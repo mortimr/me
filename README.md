@@ -1,2 +1,3 @@
-# me
-personal website
+## me
+
+Personal website built with CRA + Vercel.
