@@ -30,7 +30,6 @@ const Subtitle = styled(motion.h2)`
     font-size: 30px;
     font-weight: 500;
     margin: 0;
-    margin-top: -10px;
     opacity: 0.3;
     margin-bottom: 10px;
     margin-left: 10px;
