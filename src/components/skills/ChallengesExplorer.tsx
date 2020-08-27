@@ -7,7 +7,6 @@ import { ReactComponent as Close } from './close.svg';
 const MediaQuery = require('react-responsive').default;
 const useMediaQuery = require('react-responsive').useMediaQuery;
 
-
 export interface SkillsExplorerProps {
 
 }
@@ -255,7 +254,8 @@ export const ChallengesExplorer: React.FC<SkillsExplorerProps> = (props: SkillsE
         {({ inView, ref }) => (
             <div
                 style={{
-                    height: '100vh',
+                    height: !isDesktopOrLaptop ? undefined : '100vh',
+                    minHeight: isDesktopOrLaptop ? undefined : '100vh',
                     width: '100%',
                     display: 'flex',
                     alignItems: isDesktopOrLaptop ? 'flex-end' : 'flex-start',

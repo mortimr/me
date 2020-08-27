@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { InView } from 'react-intersection-observer';
 import { SkillsContext, Skill, Challenge } from './context';
 import { ReactComponent as Close } from './close.svg';
-
+const useMediaQuery = require('react-responsive').useMediaQuery;
 const MediaQuery = require('react-responsive').default;
 
 export interface SkillsExplorerProps {
@@ -168,7 +168,6 @@ const MobileSkillModal = styled.div`
     overflow: scroll;
     position: relative;
 `
-
 const SkillModalContainer = styled(motion.div)`
     position: fixed;
     height: calc(100vh - 100px);
@@ -201,6 +200,9 @@ const SkillsDescription = styled.h4`
 export const SkillsExplorer: React.FC<SkillsExplorerProps> = (props: SkillsExplorerProps): JSX.Element => {
 
     const skillsContext = useContext(SkillsContext);
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-device-width: 1224px)'
+      })
 
     const categories: Category[] = sortSkillsByCategories(skillsContext.skills);
 
@@ -208,7 +210,8 @@ export const SkillsExplorer: React.FC<SkillsExplorerProps> = (props: SkillsExplo
         {({ inView, ref }) => (
             <div
                 style={{
-                    height: '100vh',
+                    height: !isDesktopOrLaptop ? undefined : '100vh',
+                    minHeight: isDesktopOrLaptop ? undefined : '100vh',
                     width: '100%',
                     display: 'flex',
                     alignItems: 'flex-start',
