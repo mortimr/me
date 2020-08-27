@@ -161,8 +161,8 @@ const MobileSkillModalContainer = styled(motion.div)`
 `
 
 const MobileSkillModal = styled.div`
-    backdrop-filter: blur(16px);
     background-color: ${props => props.theme.componentColor}50;
+    backdrop-filter: blur(8px);
     height: 100%;
     width: 100%;
     overflow: scroll;
@@ -180,8 +180,8 @@ const SkillModalContainer = styled(motion.div)`
 
 const SkillModal = styled.div`
     border-radius: 8px;
-    backdrop-filter: blur(16px);
     background-color: ${props => props.theme.componentColor}50;
+    backdrop-filter: blur(16px);
     height: 100%;
     width: 100%;
 `
@@ -220,12 +220,10 @@ export const SkillsExplorer: React.FC<SkillsExplorerProps> = (props: SkillsExplo
                         <MobileSkillModalContainer
                             variants={{
                                 hidden: {
-                                    y: '50vh',
-                                    height: 0,
+                                    x: '100vw',
                                 },
                                 visible: {
-                                    y: 0,
-                                    height: '100vh',
+                                    x: 0,
                                 }
                             }}
                             transition={{
@@ -246,7 +244,7 @@ export const SkillsExplorer: React.FC<SkillsExplorerProps> = (props: SkillsExplo
                                         top: 25,
                                         left: 25
                                     }}
-                                    fill={'white'} 
+                                    fill={'white'}
                                 />
 
                             </MobileSkillModal>

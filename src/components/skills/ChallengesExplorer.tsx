@@ -267,12 +267,10 @@ export const ChallengesExplorer: React.FC<SkillsExplorerProps> = (props: SkillsE
                         <MobileChallengeModalContainer
                             variants={{
                                 hidden: {
-                                    y: '50vh',
-                                    height: 0,
+                                    x: '100vw'
                                 },
                                 visible: {
-                                    y: 0,
-                                    height: '100vh',
+                                    x: 0
                                 }
                             }}
                             transition={{

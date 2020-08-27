@@ -51,10 +51,10 @@ export const MobileBottomMenu = () => {
   return <LeftMenuContainer
     variants={{
       visible: {
-        y: 0
+        x: 0
       },
       hidden: {
-        y: 60
+        x: '-100vw'
       }
     }}
     transition={{
