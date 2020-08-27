@@ -1,9 +1,10 @@
 import { styled } from './styled';
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { scroller } from 'react-scroll'
+import { SkillsContext } from './components/skills/context';
 
-const RightMenuContainer = styled.div`
+const RightMenuContainer = styled(motion.div)`
   position: fixed;
   width: 100vw;
   height: 60px;
@@ -14,6 +15,7 @@ const RightMenuContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
   background-color: ${props => props.theme.backdropFallbackColor};
+  z-index: 999;
 
   @supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
     background-color: #00000000;
@@ -28,11 +30,29 @@ const RightMenuContainer = styled.div`
 `
 
 const Section = styled(motion.p)`
+    z-index: 90;
     font-weight: 400;
 `
 
-export const MobileTopMenu = (props: { idx: number; onChange: (idx: number) => void }) => {
-    return <RightMenuContainer>
+export const MobileTopMenu = () => {
+
+    const skillsContext = useContext(SkillsContext);
+
+    return <RightMenuContainer
+        variants={{
+            visible: {
+                y: 0
+            },
+            hidden: {
+                y: -60
+            }
+        }}
+        transition={{
+            duration: 1
+        }}
+        initial={'visible'}
+        animate={skillsContext.selectedChallenge !== null || skillsContext.selectedSkill !== null ? 'hidden' : 'visible'}
+    >
         <Section
             transition={{
                 y: {
@@ -83,6 +103,31 @@ export const MobileTopMenu = (props: { idx: number; onChange: (idx: number) => v
             }}
             initial={{ y: - 50, opacity: 0 }}
             animate={{ y: 0, opacity: 0.7 }}
+            onClick={() => scroller.scrollTo('skills', {
+                offset: -60,
+                duration: 500,
+                delay: 0,
+                smooth: 'easeInOutQuart'
+            })}
         >SKILLS</Section>
+        <Section
+            transition={{
+                y: {
+                    type: 'spring',
+                    stiffness: 200,
+                    damping: 50
+                },
+                duration: 0.4,
+                delay: 0.2
+            }}
+            initial={{ y: - 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 0.7 }}
+            onClick={() => scroller.scrollTo('challenges', {
+                offset: -60,
+                duration: 500,
+                delay: 0,
+                smooth: 'easeInOutQuart'
+            })}
+        >CHALLENGES</Section>
     </RightMenuContainer>
 };

@@ -44,7 +44,11 @@ const Section = styled(motion.div)`
 
 export const LeftMenu = () => {
 
-  return <LeftMenuContainer>
+  return <LeftMenuContainer
+    style={{
+      zIndex: 100
+    }}
+  >
     <Section
       transition={{
         x: {
@@ -63,7 +67,7 @@ export const LeftMenu = () => {
         <Mail style={{ width: '25px', height: '25px' }} fill={'white'} />
       </a>
     </Section>
-    <Section 
+    <Section
       transition={{
         x: {
           type: 'spring',
@@ -76,8 +80,8 @@ export const LeftMenu = () => {
       initial={{ x: -50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
     >
-      <a href='https://t.me/mortimr' target="_blank" rel="noopener noreferrer">
-        <Telegram style={{ width: '25px', height: '25px' }} fill={'white'} />
+      <a href='https://t.me/mortimr' target="_blank" rel="noopener noreferrer" >
+        <Telegram style={{ width: '25px', height: '25px'}} fill={'white'} />
       </a>
     </Section>
     <Section
@@ -97,7 +101,7 @@ export const LeftMenu = () => {
         <LinkedIn style={{ width: '25px', height: '25px' }} fill={'white'} />
       </a>
     </Section>
-    <Section 
+    <Section
       transition={{
         x: {
           type: 'spring',
@@ -114,7 +118,7 @@ export const LeftMenu = () => {
         <Github style={{ width: '25px', height: '25px' }} fill={'white'} />
       </a>
     </Section>
-    <ProfileImage src={me} alt={'Iulian Rotaru'} 
+    <ProfileImage src={me} alt={'Iulian Rotaru'}
       transition={{
         x: {
           type: 'spring',
@@ -127,7 +131,7 @@ export const LeftMenu = () => {
       initial={{ x: -50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
     />
-    <Line 
+    <Line
       transition={{
         y: {
           type: 'spring',

@@ -3,11 +3,12 @@ import { ReactComponent as Github } from './icons/github.svg';
 import { ReactComponent as LinkedIn } from './icons/linkedin.svg';
 import { ReactComponent as Telegram } from './icons/telegram.svg';
 import { ReactComponent as Mail } from './icons/mail.svg';
-import React from 'react';
+import React, { useContext } from 'react';
 import me from './me.png'
 import { motion } from 'framer-motion';
+import { SkillsContext } from './components/skills/context';
 
-const LeftMenuContainer = styled.div`
+const LeftMenuContainer = styled(motion.div)`
   position: fixed;
   width: 100vw;
   height: 60px;
@@ -18,6 +19,7 @@ const LeftMenuContainer = styled.div`
   align-items: center;
   justify-content: space-evenly;
   background-color: ${props => props.theme.backdropFallbackColor};
+  z-index: 999;
 
   @supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
     background-color: #00000000;
@@ -28,6 +30,7 @@ const LeftMenuContainer = styled.div`
 const ProfileImage = styled(motion.img)`
   width: 40px;
   height: 40px;
+  z-index: 90;
 `;
 
 const Section = styled(motion.div)`
@@ -38,11 +41,28 @@ const Section = styled(motion.div)`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  z-index: 90;
 `;
 
 export const MobileBottomMenu = () => {
 
-  return <LeftMenuContainer>
+  const skillsContext = useContext(SkillsContext);
+
+  return <LeftMenuContainer
+    variants={{
+      visible: {
+        y: 0
+      },
+      hidden: {
+        y: 60
+      }
+    }}
+    transition={{
+      duration: 1
+    }}
+    initial={'visible'}
+    animate={skillsContext.selectedChallenge !== null || skillsContext.selectedSkill !== null ? 'hidden' : 'visible'}
+  >
     <Section
       transition={{
         x: {

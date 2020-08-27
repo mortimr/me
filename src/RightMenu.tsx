@@ -30,7 +30,11 @@ const Section = styled(motion.p)`
 `
 
 export const RightMenu = (props: { idx: number; onChange: (idx: number) => void }) => {
-    return <RightMenuContainer>
+    return <RightMenuContainer
+        style={{
+            zIndex: 90
+        }}
+    >
         <Line
             transition={{
                 y: {
@@ -91,6 +95,11 @@ export const RightMenu = (props: { idx: number; onChange: (idx: number) => void 
             }}
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
+            onClick={() => scroller.scrollTo('skills', {
+                duration: 500,
+                delay: 0,
+                smooth: 'easeInOutQuart'
+            })}
         >SKILLS</Section>
     </RightMenuContainer>
 };

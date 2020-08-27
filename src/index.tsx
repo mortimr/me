@@ -34,17 +34,17 @@ const GlobalStyles = createGlobalStyle`
 
   h4 {
     color: ${props => (props.theme as Theme).textColor};
-    font-weight: 100;
+    font-weight: 200;
   }
 
   p {
     color: ${props => (props.theme as Theme).textColor};
-    font-weight: 100;
+    font-weight: 200;
   }
 
   span {
     color: ${props => (props.theme as Theme).textColor};
-    font-weight: 100;
+    font-weight: 200;
   }
 `;
 
