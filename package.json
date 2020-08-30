@@ -12,6 +12,7 @@
     "@types/react-scroll": "^1.8.0",
     "@types/styled-components": "^5.1.2",
     "framer-motion": "^2.6.0",
+    "moment": "^2.27.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-intersection-observer": "^8.27.1",

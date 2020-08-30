@@ -41,10 +41,10 @@ export const MobileTopMenu = () => {
     return <RightMenuContainer
         variants={{
             visible: {
-                x: 0
+                y: 0
             },
             hidden: {
-                x: '-100vw'
+                y: -60
             }
         }}
         transition={{
@@ -104,7 +104,6 @@ export const MobileTopMenu = () => {
             initial={{ y: - 50, opacity: 0 }}
             animate={{ y: 0, opacity: 0.7 }}
             onClick={() => scroller.scrollTo('skills', {
-                offset: -60,
                 duration: 500,
                 delay: 0,
                 smooth: 'easeInOutQuart'
@@ -123,7 +122,6 @@ export const MobileTopMenu = () => {
             initial={{ y: - 50, opacity: 0 }}
             animate={{ y: 0, opacity: 0.7 }}
             onClick={() => scroller.scrollTo('challenges', {
-                offset: -60,
                 duration: 500,
                 delay: 0,
                 smooth: 'easeInOutQuart'

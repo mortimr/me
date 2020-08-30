@@ -1,11 +1,10 @@
 import React, { useState, useContext } from "react"
 import { styled } from "../../styled"
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { InView } from 'react-intersection-observer';
 import { SkillsContext, Skill, Challenge } from './context';
-import { ReactComponent as Close } from './close.svg';
+import { SkillModalComponent } from "./SkillModal";
 const useMediaQuery = require('react-responsive').useMediaQuery;
-const MediaQuery = require('react-responsive').default;
 
 export interface SkillsExplorerProps {
 
@@ -58,6 +57,9 @@ const computeAnimate = (skill: Skill, inView: boolean, selectedChallenge: Challe
 const SkillCard: React.FC<SkillCardProps> = (props: SkillCardProps) => {
 
     const [delay] = useState(Math.random());
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-device-width: 1224px)'
+    })
 
     return <InView>
         {({ inView, ref }) => (
@@ -67,6 +69,7 @@ const SkillCard: React.FC<SkillCardProps> = (props: SkillCardProps) => {
                 }}
                 transition={{ type: "spring", stiffness: 100 }}
                 whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: isDesktopOrLaptop ? 0.8 : undefined }}
                 style={{
                     zIndex: 90
                 }}
@@ -151,40 +154,6 @@ const SkillsCategoryDisplay: React.FC<SkillsCategoryDisplayProps> = (props: Skil
     </div>
 }
 
-const MobileSkillModalContainer = styled(motion.div)`
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    right: 0;
-    z-index: 100;
-`
-
-const MobileSkillModal = styled.div`
-    background-color: ${props => props.theme.componentColor}50;
-    backdrop-filter: blur(8px);
-    height: 100%;
-    width: 100%;
-    overflow: scroll;
-    position: relative;
-`
-const SkillModalContainer = styled(motion.div)`
-    position: fixed;
-    height: calc(100vh - 100px);
-    width: calc(50vw - 80px);
-    top: 50px;
-    left: 80px;
-    z-index: 100;
-`
-
-const SkillModal = styled.div`
-    border-radius: 8px;
-    background-color: ${props => props.theme.componentColor}50;
-    backdrop-filter: blur(16px);
-    height: 100%;
-    width: 100%;
-`
-
 const SkillsTitle = styled.h1`
     text-transform: uppercase;
     font-weight: 600;
@@ -202,7 +171,7 @@ export const SkillsExplorer: React.FC<SkillsExplorerProps> = (props: SkillsExplo
     const skillsContext = useContext(SkillsContext);
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-device-width: 1224px)'
-      })
+    })
 
     const categories: Category[] = sortSkillsByCategories(skillsContext.skills);
 
@@ -218,64 +187,9 @@ export const SkillsExplorer: React.FC<SkillsExplorerProps> = (props: SkillsExplo
                     flexDirection: 'column'
                 }}
             >
-                <AnimatePresence>
-                    <MediaQuery maxDeviceWidth={1224}>
-                        <MobileSkillModalContainer
-                            variants={{
-                                hidden: {
-                                    x: '100vw',
-                                },
-                                visible: {
-                                    x: 0,
-                                }
-                            }}
-                            transition={{
-                                duration: 1
-                            }}
-                            initial={'hidden'}
-                            animate={skillsContext.selectedSkill !== null && inView ? 'visible' : 'hidden'}
-                        >
-                            <MobileSkillModal>
-                                <Close
-                                    onClick={() => {
-                                        skillsContext.selectSkill(null)
-                                    }}
-                                    style={{
-                                        width: 25,
-                                        height: 25,
-                                        position: 'absolute',
-                                        top: 25,
-                                        left: 25
-                                    }}
-                                    fill={'white'}
-                                />
-
-                            </MobileSkillModal>
-                        </MobileSkillModalContainer>
-                    </MediaQuery>
-                    <MediaQuery minDeviceWidth={1224}>
-                        <SkillModalContainer
-                            variants={{
-                                hidden: {
-                                    opacity: 0,
-                                    x: -300,
-                                    scale: 0.5,
-                                    zIndex: 89
-                                },
-                                visible: {
-                                    opacity: 1,
-                                    x: 0,
-                                    scale: 1,
-                                    zIndex: 100
-                                }
-                            }}
-                            initial={'hidden'}
-                            animate={skillsContext.selectedSkill !== null && inView ? 'visible' : 'hidden'}
-                        >
-                            <SkillModal />
-                        </SkillModalContainer>
-                    </MediaQuery>
-                </AnimatePresence>
+                <SkillModalComponent
+                    inView={inView}
+                />
                 <SkillsTitle>Skills</SkillsTitle>
                 <SkillsDescription>Click on a skill to see details and associated challenges.</SkillsDescription>
                 <div ref={ref}>

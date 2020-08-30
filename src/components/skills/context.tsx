@@ -9,6 +9,9 @@ export interface Skill {
     link?: string;
     level: number;
     image: string;
+    theme: string;
+    createdBy?: string;
+    usedBy?: string[];
 }
 
 export interface Challenge {
@@ -16,9 +19,11 @@ export interface Challenge {
     end?: Date;
     name: string;
     description: string;
+    subtitle: string;
     link?: string;
     skills: string[];
     image: string;
+    theme: string;
 }
 
 export interface SkillsContextState {

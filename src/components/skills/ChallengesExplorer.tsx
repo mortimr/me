@@ -1,10 +1,9 @@
 import React, { useState, useContext } from "react"
 import { styled } from "../../styled"
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { InView } from 'react-intersection-observer';
 import { SkillsContext, Challenge, Skill } from './context';
-import { ReactComponent as Close } from './close.svg';
-const MediaQuery = require('react-responsive').default;
+import { ChallengeModalComponent } from "./ChallengeModal";
 const useMediaQuery = require('react-responsive').useMediaQuery;
 
 export interface SkillsExplorerProps {
@@ -80,6 +79,9 @@ const computeAnimate = (challenge: Challenge, inView: boolean, selectedSkill: Sk
 const ChallengeCard = (props: ChallengeCardProps) => {
 
     const [delay] = useState(Math.random());
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-device-width: 1224px)'
+    })
 
     return <InView>
         {({ inView, ref }) => (
@@ -90,6 +92,7 @@ const ChallengeCard = (props: ChallengeCardProps) => {
                 onClick={props.onClick}
                 transition={{ type: "spring", stiffness: 100 }}
                 whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: isDesktopOrLaptop ? 0.8 : undefined }}
             >
                 <ChallengeCardContainer
                     ref={ref}
@@ -119,7 +122,7 @@ const ChallengeCard = (props: ChallengeCardProps) => {
                     />
                     <ChallengeTextContainer>
                         <span>{props.challenge.name}</span>
-                        <h4>{props.challenge.description}</h4>
+                        <h4>{props.challenge.subtitle}</h4>
                     </ChallengeTextContainer>
                 </ChallengeCardContainer>
             </motion.div>
@@ -164,8 +167,13 @@ interface ChallengesSectionDisplayProps {
 }
 
 const ChallengesSectionDisplay: React.FC<ChallengesSectionDisplayProps> = (props: ChallengesSectionDisplayProps): JSX.Element => {
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-device-width: 1224px)'
+    })
+
     return <div
         style={{
+            textAlign: isDesktopOrLaptop ? 'end' : 'start'
         }}
     >
         <ChallengesSectionTitle>{props.name}</ChallengesSectionTitle>
@@ -173,6 +181,7 @@ const ChallengesSectionDisplay: React.FC<ChallengesSectionDisplayProps> = (props
             display: 'flex',
             alignItems: 'center',
             flexDirection: 'row',
+            justifyContent: isDesktopOrLaptop ? 'flex-end' : 'flex-start',
             flexWrap: 'wrap',
             marginRight: 10
         }}>
@@ -192,41 +201,6 @@ const ChallengesSectionDisplay: React.FC<ChallengesSectionDisplayProps> = (props
     </div>;
 }
 
-const MobileChallengeModalContainer = styled(motion.div)`
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    right: 0;
-    z-index: 100;
-`
-
-const MobileChallengeModal = styled.div`
-    backdrop-filter: blur(16px);
-    background-color: ${props => props.theme.componentColor}50;
-    height: 100%;
-    width: 100%;
-    overflow: scroll;
-    position: relative;
-`
-
-const ChallengeModalContainer = styled(motion.div)`
-    position: fixed;
-    height: calc(100vh - 100px);
-    width: calc(50vw - 80px);
-    top: 50px;
-    right: 80px;
-    z-index: 100;
-`
-
-const ChallengeModal = styled.div`
-    border-radius: 8px;
-    backdrop-filter: blur(16px);
-    background-color: ${props => props.theme.componentColor}50;
-    height: 100%;
-    width: 100%;
-`
-
 const ChallengesTitle = styled.h1`
     text-transform: uppercase;
     font-weight: 600;
@@ -245,7 +219,7 @@ export const ChallengesExplorer: React.FC<SkillsExplorerProps> = (props: SkillsE
     const skillsContext = useContext(SkillsContext);
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-device-width: 1224px)'
-      })
+    })
 
     const challenges: Challenge[] = skillsContext.challenges;
     const sortedChallenges = sortChallenges(challenges);
@@ -262,64 +236,9 @@ export const ChallengesExplorer: React.FC<SkillsExplorerProps> = (props: SkillsE
                     flexDirection: 'column',
                 }}
             >
-                <AnimatePresence>
-                    <MediaQuery maxDeviceWidth={1224}>
-                        <MobileChallengeModalContainer
-                            variants={{
-                                hidden: {
-                                    x: '100vw'
-                                },
-                                visible: {
-                                    x: 0
-                                }
-                            }}
-                            transition={{
-                                duration: 1
-                            }}
-                            initial={'hidden'}
-                            animate={skillsContext.selectedChallenge !== null && inView ? 'visible' : 'hidden'}
-                        >
-                            <MobileChallengeModal>
-                                <Close
-                                    onClick={() => {
-                                        skillsContext.selectSkill(null)
-                                    }}
-                                    style={{
-                                        width: 25,
-                                        height: 25,
-                                        position: 'absolute',
-                                        top: 25,
-                                        left: 25
-                                    }}
-                                    fill={'white'} 
-                                />
-
-                            </MobileChallengeModal>
-                        </MobileChallengeModalContainer>
-                    </MediaQuery>
-                    <MediaQuery minDeviceWidth={1224}>
-                        <ChallengeModalContainer
-                            variants={{
-                                hidden: {
-                                    opacity: 0,
-                                    x: 300,
-                                    scale: 0.5,
-                                    zIndex: 89
-                                },
-                                visible: {
-                                    opacity: 1,
-                                    x: 0,
-                                    scale: 1,
-                                    zIndex: 100
-                                }
-                            }}
-                            initial={'hidden'}
-                            animate={skillsContext.selectedChallenge !== null && inView ? 'visible' : 'hidden'}
-                        >
-                            <ChallengeModal />
-                        </ChallengeModalContainer>
-                    </MediaQuery>
-                </AnimatePresence>
+                <ChallengeModalComponent
+                    inView={inView}
+                />
                 <ChallengesTitle>Challenges</ChallengesTitle>
                 <ChallengesDescription>Click on a challenge to see details and associated skills.</ChallengesDescription>
                 <div
