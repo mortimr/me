@@ -190,6 +190,9 @@ const SkillModalContent: React.FC = (): JSX.Element | null => {
     const challenges = useMemo(() => {
         return getChallenges(skillsContext.challenges, lastSkill?.key);
     }, [skillsContext.challenges, lastSkill])
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-device-width: 1224px)'
+    });
 
     useEffect(() => {
         if (skillsContext.selectedSkill) {
@@ -211,7 +214,7 @@ const SkillModalContent: React.FC = (): JSX.Element | null => {
                 skillsContext.selectSkill(null)
             }}
             style={{
-                position: 'absolute',
+                position: isDesktopOrLaptop ? 'absolute' : 'fixed',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',

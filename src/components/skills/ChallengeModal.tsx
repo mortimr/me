@@ -171,6 +171,9 @@ const ChallengeModalContent: React.FC = (): JSX.Element | null => {
 
     const skillsContext = useContext(SkillsContext);
     const [lastChallenge, setLastChallenge] = useState<Challenge | null>(skillsContext.selectedChallenge);
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-device-width: 1224px)'
+    })
 
     useEffect(() => {
         if (skillsContext.selectedChallenge) {
@@ -220,7 +223,7 @@ const ChallengeModalContent: React.FC = (): JSX.Element | null => {
                 skillsContext.selectChallenge(null)
             }}
             style={{
-                position: 'absolute',
+                position: isDesktopOrLaptop ? 'absolute' : 'fixed',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -234,7 +237,6 @@ const ChallengeModalContent: React.FC = (): JSX.Element | null => {
                 backgroundColor: lastChallenge.theme
             }}
         >
-
             <Close
                 style={{
                     width: 15,
