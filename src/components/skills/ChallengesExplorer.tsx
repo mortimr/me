@@ -1,7 +1,7 @@
-import React, { useState, useContext } from "react"
+import React, { useState, useContext, useEffect } from "react"
 import { styled } from "../../styled"
 import { motion } from 'framer-motion';
-import { InView } from 'react-intersection-observer';
+import { InView, useInView } from 'react-intersection-observer';
 import { SkillsContext, Challenge, Skill } from './context';
 import { ChallengeModalComponent } from "./ChallengeModal";
 const useMediaQuery = require('react-responsive').useMediaQuery;
@@ -82,59 +82,65 @@ const ChallengeCard = (props: ChallengeCardProps) => {
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-device-width: 1224px)'
     })
+    const [ref, inView] = useInView();
+    const [displayed, setDisplayed] = useState(false);
 
-    return <InView>
-        {({ inView, ref }) => (
-            <motion.div
+    useEffect(() => {
+
+        if (!displayed && inView) {
+            setDisplayed(true)
+        }
+
+    }, [displayed, inView]);
+
+    return <motion.div
+        style={{
+            zIndex: 90
+        }}
+        onClick={props.onClick}
+        transition={{ type: "spring", stiffness: 100 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: isDesktopOrLaptop ? 0.8 : undefined }}
+    >
+        <ChallengeCardContainer
+            ref={ref}
+            variants={{
+                hidden: {
+                    opacity: 0, scale: 0.3
+                },
+                visible: {
+                    opacity: 1, scale: 1
+                },
+                softhidden: {
+                    opacity: 0.2, scale: 0.8
+                }
+            }}
+            transition={{ duration: 0.4, delay }}
+            initial={'hidden'}
+            animate={computeAnimate(props.challenge, displayed, props.selectedSkill)}
+        >
+            <div
                 style={{
-                    zIndex: 90
+                    width: 60,
+                    height: 60
                 }}
-                onClick={props.onClick}
-                transition={{ type: "spring", stiffness: 100 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: isDesktopOrLaptop ? 0.8 : undefined }}
             >
-                <ChallengeCardContainer
-                    ref={ref}
-                    variants={{
-                        hidden: {
-                            opacity: 0, scale: 0.3
-                        },
-                        visible: {
-                            opacity: 1, scale: 1
-                        },
-                        softhidden: {
-                            opacity: 0.2, scale: 0.8
-                        }
+                <img
+                    style={{
+                        borderRadius: 8,
+                        height: 60,
+                        width: 60
                     }}
-                    transition={{ duration: 0.4, delay }}
-                    initial={'hidden'}
-                    animate={computeAnimate(props.challenge, inView, props.selectedSkill)}
-                >
-                    <div
-                        style={{
-                            width: 60,
-                            height: 60
-                        }}
-                    >
-                    <img
-                        style={{
-                            borderRadius: 8,
-                            height: 60,
-                            width: 60
-                        }}
-                        src={require(`./challenges/${props.challenge.image}`)}
-                        alt={props.challenge.name}
-                    />
-                    </div>
-                    <ChallengeTextContainer>
-                        <span>{props.challenge.name}</span>
-                        <h4>{props.challenge.subtitle}</h4>
-                    </ChallengeTextContainer>
-                </ChallengeCardContainer>
-            </motion.div>
-        )}
-    </InView>
+                    src={require(`./challenges/${props.challenge.image}`)}
+                    alt={props.challenge.name}
+                />
+            </div>
+            <ChallengeTextContainer>
+                <span>{props.challenge.name}</span>
+                <h4>{props.challenge.subtitle}</h4>
+            </ChallengeTextContainer>
+        </ChallengeCardContainer>
+    </motion.div>
 }
 
 interface SortedChallenges {

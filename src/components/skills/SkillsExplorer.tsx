@@ -1,7 +1,7 @@
-import React, { useState, useContext } from "react"
+import React, { useState, useContext, useEffect } from "react"
 import { styled } from "../../styled"
 import { motion } from 'framer-motion';
-import { InView } from 'react-intersection-observer';
+import { InView, useInView } from 'react-intersection-observer';
 import { SkillsContext, Skill, Challenge } from './context';
 import { SkillModalComponent } from "./SkillModal";
 const useMediaQuery = require('react-responsive').useMediaQuery;
@@ -60,42 +60,48 @@ const SkillCard: React.FC<SkillCardProps> = (props: SkillCardProps) => {
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-device-width: 1224px)'
     })
+    const [ref, inView] = useInView();
+    const [displayed, setDisplayed] = useState(false);
 
-    return <InView>
-        {({ inView, ref }) => (
-            <motion.div
-                onClick={() => {
-                    props.selectSkill(props.skill)
-                }}
-                transition={{ type: "spring", stiffness: 100 }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: isDesktopOrLaptop ? 0.8 : undefined }}
-                style={{
-                    zIndex: 90
-                }}
-            >
-                <SkillCardContainer
-                    ref={ref}
-                    variants={{
-                        hidden: {
-                            opacity: 0, scale: 0.3
-                        },
-                        visible: {
-                            opacity: 1, scale: 1
-                        },
-                        softhidden: {
-                            opacity: 0.2, scale: 0.8
-                        }
-                    }}
-                    transition={{ duration: 0.4, delay }}
-                    initial={'hidden'}
-                    animate={computeAnimate(props.skill, inView, props.selectedChallenge)}
-                >
-                    <span>{props.skill.name}</span>
-                </SkillCardContainer>
-            </motion.div>
-        )}
-    </InView>
+    useEffect(() => {
+
+        if (!displayed && inView) {
+            setDisplayed(true)
+        }
+
+    }, [displayed, inView]);
+
+    return <motion.div
+        onClick={() => {
+            props.selectSkill(props.skill)
+        }}
+        transition={{ type: "spring", stiffness: 100 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: isDesktopOrLaptop ? 0.8 : undefined }}
+        style={{
+            zIndex: 90
+        }}
+    >
+        <SkillCardContainer
+            ref={ref}
+            variants={{
+                hidden: {
+                    opacity: 0, scale: 0.3
+                },
+                visible: {
+                    opacity: 1, scale: 1
+                },
+                softhidden: {
+                    opacity: 0.2, scale: 0.8
+                }
+            }}
+            transition={{ duration: 0.4, delay }}
+            initial={'hidden'}
+            animate={computeAnimate(props.skill, displayed, props.selectedChallenge)}
+        >
+            <span>{props.skill.name}</span>
+        </SkillCardContainer>
+    </motion.div>;
 }
 
 interface Category {
