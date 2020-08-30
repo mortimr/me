@@ -210,7 +210,7 @@ const ChallengesTitle = styled.h1`
 
 const ChallengesDescription = styled.h4`
     margin: 0;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 `;
 
 

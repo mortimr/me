@@ -163,7 +163,7 @@ const SkillsTitle = styled.h1`
 
 const SkillsDescription = styled.h4`
     margin: 0;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 `;
 
 export const SkillsExplorer: React.FC<SkillsExplorerProps> = (props: SkillsExplorerProps): JSX.Element => {
