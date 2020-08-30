@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { InView } from 'react-intersection-observer'
 import { Element } from 'react-scroll'
 import { MobileComponent } from "../../MobileComponent";
+import { useTheme } from "styled-components";
+import { Theme } from "../../../theme";
 
 const Title = styled(motion.h1)`
     text-transform: uppercase;
@@ -21,6 +23,7 @@ const Description = styled(motion.p)`
 `;
 
 const ProfileImage = styled(motion.img)`
+    z-index: 3;
     width: 150px;
 `;
 
@@ -47,6 +50,9 @@ const TextContainer = styled.div`
 `;
 
 export const MobilePresentation = () => {
+
+    const theme = useTheme() as Theme;
+
     return <MobileComponent>
         <Element name="presentation" style={{
             height: '100%',
@@ -55,33 +61,102 @@ export const MobilePresentation = () => {
         <PresentationContainer>
             <AnimatePresence>
                 <ProfileImageContainer>
-                    <InView>
-                        {({ inView, ref }) => (
-                            <ProfileImage src={me} alt={'Iulian Rotaru'}
-                                ref={ref}
-                                variants={{
-                                    hidden: {
-                                        scale: 0.9,
-                                        rotate: 20,
-                                        opacity: 0
-                                    },
-                                    visible: {
-                                        scale: 1,
-                                        rotate: 0,
-                                        opacity: 1
-                                    }
-                                }}
-                                transition={{
-                                    rotate: {
-                                        type: 'spring'
-                                    },
-                                    duration: 0.5
-                                }}
-                                initial={'hidden'}
-                                animate={inView ? 'visible' : 'hidden'}
-                            />
-                        )}
-                    </InView>
+                        <InView>
+                            {({ inView, ref }) => (
+                                <>
+                                    <motion.div
+                                        variants={{
+                                            hidden: {
+                                                scale: 0.9,
+                                                rotate: 20,
+                                                opacity: 0
+                                            },
+                                            visible: {
+                                                scale: 1,
+                                                rotate: 0,
+                                                opacity: 1
+                                            }
+                                        }}
+                                        transition={{
+                                            rotate: {
+                                                type: 'spring'
+                                            },
+                                            duration: 0.5,
+                                            delay: 1
+                                        }}
+                                        initial={'hidden'}
+                                        animate={inView ? 'visible' : 'hidden'}
+                                        style={{
+                                            borderRadius: 150,
+                                            marginLeft: -28,
+                                            marginTop: 12,
+                                            position: 'absolute',
+                                            width: 150,
+                                            height: 150,
+                                            backgroundColor: 'white',
+                                            zIndex: 1,
+                                            opacity: 0.6
+                                        }}
+                                    />
+                                    <motion.div
+                                        variants={{
+                                            hidden: {
+                                                scale: 0.9,
+                                                rotate: 20,
+                                                opacity: 0
+                                            },
+                                            visible: {
+                                                scale: 1,
+                                                rotate: 0,
+                                                opacity: 1
+                                            }
+                                        }}
+                                        transition={{
+                                            rotate: {
+                                                type: 'spring'
+                                            },
+                                            duration: 0.5,
+                                            delay: 1
+                                        }}
+                                        initial={'hidden'}
+                                        animate={inView ? 'visible' : 'hidden'}
+                                        style={{
+                                            borderRadius: 150,
+                                            marginLeft: -29,
+                                            marginTop: 13,
+                                            position: 'absolute',
+                                            width: 145,
+                                            height: 145,
+                                            backgroundColor: theme.backgroundColor,
+                                            zIndex: 2
+                                        }}
+                                    />
+                                    <ProfileImage src={me} alt={'Iulian Rotaru'}
+                                        ref={ref}
+                                        variants={{
+                                            hidden: {
+                                                scale: 0.9,
+                                                rotate: 20,
+                                                opacity: 0
+                                            },
+                                            visible: {
+                                                scale: 1,
+                                                rotate: 0,
+                                                opacity: 1
+                                            }
+                                        }}
+                                        transition={{
+                                            rotate: {
+                                                type: 'spring'
+                                            },
+                                            duration: 0.5
+                                        }}
+                                        initial={'hidden'}
+                                        animate={inView ? 'visible' : 'hidden'}
+                                    />
+                                </>
+                            )}
+                        </InView>
                 </ProfileImageContainer>
                 <TextContainer>
                     <InView>
