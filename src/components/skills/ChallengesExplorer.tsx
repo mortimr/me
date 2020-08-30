@@ -78,7 +78,7 @@ const computeAnimate = (challenge: Challenge, inView: boolean, selectedSkill: Sk
 
 const ChallengeCard = (props: ChallengeCardProps) => {
 
-    const [delay] = useState(Math.random());
+    const [delay] = useState(Math.random() / 2);
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-device-width: 1224px)'
     })
