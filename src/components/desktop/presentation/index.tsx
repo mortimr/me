@@ -59,8 +59,6 @@ const TextContainer = styled.div`
 
 export const Presentation = () => {
 
-    const theme = useTheme() as Theme;
-
     return <Component>
         <Element name="presentation" style={{
             height: '100%',
@@ -103,42 +101,9 @@ export const Presentation = () => {
                                             position: 'absolute',
                                             width: 300,
                                             height: 300,
-                                            backgroundColor: 'white',
+                                            border: '2px solid white',
                                             zIndex: 1,
                                             opacity: 0.6
-                                        }}
-                                    />
-                                    <motion.div
-                                        variants={{
-                                            hidden: {
-                                                scale: 0.9,
-                                                rotate: 20,
-                                                opacity: 0
-                                            },
-                                            visible: {
-                                                scale: 1,
-                                                rotate: 0,
-                                                opacity: 1
-                                            }
-                                        }}
-                                        transition={{
-                                            rotate: {
-                                                type: 'spring'
-                                            },
-                                            duration: 0.5,
-                                            delay: 1
-                                        }}
-                                        initial={'hidden'}
-                                        animate={inView ? 'visible' : 'hidden'}
-                                        style={{
-                                            borderRadius: 150,
-                                            marginLeft: 25,
-                                            marginTop: 25,
-                                            position: 'absolute',
-                                            width: 295,
-                                            height: 295,
-                                            backgroundColor: theme.backgroundColor,
-                                            zIndex: 2
                                         }}
                                     />
                                     <ProfileImage src={me} alt={'Iulian Rotaru'}
