@@ -67,7 +67,7 @@ export const MobileHeader = () => {
                         transition={{ duration: 2, delay: 0.5 }}
                         initial={{ x: 20, opacity: 0 }}
                         animate={{ x: 0, opacity: 0.3 }}
-                    >I craft software.</Subtitle>
+                    >I craft softwares.</Subtitle>
                     <Description
                         transition={{ duration: 1, delay: 1 }}
                         initial={{ opacity: 0 }}
