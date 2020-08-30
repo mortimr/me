@@ -263,7 +263,7 @@ const SkillModalContent: React.FC = (): JSX.Element | null => {
                     :
                     null
             }
-            <Field>Depending Challenges</Field>
+            <Field>Related Challenges</Field>
             <div style={{
                 display: 'flex',
                 alignItems: 'center',

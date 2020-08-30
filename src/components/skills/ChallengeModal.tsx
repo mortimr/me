@@ -255,7 +255,7 @@ const ChallengeModalContent: React.FC = (): JSX.Element | null => {
             <DateText>{duration}</DateText>
             <Field>Description</Field>
             <DescriptionText>{lastChallenge.description}</DescriptionText>
-            <Field>Skills required</Field>
+            <Field>Related Skills</Field>
             <div style={{
                 display: 'flex',
                 alignItems: 'center',
