@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Presentation } from './components/desktop/presentation';
 import { Header } from './components/desktop/header';
 import { RightMenu } from './RightMenu';
@@ -19,6 +19,10 @@ function App() {
   const [currentPage, _setCurrentPage] = useState(0);
   const [selectedChallenge, _setSelectedChallenge] = useState<Challenge | null>(null);
   const [selectedSkill, _setSelectedSkill] = useState<Skill | null>(null);
+
+  useEffect(() => {
+    console.log('What are you looking for 🤔 ?');
+  }, []);
 
   const setSelectedChallenge = (challenge: Challenge | null) => {
     _setSelectedSkill(null);

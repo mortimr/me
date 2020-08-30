@@ -111,6 +111,12 @@ const ChallengeCard = (props: ChallengeCardProps) => {
                     initial={'hidden'}
                     animate={computeAnimate(props.challenge, inView, props.selectedSkill)}
                 >
+                    <div
+                        style={{
+                            width: 60,
+                            height: 60
+                        }}
+                    >
                     <img
                         style={{
                             borderRadius: 8,
@@ -120,6 +126,7 @@ const ChallengeCard = (props: ChallengeCardProps) => {
                         src={require(`./challenges/${props.challenge.image}`)}
                         alt={props.challenge.name}
                     />
+                    </div>
                     <ChallengeTextContainer>
                         <span>{props.challenge.name}</span>
                         <h4>{props.challenge.subtitle}</h4>
@@ -154,6 +161,10 @@ const sortChallenges = (challenges: Challenge[]): SortedChallenges => {
         } else {
             ret.current.push(challenge)
         }
+    }
+
+    for (const year of Object.keys(ret.past)) {
+        ret.past[year] = ret.past[year].sort((ch1: Challenge, ch2: Challenge): number => ch2.start.getTime() - ch1.start.getTime())
     }
 
     return ret;
@@ -227,6 +238,7 @@ export const ChallengesExplorer: React.FC<SkillsExplorerProps> = (props: SkillsE
     return <InView>
         {({ inView, ref }) => (
             <div
+                ref={ref}
                 style={{
                     height: !isDesktopOrLaptop ? undefined : '100vh',
                     minHeight: isDesktopOrLaptop ? undefined : '100vh',
@@ -242,7 +254,6 @@ export const ChallengesExplorer: React.FC<SkillsExplorerProps> = (props: SkillsE
                 <ChallengesTitle>Challenges</ChallengesTitle>
                 <ChallengesDescription>Click on a challenge to see details and associated skills.</ChallengesDescription>
                 <div
-                    ref={ref}
                     style={{
                         marginBottom: 40
                     }}

@@ -61,7 +61,9 @@ export const Presentation = () => {
         }}>
         <PresentationContainer>
             <AnimatePresence>
-                <ProfileImageContainer>
+                <ProfileImageContainer
+                    key={'image'}
+                >
                     <InView>
                         {({ inView, ref}) => (
                             <ProfileImage src={me} alt={'Iulian Rotaru'}
@@ -90,7 +92,9 @@ export const Presentation = () => {
                         )}
                     </InView>
                 </ProfileImageContainer>
-                <TextContainer>
+                <TextContainer
+                    key={'text'}
+                >
                     <InView>
                         {({ inView, ref }) => (
                             <Title

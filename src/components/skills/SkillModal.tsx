@@ -158,15 +158,22 @@ const StaticChallengeCard = (props: StaticChallengeCardProps) => {
             }, 1000);
         }}
     >
-        <img
+        <div
             style={{
-                borderRadius: 8,
-                height: 60,
-                width: 60
+                width: 60,
+                height: 60
             }}
-            src={require(`./challenges/${props.challenge.image}`)}
-            alt={props.challenge.name}
-        />
+        >
+            <img
+                style={{
+                    borderRadius: 8,
+                    height: 60,
+                    width: 60
+                }}
+                src={require(`./challenges/${props.challenge.image}`)}
+                alt={props.challenge.name}
+            />
+        </div>
         <StaticChallengeTextContainer>
             <span>{props.challenge.name}</span>
             <h4>{props.challenge.subtitle}</h4>
@@ -183,7 +190,6 @@ const SkillModalContent: React.FC = (): JSX.Element | null => {
     const challenges = useMemo(() => {
         return getChallenges(skillsContext.challenges, lastSkill?.key);
     }, [skillsContext.challenges, lastSkill])
-    console.log(challenges);
 
     useEffect(() => {
         if (skillsContext.selectedSkill) {
@@ -274,6 +280,7 @@ const SkillModalContent: React.FC = (): JSX.Element | null => {
                 {
                     challenges.map((challenge: Challenge) => (
                         <StaticChallengeCard
+                            key={challenge.name}
                             challenge={challenge}
                         />
                     ))
@@ -324,7 +331,10 @@ export const SkillModalComponent: React.FC<SkillModalComponentProps> = (props: S
 
 
     return <AnimatePresence>
-        <MediaQuery maxDeviceWidth={1224}>
+        <MediaQuery
+            key={'mobile'}
+            maxDeviceWidth={1224}
+        >
             <MobileSkillModalContainer
                 variants={{
                     hidden: {
@@ -352,7 +362,10 @@ export const SkillModalComponent: React.FC<SkillModalComponentProps> = (props: S
                 </MobileSkillModal>
             </MobileSkillModalContainer>
         </MediaQuery>
-        <MediaQuery minDeviceWidth={1224}>
+        <MediaQuery
+            key={'desktop'}
+            minDeviceWidth={1224}
+        >
             <SkillModalContainer
                 variants={{
                     hidden: {

@@ -1,0 +1,15 @@
+{
+    "short": "Iulian Rotaru",
+    "name": "Iulian Rotaru",
+    "icons": [
+      {
+        "src": "/favicon.ico",
+        "sizes": "256x256",
+        "type": "image/png"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#000000"
+  }

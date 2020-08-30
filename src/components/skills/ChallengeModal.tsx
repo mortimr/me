@@ -265,6 +265,7 @@ const ChallengeModalContent: React.FC = (): JSX.Element | null => {
             }}>
                 {
                     lastChallenge.skills.map((skillName: string) => <StaticSkillCard
+                        key={skillName}
                         skill={skillsContext.skills[skillName]}
                     />)
                 }
@@ -334,7 +335,10 @@ export const ChallengeModalComponent: React.FC<ChallengeModalComponentProps> = (
     }, [skillsContext.selectedChallenge, isDesktopOrLaptop, props.inView]);
 
     return <AnimatePresence>
-        <MediaQuery maxDeviceWidth={1224}>
+        <MediaQuery
+            maxDeviceWidth={1224}
+            key={'mobile'}
+        >
             <MobileChallengeModalContainer
                 variants={{
                     hidden: {
@@ -362,7 +366,10 @@ export const ChallengeModalComponent: React.FC<ChallengeModalComponentProps> = (
                 </MobileChallengeModal>
             </MobileChallengeModalContainer>
         </MediaQuery>
-        <MediaQuery minDeviceWidth={1224}>
+        <MediaQuery
+            minDeviceWidth={1224}
+            key={'desktop'}
+        >
             <ChallengeModalContainer
                 variants={{
                     hidden: {
