@@ -43,6 +43,7 @@ const ChallengeModal = styled.div`
     border-radius: 8px;
     height: 100%;
     width: 100%;
+    position: relative;
     background-color: ${props => props.theme.backdropFallbackColor};
     overflow: scroll;
 
@@ -219,7 +220,7 @@ const ChallengeModalContent: React.FC = (): JSX.Element | null => {
                 skillsContext.selectChallenge(null)
             }}
             style={{
-                position: 'fixed',
+                position: 'absolute',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',

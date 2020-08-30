@@ -211,7 +211,7 @@ const SkillModalContent: React.FC = (): JSX.Element | null => {
                 skillsContext.selectSkill(null)
             }}
             style={{
-                position: 'fixed',
+                position: 'absolute',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
