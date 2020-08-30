@@ -48,12 +48,12 @@ const ChallengeTextContainer = styled.div`
 
     & h4 {
         overflow: hidden;
-   text-overflow: ellipsis;
-   display: -webkit-box;
-   -webkit-box-orient: vertical;
-   -webkit-line-clamp: 2; /* number of lines to show */
-   line-height: 18px;        /* fallback */
-   max-height: 36px;  
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; /* number of lines to show */
+        line-height: 18px;        /* fallback */
+        max-height: 36px;  
         margin: 0;
     }
 `

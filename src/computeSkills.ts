@@ -65,9 +65,9 @@ export const computeSkills = (): SkillsContextState => {
         },
         challenges: [
             {
-                name: 'Ticket721',
+                name: 'Founder/CTO @ Ticket721',
                 image: 'ticket721.png',
-                subtitle: 'A ticketing platform focusing on security and user experience',
+                subtitle: 'A modern ticketing platform',
                 description: 'A ticketing platform focusing on security and user experience',
                 start: new Date(Date.parse('01 May 2018')),
                 link: 'https://app.ticket721.com',
@@ -80,7 +80,7 @@ export const computeSkills = (): SkillsContextState => {
             {
                 name: 'Learning Nx.dev',
                 image: 'nxdev.png',
-                subtitle: 'The best current solution for Typescript Monorepos',
+                subtitle: 'Typescript Monorepos tools',
                 description: 'Nx.dev is a set of tools (CLI, Schematics and Modules) that enable a true monorepo experience. Most of the time, JS and TS monorepos only use Yarn Workspaces or Lerna. But on the long term, it becomes quite hard to use Lerna or Yarn (a lot of CI manual tweaks are required, code sharing is configured manually). Nx.dev solves all these issues with built-in modification checkers (to boost your CI) and automatic code sharing configuration. A must check for Fullstack Typescript developers',
                 start: new Date(Date.parse('01 Jul 2020')),
                 theme: '#133863',

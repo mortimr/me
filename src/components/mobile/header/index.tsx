@@ -61,13 +61,13 @@ export const MobileHeader = () => {
                     <Name
                         transition={{ duration: 2 }}
                         initial={{ x: 20, opacity: 0 }}
-                        animate={{ x: 0, opacity: 0.6 }}
+                        animate={{ x: 0, opacity: 1 }}
                     >Iulian Rotaru,</Name>
                     <Subtitle
                         transition={{ duration: 2, delay: 0.5 }}
                         initial={{ x: 20, opacity: 0 }}
-                        animate={{ x: 0, opacity: 0.3 }}
-                    >I craft softwares.</Subtitle>
+                        animate={{ x: 0, opacity: 0.6 }}
+                    >I craft softwares 🛠.</Subtitle>
                     <Description
                         transition={{ duration: 1, delay: 1 }}
                         initial={{ opacity: 0 }}

@@ -307,13 +307,14 @@ export const SkillModalComponent: React.FC<SkillModalComponentProps> = (props: S
     useEffect(() => {
         if (skillsContext.selectedSkill && !isDesktopOrLaptop && props.inView) {
             let windowOffset = window.scrollY;
+            const oldStyle = document.body.style.cssText;
             setTimeout(() => {
                 windowOffset = window.scrollY;
-                document.body.setAttribute('style', `position: fixed; top: -${windowOffset}px; left: 0; right: 0;`);
+                document.body.setAttribute('style', `${oldStyle}; position: fixed; top: -${windowOffset}px; left: 0; right: 0;`);
             }, 1000); // Match animation
 
             return () => {
-                document.body.setAttribute('style', '');
+                document.body.setAttribute('style', oldStyle);
                 window.scrollTo(0, windowOffset);
             };
 
