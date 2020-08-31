@@ -184,7 +184,19 @@ export const computeSkills = (): SkillsContextState => {
                     Our goal was to implement a specific algorithm (<Bold>Barnes-Hut</Bold>) to properly compute the gravitational forces between all the bodies
                     and run a smooth simulation. It was a real technical challenge. <Bold>Click the link to find an article about my project
                     and links to the repository</Bold>.
-                    </Text>,
+
+                    <br />
+                    <img
+                        style={{
+                            width: '90%',
+                            marginLeft: '5%',
+                            marginTop: '10%',
+                            borderRadius: 8
+                        }}
+                        src={'https://github.com/mortimr/oclbhgs/raw/master/.10k1g.gif'}
+                        alt={'OCLBHGS'}
+                    />
+                </Text>,
                 start: new Date(Date.parse('01 Sep 2018')),
                 end: new Date(Date.parse('31 Dec 2018')),
                 link: 'https://dev.to/mortimr/rules-are-meant-to-be-broken-52f0',
@@ -233,6 +245,18 @@ export const computeSkills = (): SkillsContextState => {
                     • <Bold>SOEN345 Software Testing, Verification & QA </Bold>: Very interesting course about tests, how to measure quality properly, when to test, when not to test. We also studied
                     how migrations should be made, how rolling out features should be handled and how the best are doing it.
 
+                    <br />
+                    <img
+                        style={{
+                            width: '90%',
+                            marginLeft: '5%',
+                            marginTop: '10%',
+                            borderRadius: 8
+                        }}
+                        src={require('./skills_challenges_media/concordia_winter.jpg')}
+                        alt={'Concordia'}
+                    />
+
                 </Text>,
                 start: new Date(Date.parse('01 Jan 2019')),
                 end: new Date(Date.parse('31 Jun 2019')),
@@ -262,6 +286,18 @@ export const computeSkills = (): SkillsContextState => {
                     is readable by any actor of the project. We had to create our own project (a library management system) where we had to write and maintain an SRS (Software Requirements Specification)
                     and an SAD (Software Architecture Document).
 
+                    <br />
+                    <img
+                        style={{
+                            width: '90%',
+                            marginLeft: '5%',
+                            marginTop: '10%',
+                            borderRadius: 8
+                        }}
+                        src={require('./skills_challenges_media/concordia_fall.jpg')}
+                        alt={'Concordia'}
+                    />
+
                 </Text>,
                 start: new Date(Date.parse('1 Sep 2018')),
                 end: new Date(Date.parse('31 Dec 2018')),
@@ -278,7 +314,7 @@ export const computeSkills = (): SkillsContextState => {
                 description: <Text>
                     After our victory in France, we won tickets to represent our country in the World Finals. The format was the same, 24h coding, day & night, then prototype forum.
                     The jury was mainly composed of Facebook Engineers.
-                    <br/>
+                    <br />
                     For this time, we decided to do something ballsy by presenting a fully p2p social network. It would connect to other peers and exchange encrypted information about
                     friends. In the end we had a working prototype where users were able to add friends and recover their posts & likes via p2p. But it wasn't enough for the jury.
                     We had a blast during the hackathon, meeting a lot of other student engineers like us and representing France. The other candidates had incredibly solid
@@ -295,7 +331,7 @@ export const computeSkills = (): SkillsContextState => {
                         alt={'Facebook France Hackathon'}
                     />
 
-                    </Text>,
+                </Text>,
                 start: new Date(Date.parse('14 Nov 2018')),
                 end: new Date(Date.parse('20 Nov 2018')),
                 link: 'https://www.facebook.com/events/d41d8cd9/facebook-global-hackathon-finals-2018-prototype-forum-live/319810475279801/',
@@ -309,7 +345,7 @@ export const computeSkills = (): SkillsContextState => {
                 description: <Text>
                     For the first time in France, Facebook organized a student engineering hackathon. From thousands of applications, only 15 teams of 4 people were selected.
                     With 2 other students from Epitech and one from Polytechnique, we created EthBooking.
-                    <br/>
+                    <br />
                     EthBooking was a simple platform where anyone could register its hotel and start renting rooms. Payments and reservations were made without any third party
                     involved. And it was all handled by the Ethereum blockchain. We selected this topic because we knew that hotel owners are having a lot of troubles
                     with reservation platforms. This is what caught the eye of our jury and got us the first place and tickets for the World Finals !
@@ -324,7 +360,7 @@ export const computeSkills = (): SkillsContextState => {
                         src={require('./skills_challenges_media/facebook_paris_victory.jpg')}
                         alt={'Facebook France Hackathon'}
                     />
-                    </Text>,
+                </Text>,
                 start: new Date(Date.parse('07 Apr 2018')),
                 end: new Date(Date.parse('08 Apr 2018')),
                 link: 'https://www.epitech.eu/fr/actualites-evenements/facebook-global-hackathon-finals-epitech-polytechnique-blockchain-ethereum-innovation/',
@@ -338,7 +374,7 @@ export const computeSkills = (): SkillsContextState => {
                 image: 'greenbureau.png',
                 subtitle: 'Software Developer internship',
                 description: <Text>
-                    This was my first internship and professional experience in IT. 6 months inside Greenbureau, a customer relationship service provider, as 
+                    This was my first internship and professional experience in IT. 6 months inside Greenbureau, a customer relationship service provider, as
                     a Software Developer. I discovered the world of IT in a real company, their needs, their problems and their victories. This first experience
                     might be what started my entrepreneurial journey, and why I really wanted to start my very own company.
                     </Text>,
@@ -369,7 +405,20 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Epitech 1st Year',
                 image: 'epitech.png',
                 subtitle: 'Learning the basics of computer science',
-                description: 'TODO',
+                description: <Text>
+                    <br />
+                    <img
+                        style={{
+                            width: '90%',
+                            marginLeft: '5%',
+                            marginTop: '10%',
+                            borderRadius: 8
+                        }}
+                        src={require('./skills_challenges_media/epitech_tek1.jpg')}
+                        alt={'Epitech Tek1'}
+                    />
+
+                </Text>,
                 start: new Date(Date.parse('01 Sep 2015')),
                 end: new Date(Date.parse('04 Jul 2016')),
                 link: 'https://epitech.eu',
@@ -441,7 +490,20 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Epitech EIP',
                 image: 'epitechxp.png',
                 subtitle: 'A two and a half year group project',
-                description: 'TODO',
+                description: <Text>
+                    <br />
+                    <img
+                        style={{
+                            width: '90%',
+                            marginLeft: '5%',
+                            marginTop: '10%',
+                            borderRadius: 8
+                        }}
+                        src={require('./skills_challenges_media/epitech_eip.png')}
+                        alt={'Epitech EIP'}
+                    />
+
+                </Text>,
                 start: new Date(Date.parse('01 Sep 2017')),
                 end: new Date(Date.parse('20 Jan 2020')),
                 link: 'https://epitech.eu',

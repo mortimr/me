@@ -20,7 +20,7 @@ interface MobileSkillModalProps {
     color: string;
 }
 
-const MobileSkillModal = styled.div<MobileSkillModalProps>`
+const MobileSkillModal = styled(motion.div)<MobileSkillModalProps>`
     backdrop-filter: blur(8px);
     height: 100%;
     width: 100%;
@@ -101,7 +101,6 @@ const Field = styled.h4`
 const DescriptionText = styled.h4`
     margin: 0;
     margin-top: 6px;
-    margin-left: 12px;
 `;
 
 const StaticChallengeCardContainer = styled.div`
@@ -350,7 +349,7 @@ export const SkillModalComponent: React.FC<SkillModalComponentProps> = (props: S
             <MobileSkillModalContainer
                 variants={{
                     hidden: {
-                        y: '100vh',
+                        y: '150vh',
                         transition: {
                             duration: 1,
                             delay: 0
@@ -360,7 +359,7 @@ export const SkillModalComponent: React.FC<SkillModalComponentProps> = (props: S
                         y: 0,
                         transition: {
                             duration: 1,
-                            delay: 0.5
+                            delay: 0.25
                         }
                     }
                 }}
@@ -368,6 +367,22 @@ export const SkillModalComponent: React.FC<SkillModalComponentProps> = (props: S
                 animate={skillsContext.selectedSkill !== null && props.inView ? 'visible' : 'hidden'}
             >
                 <MobileSkillModal
+                    variants={{
+                        hidden: {
+                            opacity: 0,
+                            transition: {
+                                duration: 1,
+                                delay: 2
+                            }
+                        },
+                        visible: {
+                            opacity: 1,
+                            transition: {
+                                duration: 0,
+                                delay: 0
+                            }
+                        }
+                    }}
                     color={skillsContext.selectedSkill?.theme || '#000000'}
                     ref={ref}
                 >

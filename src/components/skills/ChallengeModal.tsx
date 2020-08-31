@@ -148,7 +148,6 @@ const Field = styled.h4`
 const DescriptionText = styled.div`
     margin: 0;
     margin-top: 6px;
-    margin-left: 12px;
 `;
 
 interface WebsiteLinkProps {
@@ -355,7 +354,7 @@ export const ChallengeModalComponent: React.FC<ChallengeModalComponentProps> = (
             <MobileChallengeModalContainer
                 variants={{
                     hidden: {
-                        y: '100vh',
+                        y: '150vh',
                         transition: {
                             duration: 1,
                             delay: 0
@@ -365,7 +364,7 @@ export const ChallengeModalComponent: React.FC<ChallengeModalComponentProps> = (
                         y: 0,
                         transition: {
                             duration: 1,
-                            delay: 0.5
+                            delay: 0.25
                         }
                     }
                 }}
