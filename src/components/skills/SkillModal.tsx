@@ -9,7 +9,7 @@ const useMediaQuery = require('react-responsive').useMediaQuery;
 
 const MobileSkillModalContainer = styled(motion.div)`
     position: fixed;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     top: 0;
     right: 0;
@@ -217,11 +217,7 @@ const SkillModalContent: React.FC = (): JSX.Element | null => {
         return null
     }
 
-    return <div
-        style={{
-            marginBottom: 60
-        }}
-    >
+    return <div>
         <div
             onClick={() => {
                 skillsContext.selectSkill(null)
