@@ -100,7 +100,7 @@ export const computeSkills = (): SkillsContextState => {
                 description: <Text>
                     <Bold>Ticket721</Bold> is a ticketing platform focusing on security and user experience.
                     Security is enhanced with 100% digital tickets, created as unique and 100%
-                    owned by the user on the <Bold><Bold>Ethereum</Bold> blockchain</Bold>. The tickets can be sold freely
+                    owned by the user on the <Bold>Ethereum blockchain</Bold>. The tickets can be sold freely
                     on a secured marketplace, lowering fraud drastically.
 
                     <br />
@@ -165,10 +165,10 @@ export const computeSkills = (): SkillsContextState => {
             {
                 name: 'erc2280',
                 image: 'ethereum.png',
-                subtitle: 'An attempt to create an <Bold>Ethereum</Bold> ERC',
+                subtitle: 'An attempt to create an Ethereum ERC',
                 description: <Text>
                     At one point in the development of Ticket721, the use of a token to exchange the tickets was mentioned.
-                    But in order to do so, we needed a new type of token, with extra methods. In <Bold><Bold>Ethereum</Bold></Bold>, tokens follow a standard
+                    But in order to do so, we needed a new type of token, with extra methods. In <Bold>Ethereum</Bold>, tokens follow a standard
                     called <Bold>ERC20</Bold>. To exchange any kind of tokens, you need to also have <Bold>Ether</Bold>, the core currency of the blockchain.
                     This is called <Bold>gas</Bold>, the fee for the transactions. It's a real issue when you only want to use your own token
                     (you cannot expect your users to have spare Ether for your app).
@@ -226,7 +226,7 @@ export const computeSkills = (): SkillsContextState => {
             {
                 name: 'ethvtx',
                 image: 'ethvtx.png',
-                subtitle: '<Bold>Ethereum</Bold>-ready & framework-agnostic redux store configuration',
+                subtitle: 'Ethereum-ready & framework-agnostic redux store configuration',
                 description: <Text>
                     In order to work with <Bold>Ethereum</Bold>, apps need to be connected to nodes. Nodes are what
                     keep the <Bold>Ethereum</Bold> blockchain alive, validate the transactions etc. To connect to these
@@ -389,7 +389,7 @@ export const computeSkills = (): SkillsContextState => {
                 </Text>,
                 start: new Date(Date.parse('07 Apr 2018')),
                 end: new Date(Date.parse('08 Apr 2018')),
-                link: 'https://www.epitech.eu/fr/actualites-evenements/facebook-global-hackathon-finals-epitech-polytechnique-blockchain-<Bold>Ethereum</Bold>-innovation/',
+                link: 'https://www.epitech.eu/fr/actualites-evenements/facebook-global-hackathon-finals-epitech-polytechnique-blockchain-ethereum-innovation/',
                 theme: '#395B9B',
                 skills: []
             },
