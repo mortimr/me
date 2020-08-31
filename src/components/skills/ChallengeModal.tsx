@@ -10,7 +10,7 @@ const useMediaQuery = require('react-responsive').useMediaQuery;
 
 const MobileChallengeModalContainer = styled(motion.div)`
     position: fixed;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     top: 0;
     right: 0;
@@ -21,7 +21,7 @@ interface MobileChallengeModalProps {
     color: string;
 }
 
-const MobileChallengeModal = styled.div<MobileChallengeModalProps>`
+const MobileChallengeModal = styled(motion.div)<MobileChallengeModalProps>`
     height: 100%;
     width: 100%;
     overflow: scroll;
@@ -227,11 +227,7 @@ const ChallengeModalContent: React.FC = (): JSX.Element | null => {
         return null;
     }
 
-    return <div
-        style={{
-            marginBottom: 60
-        }}
-    >
+    return <div>
         <div
             onClick={() => {
                 skillsContext.selectChallenge(null)
@@ -266,7 +262,7 @@ const ChallengeModalContent: React.FC = (): JSX.Element | null => {
                 src={require(`./challenges/${lastChallenge.image}`)}
             />
         </ImageBannerContainer>
-        <DescriptionContainer>
+        <DescriptionContainer >
             <ChallengeTitle>{lastChallenge.name}</ChallengeTitle>
             <DateText>{formatDate(lastChallenge.start)} → {lastChallenge.end ? formatDate(lastChallenge.end) : 'now'}</DateText>
             <DateText>{duration}</DateText>
@@ -377,6 +373,24 @@ export const ChallengeModalComponent: React.FC<ChallengeModalComponentProps> = (
                 animate={skillsContext.selectedChallenge !== null && props.inView ? 'visible' : 'hidden'}
             >
                 <MobileChallengeModal
+                variants={{
+                    hidden: {
+                        opacity: 0,
+                        transition: {
+                            duration: 1,
+                            delay: 2
+                        }
+                    },
+                    visible: {
+                        opacity: 1,
+                        transition: {
+                            duration: 0,
+                            delay: 0
+                        }
+                    }
+                }}
+                initial={'hidden'}
+                animate={skillsContext.selectedChallenge !== null && props.inView ? 'visible' : 'hidden'}
                     ref={ref}
                     color={skillsContext.selectedChallenge?.theme || '#000000'}
                 >

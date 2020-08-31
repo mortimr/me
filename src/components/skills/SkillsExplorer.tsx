@@ -176,6 +176,9 @@ export const SkillsExplorer: React.FC<SkillsExplorerProps> = (props: SkillsExplo
 
     const skillsContext = useContext(SkillsContext);
     const categories: Category[] = sortSkillsByCategories(skillsContext.skills);
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-device-width: 1224px)'
+    })
 
     return <InView>
         {({ inView, ref }) => (
@@ -187,20 +190,28 @@ export const SkillsExplorer: React.FC<SkillsExplorerProps> = (props: SkillsExplo
                     flexDirection: 'column'
                 }}
             >
-                <div
-                    onClick={() => {
-                        skillsContext.selectChallenge(null);
-                        skillsContext.selectSkill(null);
-                    }}
-                    style={{
-                        position: 'fixed',
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        height: '100vh',
-                        zIndex: 80
-                    }}
-                />
+                {
+                    isDesktopOrLaptop
+
+                        ?
+                        <div
+                            onClick={() => {
+                                skillsContext.selectChallenge(null);
+                                skillsContext.selectSkill(null);
+                            }}
+                            style={{
+                                position: 'fixed',
+                                top: 0,
+                                left: 0,
+                                width: '100%',
+                                height: '100vh',
+                                zIndex: 80
+                            }}
+                        />
+
+                        :
+                        null
+                }
                 <SkillModalComponent
                     inView={inView}
                 />
