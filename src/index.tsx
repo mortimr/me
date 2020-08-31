@@ -17,6 +17,11 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Heebo', sans-serif;
   }
 
+  div {
+    color: ${props => (props.theme as Theme).textColor};
+    font-weight: 200;
+  }
+
   h1 {
     color: ${props => (props.theme as Theme).textColor};
     font-weight: 200;

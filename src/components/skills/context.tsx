@@ -4,7 +4,7 @@ export interface Skill {
     name: string;
     key: string;
     subtitle?: string;
-    description: string;
+    description: JSX.Element | string;
     category: string;
     link?: string;
     level: number;
@@ -18,7 +18,7 @@ export interface Challenge {
     start: Date;
     end?: Date;
     name: string;
-    description: string;
+    description: JSX.Element | string;
     subtitle: string;
     link?: string;
     skills: string[];

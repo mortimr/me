@@ -79,7 +79,7 @@ const SkillCard: React.FC<SkillCardProps> = (props: SkillCardProps) => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: isDesktopOrLaptop ? 0.8 : undefined }}
         style={{
-            zIndex: 90
+            zIndex: 91
         }}
     >
         <SkillCardContainer
@@ -175,24 +175,32 @@ const SkillsDescription = styled.h4`
 export const SkillsExplorer: React.FC<SkillsExplorerProps> = (props: SkillsExplorerProps): JSX.Element => {
 
     const skillsContext = useContext(SkillsContext);
-    const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-device-width: 1224px)'
-    })
-
     const categories: Category[] = sortSkillsByCategories(skillsContext.skills);
 
     return <InView>
         {({ inView, ref }) => (
             <div
                 style={{
-                    height: !isDesktopOrLaptop ? undefined : '100vh',
-                    minHeight: isDesktopOrLaptop ? undefined : '100vh',
                     width: '100%',
                     display: 'flex',
                     alignItems: 'flex-start',
                     flexDirection: 'column'
                 }}
             >
+                <div
+                    onClick={() => {
+                        skillsContext.selectChallenge(null);
+                        skillsContext.selectSkill(null);
+                    }}
+                    style={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100vh',
+                        zIndex: 80
+                    }}
+                />
                 <SkillModalComponent
                     inView={inView}
                 />

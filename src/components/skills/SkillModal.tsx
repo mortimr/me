@@ -16,16 +16,21 @@ const MobileSkillModalContainer = styled(motion.div)`
     z-index: 100;
 `
 
-const MobileSkillModal = styled.div`
+interface MobileSkillModalProps {
+    color: string;
+}
+
+const MobileSkillModal = styled.div<MobileSkillModalProps>`
     backdrop-filter: blur(8px);
     height: 100%;
     width: 100%;
     overflow: scroll;
     position: relative;
     background-color: ${props => props.theme.backdropFallbackColor};
+    transition: background-color 1s linear;
 
   @supports ((-webkit-backdrop-filter: blur(16px)) or (backdrop-filter: blur(16px))) {
-    background-color: ${props => props.theme.componentColor}50;
+    background-color: ${props => props.color}30;
     backdrop-filter: blur(16px);
   }
 `
@@ -38,16 +43,21 @@ const SkillModalContainer = styled(motion.div)`
     z-index: 100;
 `
 
-const SkillModal = styled.div`
+interface SkillModalProps {
+    color: string;
+}
+
+const SkillModal = styled.div<SkillModalProps>`
     border-radius: 8px;
     backdrop-filter: blur(16px);
     height: 100%;
     width: 100%;
     background-color: ${props => props.theme.backdropFallbackColor};
     overflow: scroll;
+    transition: background-color 1s linear;
 
   @supports ((-webkit-backdrop-filter: blur(16px)) or (backdrop-filter: blur(16px))) {
-    background-color: ${props => props.theme.componentColor}50;
+    background-color: ${props => props.color}30;
     backdrop-filter: blur(16px);
   }
 `
@@ -148,13 +158,16 @@ const StaticChallengeCard = (props: StaticChallengeCardProps) => {
 
     return <StaticChallengeCardContainer
         onClick={() => {
-            skillsContext.selectChallenge(props.challenge);
+            skillsContext.selectSkill(null);
             setTimeout(() => {
                 scroller.scrollTo(isDesktopOrLaptop ? 'skills' : 'challenges', {
                     duration: 500,
                     delay: 0,
                     smooth: 'easeInOutQuart'
                 });
+            }, 500);
+            setTimeout(() => {
+                skillsContext.selectChallenge(props.challenge);
             }, 1000);
         }}
     >
@@ -359,6 +372,7 @@ export const SkillModalComponent: React.FC<SkillModalComponentProps> = (props: S
                 animate={skillsContext.selectedSkill !== null && props.inView ? 'visible' : 'hidden'}
             >
                 <MobileSkillModal
+                    color={skillsContext.selectedSkill?.theme || '#000000'}
                     ref={ref}
                 >
                     <SkillModalContent />
@@ -382,6 +396,7 @@ export const SkillModalComponent: React.FC<SkillModalComponentProps> = (props: S
                 animate={skillsContext.selectedSkill !== null && props.inView ? 'visible' : 'hidden'}
             >
                 <SkillModal
+                    color={skillsContext.selectedSkill?.theme || '#000000'}
                     ref={ref}
                 >
                     <SkillModalContent />

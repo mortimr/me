@@ -17,15 +17,20 @@ const MobileChallengeModalContainer = styled(motion.div)`
     z-index: 100;
 `
 
-const MobileChallengeModal = styled.div`
+interface MobileChallengeModalProps {
+    color: string;
+}
+
+const MobileChallengeModal = styled.div<MobileChallengeModalProps>`
     height: 100%;
     width: 100%;
     overflow: scroll;
     position: relative;
     background-color: ${props => props.theme.backdropFallbackColor};
+    transition: background-color 1s linear;
 
   @supports ((-webkit-backdrop-filter: blur(16px)) or (backdrop-filter: blur(16px))) {
-    background-color: ${props => props.theme.componentColor}50;
+    background-color: ${props => props.color}30;
     backdrop-filter: blur(16px);
   }
 `
@@ -39,16 +44,21 @@ const ChallengeModalContainer = styled(motion.div)`
     z-index: 100;
 `
 
-const ChallengeModal = styled.div`
+interface ChallengeModalProps {
+    color: string;
+}
+
+const ChallengeModal = styled.div<ChallengeModalProps>`
     border-radius: 8px;
     height: 100%;
     width: 100%;
     position: relative;
     background-color: ${props => props.theme.backdropFallbackColor};
     overflow: scroll;
+    transition: background-color 1s linear;
 
   @supports ((-webkit-backdrop-filter: blur(16px)) or (backdrop-filter: blur(16px))) {
-    background-color: ${props => props.theme.componentColor}50;
+    background-color: ${props => props.color}30;
     backdrop-filter: blur(16px);
   }
 `
@@ -81,14 +91,18 @@ const StaticSkillCard: React.FC<StaticSkillCardProps> = (props: StaticSkillCardP
 
     return <StaticSkillCardContainer
         onClick={() => {
-            skillsContext.selectSkill(props.skill);
+            skillsContext.selectChallenge(null);
             setTimeout(() => {
                 scroller.scrollTo('skills', {
                     duration: 500,
                     delay: 0,
                     smooth: 'easeInOutQuart'
                 });
+
             }, 500);
+            setTimeout(() => {
+                skillsContext.selectSkill(props.skill);
+            }, 1000);
         }}
     >
         <span>{props.skill.name}</span>
@@ -131,7 +145,7 @@ const Field = styled.h4`
     text-transform: uppercase;
 `
 
-const DescriptionText = styled.h4`
+const DescriptionText = styled.div`
     margin: 0;
     margin-top: 6px;
     margin-left: 12px;
@@ -364,6 +378,7 @@ export const ChallengeModalComponent: React.FC<ChallengeModalComponentProps> = (
             >
                 <MobileChallengeModal
                     ref={ref}
+                    color={skillsContext.selectedChallenge?.theme || '#000000'}
                 >
                     <ChallengeModalContent />
                 </MobileChallengeModal>
@@ -387,6 +402,7 @@ export const ChallengeModalComponent: React.FC<ChallengeModalComponentProps> = (
             >
                 <ChallengeModal
                     ref={ref}
+                    color={skillsContext.selectedChallenge?.theme || '#000000'}
                 >
                     <ChallengeModalContent />
                 </ChallengeModal>

@@ -246,8 +246,6 @@ export const ChallengesExplorer: React.FC<SkillsExplorerProps> = (props: SkillsE
             <div
                 ref={ref}
                 style={{
-                    height: !isDesktopOrLaptop ? undefined : '100vh',
-                    minHeight: isDesktopOrLaptop ? undefined : '100vh',
                     width: '100%',
                     display: 'flex',
                     alignItems: isDesktopOrLaptop ? 'flex-end' : 'flex-start',

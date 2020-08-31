@@ -1,40 +1,37 @@
-import React, { useContext } from "react"
+import React from "react"
 import { SkillsExplorer } from "./SkillsExplorer"
 import { ChallengesExplorer } from "./ChallengesExplorer"
 import { Element } from 'react-scroll'
-import { SkillsContext } from "./context"
 
 export const Skills = () => {
-
-    const skillsContext = useContext(SkillsContext);
 
     return <Element
         name="skills"
         style={{
-            position: 'relative',
             width: 'calc(100% - 300px)',
+            minHeight: '100vh',
             marginLeft: 150,
             marginRight: 150,
-            minHeight: '100vh',
             display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
+            justifyContent: 'flex-start',
+            alignItems: 'flex-start'
         }}>
-        <div 
-        onClick={() => {
-            skillsContext.selectChallenge(null);
-            skillsContext.selectSkill(null);
-        }}
-        style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100vw',
-            height: '100vh',
-            zIndex: 80,
-        }}
+        <div
+            style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100vw',
+                height: '100vh',
+                zIndex: 80,
+            }}
         />
-        <div style={{ width: '50%' }}>
+        <div style={{
+            width: '50%',
+            position: 'sticky',
+            top: 0,
+            zIndex: 90
+        }}>
             <SkillsExplorer />
         </div>
         <div style={{ width: '50%' }}>

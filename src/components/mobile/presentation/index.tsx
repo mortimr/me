@@ -5,8 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { InView } from 'react-intersection-observer'
 import { Element } from 'react-scroll'
 import { MobileComponent } from "../../MobileComponent";
-import { useTheme } from "styled-components";
-import { Theme } from "../../../theme";
 
 const Title = styled(motion.h1)`
     text-transform: uppercase;
