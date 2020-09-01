@@ -152,8 +152,6 @@ const SkillsCategoryDisplay: React.FC<SkillsCategoryDisplayProps> = (props: Skil
         query: '(min-device-width: 1224px)'
     })
 
-    console.log(props.category.name, amount)
-
     return <motion.div
         variants={{
             hidden: {

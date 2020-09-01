@@ -7,6 +7,13 @@ import React from 'react';
 import me from './me.png'
 import { motion } from 'framer-motion';
 
+const captureOutboundLink = function (url: string) {
+  (window as any).ga('send', 'event', 'outbound', 'click', url, {
+    'transport': 'beacon',
+    'hitCallback': function () { document.location = url as any; }
+  });
+}
+
 const LeftMenuContainer = styled.div`
   position: fixed;
   width: 80px;
@@ -63,7 +70,12 @@ export const LeftMenu = () => {
       animate={{ x: 0, opacity: 1 }}
 
     >
-      <a href='mailto:iulian@rotaru.fr'>
+      <a
+        href='mailto:iulian@rotaru.fr'
+        onClick={() => {
+          captureOutboundLink('mailto:iulian@rotaru.fr');
+        }}
+      >
         <Mail style={{ width: '25px', height: '25px' }} fill={'white'} />
       </a>
     </Section>
@@ -80,8 +92,13 @@ export const LeftMenu = () => {
       initial={{ x: -50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
     >
-      <a href='https://t.me/mortimr'>
-        <Telegram style={{ width: '25px', height: '25px'}} fill={'white'} />
+      <a
+        href='https://t.me/mortimr'
+        onClick={() => {
+          captureOutboundLink('https://t.me/mortimr');
+        }}
+      >
+        <Telegram style={{ width: '25px', height: '25px' }} fill={'white'} />
       </a>
     </Section>
     <Section
@@ -97,7 +114,12 @@ export const LeftMenu = () => {
       initial={{ x: -50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
     >
-      <a href='https://linkedin.com/in/mortimr'>
+      <a
+        href='https://linkedin.com/in/mortimr'
+        onClick={() => {
+          captureOutboundLink('https://linkedin.com/in/mortimr');
+        }}
+      >
         <LinkedIn style={{ width: '25px', height: '25px' }} fill={'white'} />
       </a>
     </Section>
@@ -114,7 +136,12 @@ export const LeftMenu = () => {
       initial={{ x: -50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
     >
-      <a href='https://github.com/mortimr'>
+      <a
+        href='https://github.com/mortimr'
+        onClick={() => {
+          captureOutboundLink('https://github.com/mortimr');
+        }}
+      >
         <Github style={{ width: '25px', height: '25px' }} fill={'white'} />
       </a>
     </Section>
