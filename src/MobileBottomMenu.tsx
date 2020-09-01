@@ -77,7 +77,7 @@ export const MobileBottomMenu = () => {
       animate={{ x: 0, opacity: 1 }}
 
     >
-      <a href='mailto:iulian@rotaru.fr' target="_blank" rel="noopener noreferrer">
+      <a href='mailto:iulian@rotaru.fr'>
         <Mail style={{ width: '25px', height: '25px' }} fill={'white'} />
       </a>
     </Section>
@@ -94,7 +94,7 @@ export const MobileBottomMenu = () => {
       initial={{ x: -50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
     >
-      <a href='https://t.me/mortimr' target="_blank" rel="noopener noreferrer">
+      <a href='https://t.me/mortimr'>
         <Telegram style={{ width: '25px', height: '25px' }} fill={'white'} />
       </a>
     </Section>
@@ -111,7 +111,7 @@ export const MobileBottomMenu = () => {
       initial={{ x: -50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
     >
-      <a href='https://www.linkedin.com/in/iulian-rotaru-82a79211b/' target="_blank" rel="noopener noreferrer">
+      <a href='https://linkedin.com/in/mortimr'>
         <LinkedIn style={{ width: '25px', height: '25px' }} fill={'white'} />
       </a>
     </Section>
@@ -128,7 +128,7 @@ export const MobileBottomMenu = () => {
       initial={{ x: -50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
     >
-      <a href='https://github.com/mortimr' target="_blank" rel="noopener noreferrer">
+      <a href='https://github.com/mortimr'>
         <Github style={{ width: '25px', height: '25px' }} fill={'white'} />
       </a>
     </Section>
