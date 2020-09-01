@@ -64,7 +64,7 @@ const ChallengeModal = styled.div<ChallengeModalProps>`
 `
 const StaticSkillCardContainer = styled.div`
     text-align: center;
-    border-radius: 12px;
+    border-radius: 8px;
     background-color: ${props => props.theme.componentColor};
     display: 'flex';
     justify-content: 'center';

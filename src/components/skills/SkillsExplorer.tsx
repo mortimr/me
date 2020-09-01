@@ -56,7 +56,6 @@ const computeAnimate = (skill: Skill, inView: boolean, selectedChallenge: Challe
 
 const SkillCard: React.FC<SkillCardProps> = (props: SkillCardProps) => {
 
-    const skillsContext = useContext(SkillsContext);
     const [delay] = useState(Math.random() / 2);
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-device-width: 1224px)'
