@@ -6,14 +6,6 @@ import { ReactComponent as Mail } from './icons/mail.svg';
 import React from 'react';
 import me from './me.png'
 import { motion } from 'framer-motion';
-
-const captureOutboundLink = function (url: string) {
-  (window as any).ga('send', 'event', 'outbound', 'click', url, {
-    'transport': 'beacon',
-    'hitCallback': function () { document.location = url as any; }
-  });
-}
-
 const LeftMenuContainer = styled.div`
   position: fixed;
   width: 80px;
@@ -72,9 +64,6 @@ export const LeftMenu = () => {
     >
       <a
         href='mailto:iulian@rotaru.fr'
-        onClick={() => {
-          captureOutboundLink('mailto:iulian@rotaru.fr');
-        }}
       >
         <Mail style={{ width: '25px', height: '25px' }} fill={'white'} />
       </a>
@@ -94,9 +83,6 @@ export const LeftMenu = () => {
     >
       <a
         href='https://t.me/mortimr'
-        onClick={() => {
-          captureOutboundLink('https://t.me/mortimr');
-        }}
       >
         <Telegram style={{ width: '25px', height: '25px' }} fill={'white'} />
       </a>
@@ -116,9 +102,6 @@ export const LeftMenu = () => {
     >
       <a
         href='https://linkedin.com/in/mortimr'
-        onClick={() => {
-          captureOutboundLink('https://linkedin.com/in/mortimr');
-        }}
       >
         <LinkedIn style={{ width: '25px', height: '25px' }} fill={'white'} />
       </a>
@@ -138,9 +121,6 @@ export const LeftMenu = () => {
     >
       <a
         href='https://github.com/mortimr'
-        onClick={() => {
-          captureOutboundLink('https://github.com/mortimr');
-        }}
       >
         <Github style={{ width: '25px', height: '25px' }} fill={'white'} />
       </a>
