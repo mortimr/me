@@ -73,7 +73,7 @@ export const computeSkills = (): SkillsContextState => {
             kubernetes: {
                 name: 'Kubernetes',
                 key: 'kubernetes',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Infrastructure & Cloud',
 
                 theme: '#ffffff',
@@ -85,7 +85,7 @@ export const computeSkills = (): SkillsContextState => {
             helm: {
                 name: 'Helm',
                 key: 'helm',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Infrastructure & Cloud',
 
                 theme: '#3130F0',
@@ -94,7 +94,7 @@ export const computeSkills = (): SkillsContextState => {
             awseks: {
                 name: 'AWS EKS',
                 key: 'awseks',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Infrastructure & Cloud',
 
                 light: true,
@@ -104,7 +104,7 @@ export const computeSkills = (): SkillsContextState => {
             awsec2: {
                 name: 'AWS EC2',
                 key: 'awsec2',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Infrastructure & Cloud',
 
                 light: true,
@@ -114,7 +114,7 @@ export const computeSkills = (): SkillsContextState => {
             awsroute53: {
                 name: 'AWS Route53',
                 key: 'awsroute53',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Infrastructure & Cloud',
 
                 light: true,
@@ -124,7 +124,7 @@ export const computeSkills = (): SkillsContextState => {
             awsecr: {
                 name: 'AWS ECR',
                 key: 'awsecr',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Infrastructure & Cloud',
 
                 light: true,
@@ -134,7 +134,7 @@ export const computeSkills = (): SkillsContextState => {
             awslambda: {
                 name: 'AWS Lambda',
                 key: 'awslambda',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Infrastructure & Cloud',
 
                 light: true,
@@ -144,7 +144,7 @@ export const computeSkills = (): SkillsContextState => {
             awsauroraserverless: {
                 name: 'AWS Aurora Serverless',
                 key: 'awsauroraserverless',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Infrastructure & Cloud',
 
                 light: true,
@@ -154,7 +154,7 @@ export const computeSkills = (): SkillsContextState => {
             pwa: {
                 name: 'PWA',
                 key: 'pwa',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 light: true,
@@ -164,7 +164,7 @@ export const computeSkills = (): SkillsContextState => {
             monorepo: {
                 name: 'Monorepo',
                 key: 'monorepo',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 light: true,
@@ -174,7 +174,7 @@ export const computeSkills = (): SkillsContextState => {
             nestjs: {
                 name: 'NestJS',
                 key: 'nestjs',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Framework & Libraries',
 
                 theme: '#831730',
@@ -183,7 +183,7 @@ export const computeSkills = (): SkillsContextState => {
             storybook: {
                 name: 'Storybook',
                 key: 'storybook',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Framework & Libraries',
 
                 theme: '#A33F62',
@@ -192,7 +192,7 @@ export const computeSkills = (): SkillsContextState => {
             blockchain: {
                 name: 'Blockchain',
                 key: 'blockchain',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 theme: '#857F87',
@@ -201,7 +201,7 @@ export const computeSkills = (): SkillsContextState => {
             ethereum: {
                 name: 'Ethereum',
                 key: 'ethereum',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'API & Services',
 
                 theme: '#4F527C',
@@ -210,7 +210,7 @@ export const computeSkills = (): SkillsContextState => {
             segment: {
                 name: 'Segment',
                 key: 'segment',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'API & Services',
 
                 light: true,
@@ -220,7 +220,7 @@ export const computeSkills = (): SkillsContextState => {
             stripe: {
                 name: 'Stripe',
                 key: 'stripe',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'API & Services',
 
                 light: true,
@@ -230,7 +230,7 @@ export const computeSkills = (): SkillsContextState => {
             projectmanagement: {
                 name: 'Project Management',
                 key: 'projectmanagement',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 theme: '#565650',
@@ -239,7 +239,7 @@ export const computeSkills = (): SkillsContextState => {
             technicallead: {
                 name: 'Technical Lead',
                 key: 'technicallead',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 light: true,
@@ -249,7 +249,7 @@ export const computeSkills = (): SkillsContextState => {
             entrepreneurship: {
                 name: 'Entrepreneurship',
                 key: 'entrepreneurship',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 light: true,
@@ -259,7 +259,7 @@ export const computeSkills = (): SkillsContextState => {
             docker: {
                 name: 'Docker',
                 key: 'docker',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Infrastructure & Cloud',
 
                 theme: '#3096ED',
@@ -268,7 +268,7 @@ export const computeSkills = (): SkillsContextState => {
             serverless: {
                 name: 'Serverless',
                 key: 'serverless',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Framework & Libraries',
 
                 theme: '#222222',
@@ -277,7 +277,7 @@ export const computeSkills = (): SkillsContextState => {
             opengl: {
                 name: 'OpenGL',
                 key: 'opengl',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Framework & Libraries',
 
                 light: true,
@@ -287,7 +287,7 @@ export const computeSkills = (): SkillsContextState => {
             opencl: {
                 name: 'OpenCL',
                 key: 'opencl',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Framework & Libraries',
 
                 light: true,
@@ -297,7 +297,7 @@ export const computeSkills = (): SkillsContextState => {
             cuda: {
                 name: 'CUDA',
                 key: 'cuda',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Framework & Libraries',
 
                 light: true,
@@ -307,7 +307,7 @@ export const computeSkills = (): SkillsContextState => {
             openmp: {
                 name: 'OpenMP',
                 key: 'openmp',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Framework & Libraries',
 
                 light: true,
@@ -317,7 +317,7 @@ export const computeSkills = (): SkillsContextState => {
             hooks: {
                 name: 'React Hooks',
                 key: 'hooks',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Framework & Libraries',
 
                 theme: '#0E0E0E',
@@ -326,7 +326,7 @@ export const computeSkills = (): SkillsContextState => {
             redux: {
                 name: 'Redux',
                 key: 'redux',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Framework & Libraries',
 
                 theme: '#A690C6',
@@ -335,7 +335,7 @@ export const computeSkills = (): SkillsContextState => {
             cicd: {
                 name: 'CI/CD',
                 key: 'cicd',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 theme: '#656565',
@@ -344,7 +344,7 @@ export const computeSkills = (): SkillsContextState => {
             multicoreprogramming: {
                 name: 'Multicore Programming',
                 key: 'multicoreprogramming',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 light: true,
@@ -354,7 +354,7 @@ export const computeSkills = (): SkillsContextState => {
             p2p: {
                 name: 'P2P',
                 key: 'p2p',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Systems',
 
                 theme: '#316CEE',
@@ -363,7 +363,7 @@ export const computeSkills = (): SkillsContextState => {
             networking: {
                 name: 'Networking',
                 key: 'networking',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Systems',
 
                 theme: '#373788',
@@ -372,7 +372,7 @@ export const computeSkills = (): SkillsContextState => {
             concurrency: {
                 name: 'Concurrency',
                 key: 'concurrency',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Systems',
 
                 theme: '#5B5B5B',
@@ -381,7 +381,7 @@ export const computeSkills = (): SkillsContextState => {
             smartcontracts: {
                 name: 'Smart Contracts',
                 key: 'smartcontracts',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 theme: '#7C674C',
@@ -390,7 +390,7 @@ export const computeSkills = (): SkillsContextState => {
             unittesting: {
                 name: 'Unit Testing',
                 key: 'unittesting',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 theme: '#2B3135',
@@ -399,7 +399,7 @@ export const computeSkills = (): SkillsContextState => {
             srs: {
                 name: 'SRS',
                 key: 'srs',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 theme: '#811B1F',
@@ -408,7 +408,7 @@ export const computeSkills = (): SkillsContextState => {
             sad: {
                 name: 'SAD',
                 key: 'sad',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 theme: '#668F20',
@@ -417,7 +417,7 @@ export const computeSkills = (): SkillsContextState => {
             integrationtesting: {
                 name: 'Integration Testing',
                 key: 'integrationtesting',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 theme: '#592314',
@@ -426,7 +426,7 @@ export const computeSkills = (): SkillsContextState => {
             functionaltesting: {
                 name: 'Functional Testing',
                 key: 'functionaltesting',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 theme: '#8D6938',
@@ -435,7 +435,7 @@ export const computeSkills = (): SkillsContextState => {
             featureflags: {
                 name: 'Feature Flags',
                 key: 'featureflags',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 light: true,
@@ -445,7 +445,7 @@ export const computeSkills = (): SkillsContextState => {
             solidity: {
                 name: 'Solidity',
                 key: 'solidity',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Programming Languages',
 
                 light: true,
@@ -455,7 +455,7 @@ export const computeSkills = (): SkillsContextState => {
             sql: {
                 name: 'SQL',
                 key: 'sql',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Programming Languages',
 
                 theme: '#639CD0',
@@ -464,7 +464,7 @@ export const computeSkills = (): SkillsContextState => {
             computerscience: {
                 name: 'Computer Science',
                 key: 'computerscience',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 theme: '#393939',
@@ -473,7 +473,7 @@ export const computeSkills = (): SkillsContextState => {
             softwareengineering: {
                 name: 'Software Engineering',
                 key: 'softwareengineering',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 light: true,
@@ -483,7 +483,7 @@ export const computeSkills = (): SkillsContextState => {
             pedagogy: {
                 name: 'Pedagogy',
                 key: 'pedagogy',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Principles',
 
                 theme: '#505050',
@@ -492,7 +492,7 @@ export const computeSkills = (): SkillsContextState => {
             cassandra: {
                 name: 'Cassandra',
                 key: 'cassandra',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Infrastructure & Cloud',
 
                 theme: '#ffffff',
@@ -502,7 +502,7 @@ export const computeSkills = (): SkillsContextState => {
             elasticsearch: {
                 name: 'Elasticsearch',
                 key: 'elasticsearch',
-                description: 'TODO',
+                description: 'Coming soon...',
                 category: 'Infrastructure & Cloud',
 
                 theme: '#A77E24',
