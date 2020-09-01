@@ -21,7 +21,7 @@ interface MobileChallengeModalProps {
     color: string;
 }
 
-const MobileChallengeModal = styled(motion.div)<MobileChallengeModalProps>`
+const MobileChallengeModal = styled(motion.div) <MobileChallengeModalProps>`
     height: 100%;
     width: 100%;
     overflow: scroll;
@@ -267,21 +267,6 @@ const ChallengeModalContent: React.FC = (): JSX.Element | null => {
             <DateText>{duration}</DateText>
             <Field>Description</Field>
             <DescriptionText>{lastChallenge.description}</DescriptionText>
-            <Field>Related Skills</Field>
-            <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'flex-start',
-                flexDirection: 'row',
-                flexWrap: 'wrap'
-            }}>
-                {
-                    lastChallenge.skills.map((skillName: string) => <StaticSkillCard
-                        key={skillName}
-                        skill={skillsContext.skills[skillName]}
-                    />)
-                }
-            </div>
             {
                 lastChallenge.link
                     ?
@@ -305,6 +290,35 @@ const ChallengeModalContent: React.FC = (): JSX.Element | null => {
 
                     :
                     null
+            }
+            {
+                lastChallenge.skills.length > 0
+
+                    ?
+                    (
+                        <>
+                        <Field>Related Skills</Field>
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'flex-start',
+                            flexDirection: 'row',
+                            flexWrap: 'wrap'
+                        }}>
+                            {
+                                lastChallenge.skills.map((skillName: string) => <StaticSkillCard
+                                    key={skillName}
+                                    skill={skillsContext.skills[skillName]}
+                                />)
+                            }
+                        </div>
+                        </>
+                )
+
+
+                :
+                null
+
             }
         </DescriptionContainer>
     </div>
@@ -373,24 +387,24 @@ export const ChallengeModalComponent: React.FC<ChallengeModalComponentProps> = (
                 animate={skillsContext.selectedChallenge !== null && props.inView ? 'visible' : 'hidden'}
             >
                 <MobileChallengeModal
-                variants={{
-                    hidden: {
-                        opacity: 0,
-                        transition: {
-                            duration: 1,
-                            delay: 2
+                    variants={{
+                        hidden: {
+                            opacity: 0,
+                            transition: {
+                                duration: 1,
+                                delay: 2
+                            }
+                        },
+                        visible: {
+                            opacity: 1,
+                            transition: {
+                                duration: 0,
+                                delay: 0
+                            }
                         }
-                    },
-                    visible: {
-                        opacity: 1,
-                        transition: {
-                            duration: 0,
-                            delay: 0
-                        }
-                    }
-                }}
-                initial={'hidden'}
-                animate={skillsContext.selectedChallenge !== null && props.inView ? 'visible' : 'hidden'}
+                    }}
+                    initial={'hidden'}
+                    animate={skillsContext.selectedChallenge !== null && props.inView ? 'visible' : 'hidden'}
                     ref={ref}
                     color={skillsContext.selectedChallenge?.theme || '#000000'}
                 >

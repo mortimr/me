@@ -7,7 +7,6 @@ export interface Skill {
     description: JSX.Element | string;
     category: string;
     link?: string;
-    level: number;
     image: string;
     theme: string;
     createdBy?: string;
