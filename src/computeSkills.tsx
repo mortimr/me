@@ -79,6 +79,7 @@ export const computeSkills = (): SkillsContextState => {
                 theme: '#ffffff',
                 image: 'kubernetes.png',
                 createdBy: 'Google',
+                light: true,
                 usedBy: ['Google', 'Shopify', 'Slack']
             },
             helm: {
@@ -96,6 +97,7 @@ export const computeSkills = (): SkillsContextState => {
                 description: 'TODO',
                 category: 'Infrastructure & Cloud',
 
+                light: true,
                 theme: '#F5C000',
                 image: 'awseks.png',
             },
@@ -105,6 +107,7 @@ export const computeSkills = (): SkillsContextState => {
                 description: 'TODO',
                 category: 'Infrastructure & Cloud',
 
+                light: true,
                 theme: '#F5C000',
                 image: 'awsec2.png',
             },
@@ -114,6 +117,7 @@ export const computeSkills = (): SkillsContextState => {
                 description: 'TODO',
                 category: 'Infrastructure & Cloud',
 
+                light: true,
                 theme: '#F5C000',
                 image: 'awsroute53.png',
             },
@@ -123,6 +127,7 @@ export const computeSkills = (): SkillsContextState => {
                 description: 'TODO',
                 category: 'Infrastructure & Cloud',
 
+                light: true,
                 theme: '#F68536',
                 image: 'awsecr.png',
             },
@@ -132,6 +137,7 @@ export const computeSkills = (): SkillsContextState => {
                 description: 'TODO',
                 category: 'Infrastructure & Cloud',
 
+                light: true,
                 theme: '#F5C000',
                 image: 'awslambda.png',
             },
@@ -141,6 +147,7 @@ export const computeSkills = (): SkillsContextState => {
                 description: 'TODO',
                 category: 'Infrastructure & Cloud',
 
+                light: true,
                 theme: '#F5C000',
                 image: 'awsauroraserverless.png',
             },
@@ -150,6 +157,7 @@ export const computeSkills = (): SkillsContextState => {
                 description: 'TODO',
                 category: 'Principles',
 
+                light: true,
                 theme: '#5BC2FD',
                 image: 'pwa.png',
             },
@@ -339,6 +347,7 @@ export const computeSkills = (): SkillsContextState => {
                 description: 'TODO',
                 category: 'Principles',
 
+                light: true,
                 theme: '#FCC000',
                 image: 'multicoreprogramming.png',
             },
@@ -429,6 +438,7 @@ export const computeSkills = (): SkillsContextState => {
                 description: 'TODO',
                 category: 'Principles',
 
+                light: true,
                 theme: '#E2E2E2',
                 image: 'featureflags.png',
             },
@@ -438,6 +448,7 @@ export const computeSkills = (): SkillsContextState => {
                 description: 'TODO',
                 category: 'Programming Languages',
 
+                light: true,
                 theme: '#E5E5E5',
                 image: 'solidity.png',
             },
@@ -465,6 +476,7 @@ export const computeSkills = (): SkillsContextState => {
                 description: 'TODO',
                 category: 'Principles',
 
+                light: true,
                 theme: '#A2B6C6',
                 image: 'softwareengineering.png',
             },
