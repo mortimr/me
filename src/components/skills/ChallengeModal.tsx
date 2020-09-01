@@ -292,7 +292,7 @@ const ChallengeModalContent: React.FC = (): JSX.Element | null => {
                     null
             }
             {
-                lastChallenge.skills.length > 0
+                lastChallenge.skills.length > 0 && !isDesktopOrLaptop
 
                     ?
                     (

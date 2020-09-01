@@ -20,7 +20,7 @@ interface MobileSkillModalProps {
     color: string;
 }
 
-const MobileSkillModal = styled(motion.div)<MobileSkillModalProps>`
+const MobileSkillModal = styled(motion.div) <MobileSkillModalProps>`
     backdrop-filter: blur(8px);
     height: 100%;
     width: 100%;
@@ -280,24 +280,34 @@ const SkillModalContent: React.FC = (): JSX.Element | null => {
                     :
                     null
             }
-            <Field>Related Challenges</Field>
-            <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                flexDirection: 'row',
-                flexWrap: 'wrap',
-                marginRight: 10
-            }}>
-                {
-                    challenges.map((challenge: Challenge) => (
-                        <StaticChallengeCard
-                            key={challenge.name}
-                            challenge={challenge}
-                        />
-                    ))
+            {
+                isDesktopOrLaptop
 
-                }
-            </div>
+                    ?
+                    null
+
+                    :
+                    <>
+                        <Field>Related Challenges</Field>
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            flexDirection: 'row',
+                            flexWrap: 'wrap',
+                            marginRight: 10
+                        }}>
+                            {
+                                challenges.map((challenge: Challenge) => (
+                                    <StaticChallengeCard
+                                        key={challenge.name}
+                                        challenge={challenge}
+                                    />
+                                ))
+
+                            }
+                        </div>
+                    </>
+            }
         </DescriptionContainer>
     </div>
 
