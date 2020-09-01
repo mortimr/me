@@ -112,7 +112,7 @@ const ChallengeCard = (props: ChallengeCardProps) => {
                     opacity: 1, scale: 1
                 },
                 softhidden: {
-                    opacity: 0.2, scale: 0.8
+                    opacity: 0.1, scale: 0.9
                 }
             }}
             transition={{ duration: 0.4, delay }}

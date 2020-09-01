@@ -56,6 +56,7 @@ const computeAnimate = (skill: Skill, inView: boolean, selectedChallenge: Challe
 
 const SkillCard: React.FC<SkillCardProps> = (props: SkillCardProps) => {
 
+    const skillsContext = useContext(SkillsContext);
     const [delay] = useState(Math.random() / 2);
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-device-width: 1224px)'
@@ -86,13 +87,13 @@ const SkillCard: React.FC<SkillCardProps> = (props: SkillCardProps) => {
             ref={ref}
             variants={{
                 hidden: {
-                    opacity: 0, scale: 0.3
+                    opacity: 0, scale: 0
                 },
                 visible: {
                     opacity: 1, scale: 1
                 },
                 softhidden: {
-                    opacity: 0.2, scale: 0.8
+                    opacity: 0.1, scale: 0.9
                 }
             }}
             transition={{ duration: 0.4, delay }}
