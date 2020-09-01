@@ -255,7 +255,7 @@ const SkillModalContent: React.FC = (): JSX.Element | null => {
         <DescriptionContainer>
             <SkillTitle>{lastSkill.name}</SkillTitle>
             <Field>Description</Field>
-            <DescriptionText>{lastSkill.description}</DescriptionText>
+            {lastSkill.description}
             {
                 lastSkill.createdBy
 
