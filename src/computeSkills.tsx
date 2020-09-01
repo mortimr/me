@@ -1125,16 +1125,16 @@ export const computeSkills = (): SkillsContextState => {
                    <br />
                     <br />
 
-                    Our role is simple, they have to work in the school
-                    and <Bold>wear a visible red shirt</Bold> so other students can find them easily and know they are here to help.
-                    They also have to follow the school schedule for planned <Bold>Follow-Ups</Bold>, <Bold>Kick-Offs</Bold> and <Bold>Deliveries</Bold> that
-                    they would have to animate.
+                    I enrolled for one year only, and stopped because I wanted to focus on starting my own company. But
+                    it was a great human experience.
 
                    <br />
                     <br />
 
-                    I enrolled for one year only, and stopped because I wanted to focus on starting my own company. But
-                    it was a great human experience.
+                    Our role was simple, we had to work in the school
+                    and <Bold>wear a visible red shirt</Bold> so other students can find us easily and know we are here to help.
+                    We also had to follow the school schedule for planned <Bold>Follow-Ups</Bold>, <Bold>Kick-Offs</Bold> and <Bold>Deliveries</Bold> that
+                    we needed to manage.
 
                 </Text>,
                 start: new Date(Date.parse('01 Sep 2016')),
