@@ -103,12 +103,12 @@ export const MobileTopMenu = () => {
             }}
             initial={{ y: - 50, opacity: 0 }}
             animate={{ y: 0, opacity: 0.7 }}
-            onClick={() => scroller.scrollTo('skills', {
+            onClick={() => scroller.scrollTo('challenges', {
                 duration: 500,
                 delay: 0,
                 smooth: 'easeInOutQuart'
             })}
-        >SKILLS</Section>
+        >CHALLENGES</Section>
         <Section
             transition={{
                 y: {
@@ -121,11 +121,11 @@ export const MobileTopMenu = () => {
             }}
             initial={{ y: - 50, opacity: 0 }}
             animate={{ y: 0, opacity: 0.7 }}
-            onClick={() => scroller.scrollTo('challenges', {
+            onClick={() => scroller.scrollTo('skills', {
                 duration: 500,
                 delay: 0,
                 smooth: 'easeInOutQuart'
             })}
-        >CHALLENGES</Section>
+        >SKILLS</Section>
     </RightMenuContainer>
 };

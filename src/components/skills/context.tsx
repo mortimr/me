@@ -12,6 +12,7 @@ export interface Skill {
     theme: string;
     createdBy?: string;
     usedBy?: string[];
+    light?: boolean;
 }
 
 export interface Challenge {
@@ -24,6 +25,7 @@ export interface Challenge {
     skills: string[];
     image: string;
     theme: string;
+    light?: boolean;
 }
 
 export interface SkillsContextState {

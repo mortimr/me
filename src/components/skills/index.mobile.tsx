@@ -14,17 +14,17 @@ export const MobileSkills = () => {
         }}>
 
         <Element
-            name="skills"
-            style={{ padding: 12 }}
-        >
-            <SkillsExplorer />
-        </Element>
-
-        <Element
             name="challenges"
             style={{ padding: 12 }}
         >
             <ChallengesExplorer />
+        </Element>
+
+        <Element
+            name="skills"
+            style={{ padding: 12 }}
+        >
+            <SkillsExplorer />
         </Element>
     </div>
 }

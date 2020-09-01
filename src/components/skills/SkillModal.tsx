@@ -242,7 +242,7 @@ const SkillModalContent: React.FC = (): JSX.Element | null => {
                     width: 15,
                     height: 15,
                 }}
-                fill={'white'}
+                fill={lastSkill.light ? 'black' : 'white'}
             />
         </div>
         <ImageBannerContainer

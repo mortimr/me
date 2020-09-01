@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react"
+import React, { useState, useContext, useEffect, useMemo } from "react"
 import { styled } from "../../styled"
 import { motion } from 'framer-motion';
 import { InView, useInView } from 'react-intersection-observer';
@@ -183,12 +183,35 @@ interface ChallengesSectionDisplayProps {
     selectChallenge: (challenge: (Challenge | null)) => void;
 }
 
+const getDisplayedAmount = (challenges: Challenge[], skill: Skill | null): number => {
+    if (!skill) {
+        return challenges.length;
+    }
+
+    return challenges.filter((challenge: Challenge): boolean => challenge.skills.indexOf(skill.key) !== -1).length;
+}
+
 const ChallengesSectionDisplay: React.FC<ChallengesSectionDisplayProps> = (props: ChallengesSectionDisplayProps): JSX.Element => {
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-device-width: 1224px)'
     })
+    const amount = useMemo(() => {
+        return getDisplayedAmount(props.challenges, props.selectedSkill);
+    }, [props.challenges, props.selectedSkill]);
 
-    return <div
+    return <motion.div
+        variants={{
+            hidden: {
+                scale: 0,
+                height: 0
+            },
+            visible: {
+                scale: 1,
+                height: 'auto'
+            }
+        }}
+        initial={'visible'}
+        animate={amount === 0 && isDesktopOrLaptop ? 'hidden' : 'visible'}
         style={{
             textAlign: isDesktopOrLaptop ? 'end' : 'start'
         }}
@@ -215,7 +238,7 @@ const ChallengesSectionDisplay: React.FC<ChallengesSectionDisplayProps> = (props
                 ))
             }
         </div>
-    </div>;
+    </motion.div>;
 }
 
 const ChallengesTitle = styled.h1`

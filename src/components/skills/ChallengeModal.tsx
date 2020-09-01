@@ -69,11 +69,11 @@ const StaticSkillCardContainer = styled.div`
     display: 'flex';
     justify-content: 'center';
     align-items: 'center';
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 4px;
     cursor: pointer;
 
     & span {
@@ -251,7 +251,7 @@ const ChallengeModalContent: React.FC = (): JSX.Element | null => {
                     width: 15,
                     height: 15,
                 }}
-                fill={'white'}
+                fill={lastChallenge.light ? 'black' : 'white'}
             />
         </div>
         <ImageBannerContainer
@@ -294,6 +294,7 @@ const ChallengeModalContent: React.FC = (): JSX.Element | null => {
                         >
                             <h4
                                 style={{
+                                    color: lastChallenge.light ? 'black' : 'white',
                                     textTransform: 'uppercase',
                                     fontWeight: 400
                                 }}

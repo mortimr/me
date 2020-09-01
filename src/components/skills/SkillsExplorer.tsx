@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react"
+import React, { useState, useContext, useEffect, useMemo } from "react"
 import { styled } from "../../styled"
 import { motion } from 'framer-motion';
 import { InView, useInView } from 'react-intersection-observer';
@@ -19,16 +19,16 @@ const SkillSectionTitle = styled.h3`
 
 const SkillCardContainer = styled(motion.div)`
     text-align: center;
-    border-radius: 12px;
+    border-radius: 8px;
     background-color: ${props => props.theme.componentColor};
     display: 'flex';
     justify-content: 'center';
     align-items: 'center';
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 4px;
     cursor: pointer;
 
     & span {
@@ -135,9 +135,39 @@ interface SkillsCategoryDisplayProps {
     selectSkill: (skill: Skill | null) => void;
 }
 
+const getDisplayedAmount = (skills: Skill[], challenge: Challenge | null): number => {
+    if (!challenge) {
+        return skills.length;
+    }
+
+    return skills.filter((skill: Skill): boolean => challenge.skills.indexOf(skill.key) !== -1).length;
+}
+
 const SkillsCategoryDisplay: React.FC<SkillsCategoryDisplayProps> = (props: SkillsCategoryDisplayProps): JSX.Element => {
 
-    return <div>
+    const amount = useMemo(() => {
+        return getDisplayedAmount(props.category.skills, props.selectedChallenge);
+    }, [props.selectedChallenge, props.category.skills])
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-device-width: 1224px)'
+    })
+
+    console.log(props.category.name, amount)
+
+    return <motion.div
+        variants={{
+            hidden: {
+                scale: 0,
+                height: 0
+            },
+            visible: {
+                scale: 1,
+                height: 'auto'
+            }
+        }}
+        initial={'visible'}
+        animate={amount === 0 && isDesktopOrLaptop ? 'hidden' : 'visible'}
+    >
         <SkillSectionTitle>{props.category.name}</SkillSectionTitle>
         <div style={{
             display: 'flex',
@@ -157,7 +187,7 @@ const SkillsCategoryDisplay: React.FC<SkillsCategoryDisplayProps> = (props: Skil
                 ))
             }
         </div>
-    </div>
+    </motion.div>
 }
 
 const SkillsTitle = styled.h1`
@@ -219,24 +249,13 @@ export const SkillsExplorer: React.FC<SkillsExplorerProps> = (props: SkillsExplo
                 <SkillsDescription>Click on a skill to see details and associated challenges.</SkillsDescription>
                 <div ref={ref}>
                     {
-                        categories.map((category: Category, idx: number) => (
-                            idx === 0
-
-                                ?
-                                <SkillsCategoryDisplay
-                                    selectSkill={skillsContext.selectSkill}
-                                    key={category.name}
-                                    selectedChallenge={skillsContext.selectedChallenge}
-                                    category={category}
-                                />
-
-                                :
-                                <SkillsCategoryDisplay
-                                    selectSkill={skillsContext.selectSkill}
-                                    key={category.name}
-                                    selectedChallenge={skillsContext.selectedChallenge}
-                                    category={category}
-                                />
+                        categories.map((category: Category) => (
+                            <SkillsCategoryDisplay
+                                selectSkill={skillsContext.selectSkill}
+                                key={category.name}
+                                selectedChallenge={skillsContext.selectedChallenge}
+                                category={category}
+                            />
                         ))
                     }
                 </div>

@@ -73,24 +73,413 @@ export const computeSkills = (): SkillsContextState => {
                 createdBy: 'Ex-Googlers, Ex-Microsofters & Ex-Facebookers',
                 usedBy: ['Cisco', 'T-Mobile', 'Microsoft', 'RedHat']
             },
-            sql: {
-                name: 'SQL',
-                key: 'sql',
+            kubernetes: {
+                name: 'Kubernetes',
+                key: 'kubernetes',
                 description: 'TODO',
-                category: 'TODO',
+                category: 'Infrastructure & Cloud',
                 level: 0,
                 theme: '#133863',
-                image: 'sql.png',
+                image: 'nxdev.png',
+                createdBy: 'Google',
+                usedBy: ['Google', 'Shopify', 'Slack']
+            },
+            helm: {
+                name: 'Helm',
+                key: 'helm',
+                description: 'TODO',
+                category: 'Infrastructure & Cloud',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            awseks: {
+                name: 'AWS EKS',
+                key: 'awseks',
+                description: 'TODO',
+                category: 'Infrastructure & Cloud',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            awsec2: {
+                name: 'AWS EC2',
+                key: 'awsec2',
+                description: 'TODO',
+                category: 'Infrastructure & Cloud',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            awsroute53: {
+                name: 'AWS Route53',
+                key: 'awsroute53',
+                description: 'TODO',
+                category: 'Infrastructure & Cloud',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            awsecr: {
+                name: 'AWS ECR',
+                key: 'awsecr',
+                description: 'TODO',
+                category: 'Infrastructure & Cloud',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            awslambda: {
+                name: 'AWS Lambda',
+                key: 'awslambda',
+                description: 'TODO',
+                category: 'Infrastructure & Cloud',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            awsauroraserverless: {
+                name: 'AWS Aurora Serverless',
+                key: 'awsauroraserverless',
+                description: 'TODO',
+                category: 'Infrastructure & Cloud',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            pwa: {
+                name: 'PWA',
+                key: 'pwa',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            monorepo: {
+                name: 'Monorepo',
+                key: 'monorepo',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            nestjs: {
+                name: 'NestJS',
+                key: 'nestjs',
+                description: 'TODO',
+                category: 'Framework & Libraries',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            storybook: {
+                name: 'Storybook',
+                key: 'storybook',
+                description: 'TODO',
+                category: 'Framework & Libraries',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            blockchain: {
+                name: 'Blockchain',
+                key: 'blockchain',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            ethereum: {
+                name: 'Ethereum',
+                key: 'ethereum',
+                description: 'TODO',
+                category: 'API & Services',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            segment: {
+                name: 'Segment',
+                key: 'segment',
+                description: 'TODO',
+                category: 'API & Services',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            stripe: {
+                name: 'Stripe',
+                key: 'stripe',
+                description: 'TODO',
+                category: 'API & Services',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            projectmanagement: {
+                name: 'Project Management',
+                key: 'projectmanagement',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            technicallead: {
+                name: 'Technical Lead',
+                key: 'technicallead',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            entrepreneurship: {
+                name: 'Entrepreneurship',
+                key: 'entrepreneurship',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            docker: {
+                name: 'Docker',
+                key: 'docker',
+                description: 'TODO',
+                category: 'Infrastructure & Cloud',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            serverless: {
+                name: 'Serverless',
+                key: 'serverless',
+                description: 'TODO',
+                category: 'Framework & Libraries',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            opengl: {
+                name: 'OpenGL',
+                key: 'opengl',
+                description: 'TODO',
+                category: 'Framework & Libraries',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            opencl: {
+                name: 'OpenCL',
+                key: 'opencl',
+                description: 'TODO',
+                category: 'Framework & Libraries',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            cuda: {
+                name: 'CUDA',
+                key: 'cuda',
+                description: 'TODO',
+                category: 'Framework & Libraries',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            openmp: {
+                name: 'OpenMP',
+                key: 'openmp',
+                description: 'TODO',
+                category: 'Framework & Libraries',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            redux: {
+                name: 'Redux',
+                key: 'redux',
+                description: 'TODO',
+                category: 'Framework & Libraries',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            cicd: {
+                name: 'CI/CD',
+                key: 'cicd',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            multicoreprogramming: {
+                name: 'Multicore Programming',
+                key: 'multicoreprogramming',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            p2p: {
+                name: 'P2P',
+                key: 'p2p',
+                description: 'TODO',
+                category: 'Systems',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
             },
             networking: {
                 name: 'Networking',
                 key: 'networking',
                 description: 'TODO',
-                category: 'TODO',
+                category: 'Systems',
                 level: 0,
                 theme: '#133863',
-                image: 'networking.png',
-            }
+                image: 'nxdev.png',
+            },
+            concurrency: {
+                name: 'Concurrency',
+                key: 'concurrency',
+                description: 'TODO',
+                category: 'Systems',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            smartcontracts: {
+                name: 'Smart Contracts',
+                key: 'smartcontracts',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            unittesting: {
+                name: 'Unit Testing',
+                key: 'unittesting',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            srs: {
+                name: 'SRS',
+                key: 'srs',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            sad: {
+                name: 'SAD',
+                key: 'sad',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            integrationtesting: {
+                name: 'Integration Testing',
+                key: 'integrationtesting',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            functionaltesting: {
+                name: 'Functional Testing',
+                key: 'functionaltesting',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            featureflags: {
+                name: 'Feature Flags',
+                key: 'featureflags',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            solidity: {
+                name: 'Solidity',
+                key: 'solidity',
+                description: 'TODO',
+                category: 'Programming Languages',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            sql: {
+                name: 'SQL',
+                key: 'sql',
+                description: 'TODO',
+                category: 'Programming Languages',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            computerscience: {
+                name: 'Computer Science',
+                key: 'computerscience',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            softwareengineering: {
+                name: 'Software Engineering',
+                key: 'softwareengineering',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            pedagogy: {
+                name: 'Pedagogy',
+                key: 'pedagogy',
+                description: 'TODO',
+                category: 'Principles',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            cassandra: {
+                name: 'Cassandra',
+                key: 'cassandra',
+                description: 'TODO',
+                category: 'Infrastructure & Cloud',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
+            elasticsearch: {
+                name: 'Elasticsearch',
+                key: 'elasticsearch',
+                description: 'TODO',
+                category: 'Infrastructure & Cloud',
+                level: 0,
+                theme: '#133863',
+                image: 'nxdev.png',
+            },
         },
         challenges: [
             {
@@ -112,10 +501,42 @@ export const computeSkills = (): SkillsContextState => {
                 </Text>,
                 start: new Date(Date.parse('01 May 2018')),
                 link: 'https://app.ticket721.com',
-                theme: '#0D0D0D',
+                theme: '#000000',
                 skills: [
                     'typescript',
-                    'react'
+                    'react',
+                    'nestjs',
+                    'storybook',
+                    'solidity',
+                    'sql',
+
+                    'stripe',
+                    'ethereum',
+                    'segment',
+
+                    'pwa',
+                    'monorepo',
+                    'blockchain',
+                    'cicd',
+                    'unittesting',
+                    'integrationtesting',
+                    'functionaltesting',
+                    'featureflags',
+                    'smartcontracts',
+
+                    'kubernetes',
+                    'docker',
+                    'helm',
+                    'awseks',
+                    'awsec2',
+                    'awsroute53',
+                    'awsecr',
+                    'cassandra',
+                    'elasticsearch',
+
+                    'projectmanagement',
+                    'technicallead',
+                    'entrepreneurship'
                 ]
             },
             {
@@ -134,6 +555,9 @@ export const computeSkills = (): SkillsContextState => {
                 theme: '#222222',
                 link: 'https://www.serverless.com/',
                 skills: [
+                    'serverless',
+                    'awsauroraserverless',
+                    'awslambda'
                 ]
             },
             {
@@ -157,7 +581,10 @@ export const computeSkills = (): SkillsContextState => {
                 skills: [
                     'typescript',
                     'react',
-                    'nxdev'
+                    'nxdev',
+                    'nestjs',
+                    'cicd',
+                    'monorepo'
                 ]
             },
 
@@ -190,7 +617,12 @@ export const computeSkills = (): SkillsContextState => {
                 end: new Date(Date.parse('15 Mar 2020')),
                 link: 'https://github.com/ethereum/EIPs/pull/2280',
                 theme: '#4F527C',
-                skills: []
+                skills: [
+                    'ethereum',
+                    'blockchain',
+                    'solidity',
+                    'smartcontracts'
+                ]
             },
             {
                 name: 'oclbhgs',
@@ -221,7 +653,12 @@ export const computeSkills = (): SkillsContextState => {
                 end: new Date(Date.parse('31 Dec 2018')),
                 link: 'https://dev.to/mortimr/rules-are-meant-to-be-broken-52f0',
                 theme: '#2E5FA3',
-                skills: []
+                skills: [
+                    'multicoreprogramming',
+                    'opengl',
+                    'opencl',
+                    'c'
+                ]
             },
             {
                 name: 'ethvtx',
@@ -244,7 +681,15 @@ export const computeSkills = (): SkillsContextState => {
                 end: new Date(Date.parse('31 Aug 2018')),
                 link: 'https://github.com/ticket721/ethvtx',
                 theme: '#363636',
-                skills: []
+                skills: [
+                    'typescript',
+                    'react',
+                    'redux',
+                    'ethereum',
+                    'blockchain',
+                    'solidity',
+                    'smartcontracts'
+                ]
             },
 
             // Concordia
@@ -286,7 +731,16 @@ export const computeSkills = (): SkillsContextState => {
                 end: new Date(Date.parse('31 Jun 2019')),
                 link: 'https://www.concordia.ca/',
                 theme: '#92112C',
-                skills: []
+                skills: [
+                    'computerscience',
+                    'softwareengineering',
+                    'concurrency',
+                    'networking',
+                    'unittesting',
+                    'integrationtesting',
+                    'functionaltesting',
+                    'featureflags'
+                ]
             },
             {
                 name: 'Concordia Fall 2018',
@@ -327,7 +781,22 @@ export const computeSkills = (): SkillsContextState => {
                 end: new Date(Date.parse('31 Dec 2018')),
                 link: 'https://www.concordia.ca/',
                 theme: '#92112C',
-                skills: []
+                skills: [
+                    'computerscience',
+                    'softwareengineering',
+                    'multicoreprogramming',
+                    'concurrency',
+                    'opencl',
+                    'opengl',
+                    'cuda',
+                    'openmp',
+                    'c',
+                    'cpp',
+                    'srs',
+                    'sad',
+                    'sql',
+                    'typescript'
+                ]
             },
 
             // Hackathons
@@ -361,7 +830,15 @@ export const computeSkills = (): SkillsContextState => {
                 end: new Date(Date.parse('20 Nov 2018')),
                 link: 'https://www.facebook.com/events/d41d8cd9/facebook-global-hackathon-finals-2018-prototype-forum-live/319810475279801/',
                 theme: '#2461B1',
-                skills: []
+                skills: [
+                    'typescript',
+                    'blockchain',
+                    'ethereum',
+                    'smartcontracts',
+                    'solidity',
+                    'networking',
+                    'p2p'
+                ]
             },
             {
                 name: 'Facebook FR Hackathon',
@@ -391,7 +868,13 @@ export const computeSkills = (): SkillsContextState => {
                 end: new Date(Date.parse('08 Apr 2018')),
                 link: 'https://www.epitech.eu/fr/actualites-evenements/facebook-global-hackathon-finals-epitech-polytechnique-blockchain-ethereum-innovation/',
                 theme: '#395B9B',
-                skills: []
+                skills: [
+                    'typescript',
+                    'blockchain',
+                    'ethereum',
+                    'solidity',
+                    'smartcontracts'
+                ]
             },
 
             // Internships
@@ -408,7 +891,8 @@ export const computeSkills = (): SkillsContextState => {
                 end: new Date(Date.parse('31 Dec 2016')),
                 link: 'https://corp.greenbureau.com/',
                 theme: '#5F70FE',
-                skills: []
+                skills: [
+                ]
             },
             {
                 name: 'Advanced Schema',
@@ -428,7 +912,14 @@ export const computeSkills = (): SkillsContextState => {
                 end: new Date(Date.parse('31 Aug 2018')),
                 link: 'https://www.advanced-schema.com/home',
                 theme: '#3A3A3A',
-                skills: []
+                skills: [
+                    'blockchain',
+                    'smartcontracts',
+                    'projectmanagement',
+                    'unittesting',
+                    'integrationtesting',
+                    'docker'
+                ]
             },
 
             // EPITECH
@@ -462,6 +953,7 @@ export const computeSkills = (): SkillsContextState => {
                 link: 'https://epitech.eu',
                 theme: '#000000',
                 skills: [
+                    'computerscience',
                     'c',
                     'unix',
                     'sql'
@@ -483,10 +975,13 @@ export const computeSkills = (): SkillsContextState => {
                 end: new Date(Date.parse('02 Aug 2017')),
                 link: 'https://epitech.eu',
                 skills: [
+                    'computerscience',
+                    'softwareengineering',
                     'c',
                     'cpp',
                     'unix',
-                    'sql'
+                    'sql',
+                    'projectmanagement'
                 ],
                 theme: '#000000'
             },
@@ -503,11 +998,13 @@ export const computeSkills = (): SkillsContextState => {
                 end: new Date(Date.parse('31 Aug 2018')),
                 link: 'https://epitech.eu',
                 skills: [
+                    'computerscience',
+                    'softwareengineering',
                     'c',
                     'cpp',
                     'unix',
                     'sql',
-                    'networking'
+                    'projectmanagement'
                 ],
                 theme: '#000000'
             },
@@ -524,6 +1021,9 @@ export const computeSkills = (): SkillsContextState => {
                 end: new Date(Date.parse('27 Jul 2019')),
                 link: 'https://epitech.eu',
                 skills: [
+                    'computerscience',
+                    'softwareengineering',
+                    'projectmanagement'
                 ],
                 theme: '#000000'
             },
@@ -540,6 +1040,9 @@ export const computeSkills = (): SkillsContextState => {
                 end: new Date(Date.parse('29 Sep 2020')),
                 link: 'https://epitech.eu',
                 skills: [
+                    'computerscience',
+                    'softwareengineering',
+                    'projectmanagement'
                 ],
                 theme: '#000000'
             },
@@ -550,7 +1053,7 @@ export const computeSkills = (): SkillsContextState => {
                 description: <Text>
                     The EIP is a <Bold>2.5 year</Bold> project started in 3rd year. With 8 other Epitech students, we decided to create
                     a smart schedule planner, using prediction algorithms and AI to build the best possible week schedule depending
-                    on what you're used to do. We called this project <Bold>Perfect Week</Bold>. And just like every school project, we 
+                    on what you're used to do. We called this project <Bold>Perfect Week</Bold>. And just like every school project, we
                     forgot about it the day after the final delivery.
 
                     <br />
@@ -570,8 +1073,84 @@ export const computeSkills = (): SkillsContextState => {
                 end: new Date(Date.parse('20 Jan 2020')),
                 link: 'https://epitech.eu',
                 skills: [
+                    'typescript',
+                    'cicd',
+                    'kubernetes',
+                    'projectmanagement',
+                    'docker',
+                    'sql',
                 ],
                 theme: '#000000',
+            },
+            {
+                name: 'Teaching Assistant',
+                image: 'epitech_astek.png',
+                subtitle: 'Helping and grading students on C projects',
+                description: <Text>
+
+                    They are called <Bold>Asteks</Bold> ("Assistant Technique" in French), and they are the students selected to
+                    help other students on C projects. You can become an Astek on your second year. After a technical
+                    interview, only a few students are selected.
+
+                   <br />
+                    <br />
+
+                    Our role is simple, they have to work in the school
+                    and <Bold>wear a visible red shirt</Bold> so other students can find them easily and know they are here to help.
+                    They also have to follow the school schedule for planned <Bold>Follow-Ups</Bold>, <Bold>Kick-Offs</Bold> and <Bold>Deliveries</Bold> that
+                    they would have to animate.
+
+                   <br />
+                    <br />
+
+                    I enrolled for one year only, and stopped because I wanted to focus on starting my own company. But
+                    it was a great human experience.
+
+                </Text>,
+                start: new Date(Date.parse('01 Sep 2016')),
+                end: new Date(Date.parse('02 Aug 2017')),
+                link: 'https://epitech.eu',
+                skills: [
+                    'c',
+                    'pedagogy'
+                ],
+                theme: '#A61B27',
+            },
+            {
+                name: 'Head of Blockchain Dpt',
+                image: 'poc.jpg',
+                subtitle: '@ PoC, a student association',
+                description: <Text>
+
+                    PoC is a student R&D center. In the hearth of Epitech, students had the opportunity
+                    to work on innovative projects and still win credits for the main Epitech curriculum.
+
+                    <br />
+                    <br />
+
+                    As I worked a lot on Blockchain topics, I was given the lead on the Blockchain Department when PoC was created.
+                    PoC was composed of 5 departments: <Bold>AI</Bold>, <Bold>Security</Bold>, <Bold>Health</Bold>, <Bold>Hardware</Bold> and <Bold>Blockchain</Bold>.
+                    My department wasn't the most famous one as the BLockchain topic was quite new compared to what could be done in other departments.
+
+                    <br />
+                    <br />
+
+                    Unfortunately, when I left for Canada on my 4th year, the Blockchain department closed as no one was able to keep the projects alive.
+
+
+                </Text>,
+                start: new Date(Date.parse('01 Sep 2017')),
+                end: new Date(Date.parse('31 Aug 2018')),
+                link: 'https://epitech.eu',
+                skills: [
+                    'blockchain',
+                    'ethereum',
+                    'pedagogy',
+                    'solidity',
+                    'projectmanagement'
+                ],
+                light: true,
+                theme: '#FFFFFF',
             }
         ],
         selectChallenge: () => { },
