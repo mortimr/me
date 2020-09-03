@@ -8,6 +8,7 @@ export interface Skill {
     category: string;
     link?: string;
     image: string;
+    level: number;
     theme: string;
     createdBy?: string;
     usedBy?: string[];

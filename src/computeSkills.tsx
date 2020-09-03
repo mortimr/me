@@ -17,16 +17,78 @@ export const computeSkills = (): SkillsContextState => {
             typescript: {
                 name: 'Typescript',
                 key: 'typescript',
-                description: 'JS with types',
+                level: 4,
+                description: <Text>
+                    TypeScript is an open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions.
+
+                    <br />
+                    <br />
+
+                    Types provide a way to describe the shape of an object, providing better documentation, and allowing TypeScript to validate that your code is working correctly.
+
+                    <br />
+                    <br />
+
+                    Writing types can be optional in TypeScript, because type inference allows you to get a lot of power without writing additional code.
+                </Text>,
                 category: 'Programming Languages',
                 theme: '#277ACC',
                 image: 'typescript.png',
                 createdBy: 'Microsoft',
             },
+            javascript: {
+                name: 'Javascript',
+                key: 'javascript',
+                level: 4,
+                description: <Text>
+                    JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.
+
+                    <br />
+                    <br />
+
+                    While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js,
+                    Apache CouchDB and Adobe Acrobat.
+
+                    <br />
+                    <br />
+
+                    JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative,
+                    and declarative (e.g. functional programming) styles. Read more about JavaScript.
+                </Text>,
+                category: 'Programming Languages',
+                theme: '#F8E321',
+                image: 'javascript.png',
+                createdBy: 'Mozilla'
+            },
+            nodejs: {
+                name: 'Node.js',
+                key: 'nodejs',
+                level: 4,
+                description: <Text>
+                    Node.js is an open-source, cross-platform, JavaScript runtime environment (Framework) that executes JavaScript code 
+                    outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side 
+                    scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. 
+                    <br/>
+                    <br/>
+                    Consequently, Node.js represents a "JavaScript everywhere" paradigm, unifying web-application development around a single 
+                    programming language, rather than different languages for server- and client-side scripts.
+                </Text>,
+                createdBy: 'OpenJS Foundation',
+                category: 'Framework & Libraries',
+                theme: '#4E6E25',
+                image: 'nodejs.png',
+            },
             c: {
                 name: 'C',
                 key: 'c',
-                description: 'Just below C++, just above ASM',
+                level: 3,
+                description: <Text>
+                    C is a general-purpose, procedural computer programming language supporting structured programming, lexical 
+                    variable scope, and recursion, with a static type system. By design, C provides constructs that map efficiently 
+                    to typical machine instructions. It has found lasting use in applications previously coded in assembly language. 
+                    Such applications include operating systems and various application software for computer architectures that range 
+                    from supercomputers to PLCs and embedded systems.
+                </Text>,
                 category: 'Programming Languages',
                 theme: '#333E90',
                 image: 'c.png'
@@ -34,7 +96,14 @@ export const computeSkills = (): SkillsContextState => {
             cpp: {
                 name: 'C++',
                 key: 'cpp',
-                description: 'THE object oriented programming language',
+                level: 3,
+                description: <Text>
+                    C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, 
+                    or "C with Classes". The language has expanded significantly over time, and modern C++ now has object-oriented, generic, 
+                    and functional features in addition to facilities for low-level memory manipulation. It is almost always implemented as a 
+                    compiled language, and many vendors provide C++ compilers, including the Free Software Foundation, LLVM, Microsoft, Intel, Oracle, 
+                    and IBM, so it is available on many platforms.[9]
+                </Text>,
                 category: 'Programming Languages',
                 theme: '#1E6AA6',
                 image: 'cpp.png'
@@ -42,7 +111,13 @@ export const computeSkills = (): SkillsContextState => {
             react: {
                 name: 'React',
                 key: 'react',
-                description: 'Javascript library for building interfaces',
+                level: 4,
+                description: <Text>
+                    React makes it painless to create interactive UIs. Design simple views for each state in your application, 
+                    and React will efficiently update and render just the right components when your data changes.
+
+                    Declarative views make your code more predictable and easier to debug.
+                </Text>,
                 category: 'Framework & Libraries',
 
                 theme: '#367586',
@@ -53,7 +128,10 @@ export const computeSkills = (): SkillsContextState => {
             unix: {
                 name: 'UNIX',
                 key: 'unix',
-                description: 'Multitasking, multiuser computer operating systems',
+                level: 3,
+                description: <Text>
+                    Unix is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix, development starting in the 1970s.
+                </Text>,
                 category: 'Systems',
 
                 theme: '#000000',
@@ -62,7 +140,11 @@ export const computeSkills = (): SkillsContextState => {
             nxdev: {
                 name: 'Nx.dev',
                 key: 'nxdev',
-                description: 'Set of extensible dev tools for monorepos, which helps you develop like Google, Facebook, and Microsoft',
+                level: 2,
+                description: <Text>
+                    Nx is a set of extensible dev tools for monorepos, which helps you develop like Google, Facebook, and Microsoft.
+                    It has first-class support for many frontend and backend technologies, so its documentation comes in multiple flavours.
+                </Text>,
                 category: 'Framework & Libraries',
 
                 theme: '#133863',
@@ -73,7 +155,17 @@ export const computeSkills = (): SkillsContextState => {
             kubernetes: {
                 name: 'Kubernetes',
                 key: 'kubernetes',
-                description: <Text>Coming soon ...</Text>,
+                level: 4,
+                description: <Text>
+                    Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications
+
+                    <br/>
+                    <br/>
+
+                    It groups containers that make up an application into logical units for easy management and discovery. Kubernetes 
+                    builds upon 15 years of experience of running production workloads at Google, combined with best-of-breed ideas and practices from the community.
+
+                </Text>,
                 category: 'Infrastructure & Cloud',
 
                 theme: '#ffffff',
@@ -85,7 +177,12 @@ export const computeSkills = (): SkillsContextState => {
             helm: {
                 name: 'Helm',
                 key: 'helm',
-                description: <Text>Coming soon ...</Text>,
+                level: 4,
+                description: <Text>
+                    Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
+
+                    Charts are easy to create, version, share, and publish.
+                </Text>,
                 category: 'Infrastructure & Cloud',
 
                 theme: '#3130F0',
@@ -94,7 +191,24 @@ export const computeSkills = (): SkillsContextState => {
             awseks: {
                 name: 'AWS EKS',
                 key: 'awseks',
-                description: <Text>Coming soon ...</Text>,
+                level: 4,
+                description: <Text>
+                    Amazon Elastic Kubernetes Service is a fully managed Kubernetes service. Customers such as Intel, 
+                    Snap, Intuit, GoDaddy, and Autodesk trust EKS to run their most sensitive and mission critical applications 
+                    because of its security, reliability, and scalability.
+
+                    <br/>
+                    <br/>
+
+                    EKS is the best place to run Kubernetes for several reasons. First, you can choose to run your EKS clusters using 
+                    AWS Fargate, which is serverless compute for containers. Fargate removes the need to provision and manage servers, 
+                    lets you specify and pay for resources per application, and improves security through application isolation by design. 
+                    Second, EKS is deeply integrated with services such as Amazon CloudWatch, Auto Scaling Groups, AWS Identity and Access 
+                    Management (IAM), and Amazon Virtual Private Cloud (VPC), providing you a seamless experience to monitor, scale, and 
+                    load-balance your applications. Third, EKS integrates with AWS App Mesh and provides a Kubernetes native experience to 
+                    consume service mesh features and bring rich observability, traffic controls and security features to applications. Additionally, 
+                    EKS provides a scalable and highly-available control plane that runs across multiple availability zones to eliminate a single point of failure.
+                </Text>,
                 category: 'Infrastructure & Cloud',
 
                 light: true,
@@ -104,7 +218,13 @@ export const computeSkills = (): SkillsContextState => {
             awsec2: {
                 name: 'AWS EC2',
                 key: 'awsec2',
-                description: <Text>Coming soon ...</Text>,
+                level: 4,
+                description: <Text>
+                    Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is 
+                    designed to make web-scale cloud computing easier for developers. Amazon EC2’s simple web service interface allows you to obtain and 
+                    configure capacity with minimal friction. It provides you with complete control of your computing resources and lets you run on Amazon’s 
+                    proven computing environment.
+                </Text>,
                 category: 'Infrastructure & Cloud',
 
                 light: true,
@@ -114,7 +234,26 @@ export const computeSkills = (): SkillsContextState => {
             awsroute53: {
                 name: 'AWS Route53',
                 key: 'awsroute53',
-                description: <Text>Coming soon ...</Text>,
+                level: 4,
+                description: <Text>
+                    Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service. It is designed to give 
+                    developers and businesses an extremely reliable and cost effective way to route end users to Internet applications by 
+                    translating names like www.example.com into the numeric IP addresses like 192.0.2.1 that computers use to connect to each 
+                    \other. Amazon Route 53 is fully compliant with IPv6 as well.
+
+                    <br/>
+                    <br/>
+
+                    Amazon Route 53 effectively connects user requests to infrastructure running in AWS – such as Amazon EC2 instances, 
+                    Elastic Load Balancing load balancers, or Amazon S3 buckets – and can also be used to route users to infrastructure outside 
+                    of AWS. You can use Amazon Route 53 to configure DNS health checks to route traffic to healthy endpoints or to independently 
+                    monitor the health of your application and its endpoints. Amazon Route 53 Traffic Flow makes it easy for you to manage traffic 
+                    globally through a variety of routing types, including Latency Based Routing, Geo DNS, Geoproximity, and Weighted Round Robin—all 
+                    of which can be combined with DNS Failover in order to enable a variety of low-latency, fault-tolerant architectures. Using Amazon 
+                    Route 53 Traffic Flow’s simple visual editor, you can easily manage how your end-users are routed to your application’s endpoints—whether 
+                    in a single AWS region or distributed around the globe. Amazon Route 53 also offers Domain Name Registration – you can purchase and manage 
+                    domain names such as example.com and Amazon Route 53 will automatically configure DNS settings for your domains.
+                </Text>,
                 category: 'Infrastructure & Cloud',
 
                 light: true,
@@ -124,7 +263,15 @@ export const computeSkills = (): SkillsContextState => {
             awsecr: {
                 name: 'AWS ECR',
                 key: 'awsecr',
-                description: <Text>Coming soon ...</Text>,
+                level: 4,
+                description: <Text>
+                    Amazon Elastic Container Registry (ECR) is a fully-managed Docker container registry that makes it easy for developers to store, manage, 
+                    and deploy Docker container images. Amazon ECR is integrated with Amazon Elastic Container Service (ECS), simplifying your development to 
+                    production workflow. Amazon ECR eliminates the need to operate your own container repositories or worry about scaling the underlying infrastructure. 
+                    Amazon ECR hosts your images in a highly available and scalable architecture, allowing you to reliably deploy containers for your applications. 
+                    Integration with AWS Identity and Access Management (IAM) provides resource-level control of each repository. With Amazon ECR, there are no upfront 
+                    fees or commitments. You pay only for the amount of data you store in your repositories and data transferred to the Internet.
+                </Text>,
                 category: 'Infrastructure & Cloud',
 
                 light: true,
@@ -134,7 +281,17 @@ export const computeSkills = (): SkillsContextState => {
             awslambda: {
                 name: 'AWS Lambda',
                 key: 'awslambda',
-                description: <Text>Coming soon ...</Text>,
+                level: 2,
+                description: <Text>
+                    AWS Lambda lets you run code without provisioning or managing servers. You pay only for the compute time you consume.
+
+                    <br/>
+                    <br/>
+
+                    With Lambda, you can run code for virtually any type of application or backend service - all with zero administration. 
+                    Just upload your code and Lambda takes care of everything required to run and scale your code with high availability. 
+                    You can set up your code to automatically trigger from other AWS services or call it directly from any web or mobile app.
+                </Text>,
                 category: 'Infrastructure & Cloud',
 
                 light: true,
@@ -144,7 +301,21 @@ export const computeSkills = (): SkillsContextState => {
             awsauroraserverless: {
                 name: 'AWS Aurora Serverless',
                 key: 'awsauroraserverless',
-                description: <Text>Coming soon ...</Text>,
+                level: 2,
+                description: <Text>
+                    Amazon Aurora Serverless is an on-demand, auto-scaling configuration for Amazon Aurora (MySQL-compatible and 
+                    PostgreSQL-compatible editions), where the database will automatically start up, shut down, and scale capacity 
+                    up or down based on your application's needs. It enables you to run your database in the cloud without managing 
+                    any database instances. It's a simple, cost-effective option for infrequent, intermittent, or unpredictable workloads.
+
+                    <br/>
+                    <br/>
+
+                    Manually managing database capacity can take up valuable time and can lead to inefficient use of database resources. 
+                    With Aurora Serverless, you simply create a database endpoint, optionally specify the desired database capacity range, 
+                    and connect your applications. You pay on a per-second basis for the database capacity you use when the database is active, 
+                    and migrate between standard and serverless configurations with a few clicks in the Amazon RDS Management Console.
+                </Text>,
                 category: 'Infrastructure & Cloud',
 
                 light: true,
@@ -154,7 +325,15 @@ export const computeSkills = (): SkillsContextState => {
             pwa: {
                 name: 'PWA',
                 key: 'pwa',
-                description: <Text>Coming soon ...</Text>,
+                level: 4,
+                description: <Text>
+                    A progressive web application (PWA) is a type of application software delivered through the web, built using common web 
+                    technologies including HTML, CSS and JavaScript. It is intended to work on any platform that uses a standards-compliant 
+                    browser. Functionality includes working offline, push notifications, and device hardware access, enabling creating user 
+                    experiences similar to native applications on desktop and mobile devices. Since a progressive web app is a type of webpage 
+                    or website known as a web application, there is no requirement for developers or users to install the web apps via digital 
+                    distribution systems like Apple App Store or Google Play.
+                </Text>,
                 category: 'Principles',
 
                 light: true,
@@ -164,7 +343,17 @@ export const computeSkills = (): SkillsContextState => {
             monorepo: {
                 name: 'Monorepo',
                 key: 'monorepo',
-                description: <Text>Coming soon ...</Text>,
+                level: 4,
+                description: <Text>
+                    In revision control systems, a monorepo is a software development strategy where code for many projects is stored 
+                    in the same repository. As of 2017 some forms of this software engineering practice were over a decade old, but the 
+                    general concept had only recently been named. Many attempts have been made to differentiate between monolithic applications 
+                    and other, newer forms of monorepos.
+                    <br/>
+                    <br/>
+                    Google, Facebook, Microsoft, Uber, Airbnb and Twitter all employ very large monorepos with varying strategies to scale 
+                    build systems and version control software with a large volume of code and daily changes.
+                </Text>,
                 category: 'Principles',
 
                 light: true,
@@ -174,7 +363,21 @@ export const computeSkills = (): SkillsContextState => {
             nestjs: {
                 name: 'NestJS',
                 key: 'nestjs',
-                description: <Text>Coming soon ...</Text>,
+                level: 4,
+                description: <Text>
+                    NestJS is a framework for building efficient, scalable Node.js server-side applications. It uses progressive JavaScript, 
+                    is built with and fully supports TypeScript (yet still enables developers to code in pure JavaScript) and combines elements 
+                    of OOP (Object Oriented Programming), FP (Functional Programming), and FRP (Functional Reactive Programming).
+                    <br/>
+                    <br/>
+
+                    Under the hood, Nest makes use of robust HTTP Server frameworks like Express (the default) and optionally can be configured to use Fastify as well!
+                    <br/>
+                    <br/>
+
+                    Nest provides a level of abstraction above these common Node.js frameworks (Express/Fastify), but also exposes their APIs directly to the developer. 
+                    This gives developers the freedom to use the myriad of third-party modules which are available for the underlying platform.
+                </Text>,
                 category: 'Framework & Libraries',
 
                 theme: '#831730',
@@ -183,7 +386,12 @@ export const computeSkills = (): SkillsContextState => {
             storybook: {
                 name: 'Storybook',
                 key: 'storybook',
-                description: <Text>Coming soon ...</Text>,
+                level: 4,
+                description: <Text>
+                    Storybook is a tool for UI development. It makes development faster and easier by isolating components. This allows you to work on one component at 
+                    a time. You can develop entire UIs without needing to start up a complex dev stack, force certain data into your database, or navigate around your 
+                    application.
+                </Text>,
                 category: 'Framework & Libraries',
 
                 theme: '#A33F62',
@@ -192,7 +400,20 @@ export const computeSkills = (): SkillsContextState => {
             blockchain: {
                 name: 'Blockchain',
                 key: 'blockchain',
-                description: <Text>Coming soon ...</Text>,
+                level: 4,
+                description: <Text>
+                    A blockchain is a growing list of records, called blocks, that are linked using cryptography. Each block contains a cryptographic hash of the p
+                    revious block, a timestamp, and transaction data (generally represented as a Merkle tree).
+                    <br/>
+                    <br/>
+
+                    By design, a blockchain is resistant to modification of the data. It is "an open, distributed ledger that can record transactions between two parties 
+                    efficiently and in a verifiable and permanent way". For use as a distributed ledger, a blockchain is typically managed by a peer-to-peer network collectively 
+                    adhering to a protocol for inter-node communication and validating new blocks. Once recorded, the data in any given block cannot be altered retroactively 
+                    without alteration of all subsequent blocks, which requires consensus of the network majority. Although blockchain records are not unalterable, blockchains 
+                    may be considered secure by design and exemplify a distributed computing system with high Byzantine fault tolerance. Decentralized consensus has therefore 
+                    been claimed with a blockchain.
+                </Text>,
                 category: 'Principles',
 
                 theme: '#857F87',
@@ -201,7 +422,18 @@ export const computeSkills = (): SkillsContextState => {
             ethereum: {
                 name: 'Ethereum',
                 key: 'ethereum',
-                description: <Text>Coming soon ...</Text>,
+                level: 4,
+                description: <Text>
+                    Ethereum is a decentralized open source blockchain featuring smart contract functionality. Ether is the cryptocurrency generated by 
+                    Ethereum miners as a reward for computations performed to secure the blockchain. Ethereum serves as the platform for over 260,000 different 
+                    cryptocurrencies, including 47 of the top 100 cryptocurrencies by market capitalization.
+                    <br/>
+                    <br/>
+
+                    Ethereum provides a decentralized virtual machine, the Ethereum Virtual Machine (EVM), which can execute scripts using an international network 
+                    of public nodes. The virtual machine's instruction set, in contrast to others like Bitcoin Script, is Turing-complete. "Gas", an internal 
+                    transaction pricing mechanism, is used to mitigate spam and allocate resources on the network.
+                </Text>,
                 category: 'API & Services',
 
                 theme: '#4F527C',
@@ -210,7 +442,16 @@ export const computeSkills = (): SkillsContextState => {
             segment: {
                 name: 'Segment',
                 key: 'segment',
-                description: <Text>Coming soon ...</Text>,
+                level: 2,
+                description: <Text>
+                    With Segment, you can collect, transform, send, and archive your first-party customer data. We simplify the process of collecting data and 
+                    hooking up new tools, allowing you to spend more time using your data, and less time trying to collect it. You can use Segment to track events 
+                    that happen when a user interacts with the interfaces. “Interfaces” is our generic word for any digital properties you own: your website, mobile 
+                    apps, and processes that run on a server or OTT device.
+
+                    When you capture interaction data in Segment, you can send it (often in real-time) to your favorite tools marketing, product, and analytics tools, as well as to 
+                    data warehouses. In most cases, you won’t even need to touch your tracking code to connect new tools.
+                </Text>,
                 category: 'API & Services',
 
                 light: true,
@@ -220,7 +461,12 @@ export const computeSkills = (): SkillsContextState => {
             stripe: {
                 name: 'Stripe',
                 key: 'stripe',
-                description: <Text>Coming soon ...</Text>,
+                level: 4,
+                description: <Text>
+                    Stripe is an American financial services and software as a service (SaaS) company headquartered in San Francisco, California, 
+                    United States. The company primarily offers payment processing software and application programming interfaces (APIs) 
+                    for e-commerce websites and mobile applications.
+                </Text>,
                 category: 'API & Services',
 
                 light: true,
@@ -230,7 +476,14 @@ export const computeSkills = (): SkillsContextState => {
             projectmanagement: {
                 name: 'Project Management',
                 key: 'projectmanagement',
-                description: <Text>Coming soon ...</Text>,
+                level: 4,
+                description: <Text>
+                    Project management is the process of leading the work of a team to achieve goals and meet success criteria at a specified time. 
+                    The primary challenge of project management is to achieve all of the project goals within the given constraints. 
+                    This information is usually described in project documentation, created at the beginning of the development process. 
+                    The primary constraints are scope, time, quality and budget. The secondary challenge is to optimize the allocation of 
+                    necessary inputs and apply them to meet pre-defined objectives.
+                </Text>,
                 category: 'Principles',
 
                 theme: '#565650',
@@ -239,7 +492,13 @@ export const computeSkills = (): SkillsContextState => {
             technicallead: {
                 name: 'Technical Lead',
                 key: 'technicallead',
-                description: <Text>Coming soon ...</Text>,
+                level: 3,
+                description: <Text>
+                    Technical Lead as the name states is solely responsible for leading a development team. The task of Technical Leader 
+                    is not easy. They have to lead a team. Technical Lead is the one who actually creates a technical vision in order to 
+                    turn it into reality with the help of the team. Technical Lead at times also has to take up the role of Software Architect, 
+                    Team Lead or Software Engineer Manager. Along with all this Technical Lead also have to maintain the relation with everyone on board.
+                </Text>,
                 category: 'Principles',
 
                 light: true,
@@ -249,7 +508,18 @@ export const computeSkills = (): SkillsContextState => {
             entrepreneurship: {
                 name: 'Entrepreneurship',
                 key: 'entrepreneurship',
-                description: <Text>Coming soon ...</Text>,
+                level: 4,
+                description: <Text>
+                    Entrepreneurship is the creation or extraction of value. With this definition, entrepreneurship is viewed as change, which may 
+                    include other values than simply economic ones.
+                    <br/>
+                    <br/>
+
+                    More narrow definitions have described entrepreneurship as the process of designing, launching and running a new business, which i
+                    s often initially a small business, or as the "capacity and willingness to develop, organize and manage a business venture along with any of 
+                    its risks to make a profit."
+                    
+                </Text>,
                 category: 'Principles',
 
                 light: true,
@@ -259,7 +529,16 @@ export const computeSkills = (): SkillsContextState => {
             docker: {
                 name: 'Docker',
                 key: 'docker',
-                description: <Text>Coming soon ...</Text>,
+                level: 4,
+                description: <Text>
+                    Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.
+                    Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each 
+                    other through well-defined channels. All containers are run by a single operating system kernel and therefore use fewer resources than virtual machines.
+
+                    <br/>
+                    <br/>
+                    The service has both free and premium tiers. The software that hosts the containers is called Docker Engine. It was first started in 2013 and is developed by Docker, Inc.
+                </Text>,
                 category: 'Infrastructure & Cloud',
 
                 theme: '#3096ED',
@@ -268,25 +547,17 @@ export const computeSkills = (): SkillsContextState => {
             serverless: {
                 name: 'Serverless',
                 key: 'serverless',
+                level: 2,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Framework & Libraries',
 
                 theme: '#222222',
                 image: 'serverless.png',
             },
-            opengl: {
-                name: 'OpenGL',
-                key: 'opengl',
-                description: <Text>Coming soon ...</Text>,
-                category: 'Framework & Libraries',
-
-                light: true,
-                theme: '#ffffff',
-                image: 'opengl.png',
-            },
             opencl: {
                 name: 'OpenCL',
                 key: 'opencl',
+                level: 3,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Framework & Libraries',
 
@@ -297,6 +568,7 @@ export const computeSkills = (): SkillsContextState => {
             cuda: {
                 name: 'CUDA',
                 key: 'cuda',
+                level: 3,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Framework & Libraries',
 
@@ -307,6 +579,7 @@ export const computeSkills = (): SkillsContextState => {
             openmp: {
                 name: 'OpenMP',
                 key: 'openmp',
+                level: 3,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Framework & Libraries',
 
@@ -317,6 +590,7 @@ export const computeSkills = (): SkillsContextState => {
             hooks: {
                 name: 'React Hooks',
                 key: 'hooks',
+                level: 4,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Framework & Libraries',
 
@@ -326,6 +600,7 @@ export const computeSkills = (): SkillsContextState => {
             redux: {
                 name: 'Redux',
                 key: 'redux',
+                level: 4,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Framework & Libraries',
 
@@ -335,6 +610,7 @@ export const computeSkills = (): SkillsContextState => {
             cicd: {
                 name: 'CI/CD',
                 key: 'cicd',
+                level: 4,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Principles',
 
@@ -344,6 +620,7 @@ export const computeSkills = (): SkillsContextState => {
             multicoreprogramming: {
                 name: 'Multicore Programming',
                 key: 'multicoreprogramming',
+                level: 3,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Principles',
 
@@ -354,6 +631,7 @@ export const computeSkills = (): SkillsContextState => {
             p2p: {
                 name: 'P2P',
                 key: 'p2p',
+                level: 3,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Systems',
 
@@ -363,6 +641,7 @@ export const computeSkills = (): SkillsContextState => {
             networking: {
                 name: 'Networking',
                 key: 'networking',
+                level: 3,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Systems',
 
@@ -372,6 +651,7 @@ export const computeSkills = (): SkillsContextState => {
             concurrency: {
                 name: 'Concurrency',
                 key: 'concurrency',
+                level: 3,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Systems',
 
@@ -381,6 +661,7 @@ export const computeSkills = (): SkillsContextState => {
             smartcontracts: {
                 name: 'Smart Contracts',
                 key: 'smartcontracts',
+                level: 4,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Principles',
 
@@ -390,6 +671,7 @@ export const computeSkills = (): SkillsContextState => {
             unittesting: {
                 name: 'Unit Testing',
                 key: 'unittesting',
+                level: 4,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Principles',
 
@@ -399,6 +681,7 @@ export const computeSkills = (): SkillsContextState => {
             srs: {
                 name: 'SRS',
                 key: 'srs',
+                level: 3,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Principles',
 
@@ -408,6 +691,7 @@ export const computeSkills = (): SkillsContextState => {
             sad: {
                 name: 'SAD',
                 key: 'sad',
+                level: 3,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Principles',
 
@@ -417,6 +701,7 @@ export const computeSkills = (): SkillsContextState => {
             integrationtesting: {
                 name: 'Integration Testing',
                 key: 'integrationtesting',
+                level: 4,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Principles',
 
@@ -426,6 +711,7 @@ export const computeSkills = (): SkillsContextState => {
             functionaltesting: {
                 name: 'Functional Testing',
                 key: 'functionaltesting',
+                level: 4,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Principles',
 
@@ -435,6 +721,7 @@ export const computeSkills = (): SkillsContextState => {
             featureflags: {
                 name: 'Feature Flags',
                 key: 'featureflags',
+                level: 3,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Principles',
 
@@ -445,6 +732,7 @@ export const computeSkills = (): SkillsContextState => {
             solidity: {
                 name: 'Solidity',
                 key: 'solidity',
+                level: 4,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Programming Languages',
 
@@ -455,6 +743,7 @@ export const computeSkills = (): SkillsContextState => {
             sql: {
                 name: 'SQL',
                 key: 'sql',
+                level: 3,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Programming Languages',
 
@@ -464,6 +753,7 @@ export const computeSkills = (): SkillsContextState => {
             computerscience: {
                 name: 'Computer Science',
                 key: 'computerscience',
+                level: 4,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Principles',
 
@@ -473,6 +763,7 @@ export const computeSkills = (): SkillsContextState => {
             softwareengineering: {
                 name: 'Software Engineering',
                 key: 'softwareengineering',
+                level: 4,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Principles',
 
@@ -483,6 +774,7 @@ export const computeSkills = (): SkillsContextState => {
             pedagogy: {
                 name: 'Pedagogy',
                 key: 'pedagogy',
+                level: 3,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Principles',
 
@@ -492,6 +784,7 @@ export const computeSkills = (): SkillsContextState => {
             cassandra: {
                 name: 'Cassandra',
                 key: 'cassandra',
+                level: 3,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Infrastructure & Cloud',
 
@@ -502,6 +795,7 @@ export const computeSkills = (): SkillsContextState => {
             elasticsearch: {
                 name: 'Elasticsearch',
                 key: 'elasticsearch',
+                level: 3,
                 description: <Text>Coming soon ...</Text>,
                 category: 'Infrastructure & Cloud',
 
@@ -532,6 +826,8 @@ export const computeSkills = (): SkillsContextState => {
                 theme: '#000000',
                 skills: [
                     'typescript',
+                    'javascript',
+                    'nodejs',
                     'react',
                     'nestjs',
                     'storybook',
@@ -610,6 +906,8 @@ export const computeSkills = (): SkillsContextState => {
                 link: 'https://nx.dev',
                 skills: [
                     'typescript',
+                    'javascript',
+                    'nodejs',
                     'react',
                     'nxdev',
                     'nestjs',
@@ -685,7 +983,6 @@ export const computeSkills = (): SkillsContextState => {
                 theme: '#2E5FA3',
                 skills: [
                     'multicoreprogramming',
-                    'opengl',
                     'opencl',
                     'c'
                 ]
@@ -713,6 +1010,7 @@ export const computeSkills = (): SkillsContextState => {
                 theme: '#363636',
                 skills: [
                     'typescript',
+                    'javascript',
                     'react',
                     'redux',
                     'ethereum',
@@ -825,7 +1123,9 @@ export const computeSkills = (): SkillsContextState => {
                     'srs',
                     'sad',
                     'sql',
-                    'typescript'
+                    'typescript',
+                    'javascript',
+                    'nodejs'
                 ]
             },
 
@@ -862,6 +1162,8 @@ export const computeSkills = (): SkillsContextState => {
                 theme: '#2461B1',
                 skills: [
                     'typescript',
+                    'javascript',
+                    'nodejs',
                     'blockchain',
                     'ethereum',
                     'smartcontracts',
@@ -900,6 +1202,8 @@ export const computeSkills = (): SkillsContextState => {
                 theme: '#395B9B',
                 skills: [
                     'typescript',
+                    'javascript',
+                    'nodejs',
                     'blockchain',
                     'ethereum',
                     'solidity',
@@ -1104,6 +1408,8 @@ export const computeSkills = (): SkillsContextState => {
                 link: 'https://epitech.eu',
                 skills: [
                     'typescript',
+                    'javascript',
+                    'nodejs',
                     'cicd',
                     'kubernetes',
                     'projectmanagement',

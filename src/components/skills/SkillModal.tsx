@@ -193,6 +193,81 @@ const StaticChallengeCard = (props: StaticChallengeCardProps) => {
     </StaticChallengeCardContainer>
 }
 
+const LightenColor = function (color: string, percent: number) {
+    color = color.replace('#', '');
+    var num = parseInt(color, 16),
+        amt = Math.round(2.55 * percent),
+        R = (num >> 16) + amt,
+        B = ((num >> 8) & 0x00FF) + amt,
+        G = (num & 0x0000FF) + amt;
+
+    return '#' + (0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 + (B < 255 ? B < 1 ? 0 : B : 255) * 0x100 + (G < 255 ? G < 1 ? 0 : G : 255)).toString(16).slice(1);
+};
+
+const LevelIndicator = (props: { level: number, color: string, visible: boolean }): JSX.Element => {
+
+    console.log(props.color, LightenColor(props.color, 30));
+    return <div
+        style={{
+            marginTop: 24,
+            position: 'relative',
+            width: '90%',
+            marginLeft: '5%',
+            height: '7px',
+            borderRadius: '5px',
+            zIndex: 100
+        }}
+    >
+        <div
+            style={{
+                position: 'absolute',
+                width: `100%`,
+                height: '7px',
+                borderRadius: '7px',
+                backgroundColor: `${LightenColor(props.color, 20)}`,
+                top: 0,
+                left: 0,
+                opacity: 0.3,
+                zIndex: 100
+            }}
+        />
+        <motion.div
+            variants={{
+                hidden: {
+                    width: 0,
+                    boxShadow: '0px 0px 0px 0px #000000',
+                    transition: {
+                        duration: 1,
+                        delay: 0,
+                    }
+                },
+                visible: {
+                    width: `${props.level * 20}%`,
+                    boxShadow: `0px 0px ${(props.level > 2 ? props.level : 0) * 2}px ${props.level > 2 ? 1 : 0}px ${LightenColor(props.color, 20)}`,
+                    transition: {
+                        delay: 1,
+                        duration: props.level,
+                    }
+                }
+            }}
+            animate={props.visible ? 'visible' : 'hidden'}
+            initial={'hidden'}
+            style={{
+                position: 'absolute',
+                width: 0,
+                height: '7px',
+                borderRadius: '7px',
+                backgroundColor: `${LightenColor(props.color, 50)}`,
+                boxShadow: `0px 0px 0px 0px ${LightenColor(props.color, 40)}`,
+                top: 0,
+                left: 0,
+                zIndex: 101
+            }}
+        />
+
+    </div>
+}
+
 const getChallenges = (challenges: Challenge[], skill: string | undefined): Challenge[] => challenges.filter((challenge: Challenge): boolean => challenge.skills.indexOf(skill as string) !== -1)
 
 const SkillModalContent: React.FC = (): JSX.Element | null => {
@@ -254,6 +329,12 @@ const SkillModalContent: React.FC = (): JSX.Element | null => {
         </ImageBannerContainer>
         <DescriptionContainer>
             <SkillTitle>{lastSkill.name}</SkillTitle>
+            <Field>Level</Field>
+            <LevelIndicator
+                visible={skillsContext.selectedSkill !== null && skillsContext.selectedSkill.key === lastSkill.key}
+                level={lastSkill.level}
+                color={lastSkill.theme}
+            />
             <Field>Description</Field>
             {lastSkill.description}
             {
