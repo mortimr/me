@@ -548,7 +548,19 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Serverless',
                 key: 'serverless',
                 level: 2,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    The Serverless Framework is a free and open-source web framework written using Node.js. Serverless is the 
+                    first framework developed for building applications on AWS Lambda, a serverless computing platform provided by 
+                    Amazon as a part of Amazon Web Services. 
+
+                    <br/>
+                    <br/>
+                    
+                    Currently, applications developed with Serverless can be deployed to other 
+                    function as a service providers, including Microsoft Azure with Azure Functions, IBM Bluemix with IBM Cloud Functions 
+                    based on Apache OpenWhisk, Google Cloud using Google Cloud Functions, Oracle Cloud using Oracle Fn, Kubeless based 
+                    on Kubernetes, Spotinst and Webtask by Auth0.
+                </Text>,
                 category: 'Framework & Libraries',
 
                 theme: '#222222',
@@ -558,7 +570,13 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'OpenCL',
                 key: 'opencl',
                 level: 3,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    OpenCL (Open Computing Language) is a framework for writing programs that execute across heterogeneous platforms consisting of central 
+                    processing units (CPUs), graphics processing units (GPUs), digital signal processors (DSPs), field-programmable gate arrays (FPGAs) and 
+                    other processors or hardware accelerators. OpenCL specifies programming languages (based on C99 and C++11) for programming these devices 
+                    and application programming interfaces (APIs) to control the platform and execute programs on the compute devices. OpenCL provides a 
+                    standard interface for parallel computing using task- and data-based parallelism.
+                </Text>,
                 category: 'Framework & Libraries',
 
                 light: true,
@@ -569,7 +587,23 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'CUDA',
                 key: 'cuda',
                 level: 3,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    CUDA (Compute Unified Device Architecture) is a parallel computing platform and application programming 
+                    interface (API) model created by Nvidia. It allows software developers and software engineers to use a 
+                    CUDA-enabled graphics processing unit (GPU) for general purpose processing – an approach termed GPGPU 
+                    (General-Purpose computing on Graphics Processing Units). The CUDA platform is a software layer that 
+                    gives direct access to the GPU's virtual instruction set and parallel computational elements, for the 
+                    execution of compute kernels.
+
+                    <br/>
+                    <br/>
+
+                    The CUDA platform is designed to work with programming languages such as C, C++, and Fortran. This accessibility 
+                    makes it easier for specialists in parallel programming to use GPU resources, in contrast to prior APIs like Direct3D 
+                    and OpenGL, which required advanced skills in graphics programming. CUDA-powered GPUs also support programming 
+                    frameworks such as OpenACC and OpenCL; and HIP by compiling such code to CUDA. When CUDA was first introduced by Nvidia, 
+                    the name was an acronym for Compute Unified Device Architecture, but Nvidia subsequently dropped the common use of the acronym.
+                </Text>,
                 category: 'Framework & Libraries',
 
                 light: true,
@@ -580,7 +614,24 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'OpenMP',
                 key: 'openmp',
                 level: 3,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    The application programming interface (API) OpenMP (Open Multi-Processing) supports multi-platform shared-memory multiprocessing programming 
+                    in C, C++, and Fortran, on many platforms, instruction-set architectures and operating systems, including Solaris, AIX, HP-UX, Linux, macOS, 
+                    and Windows. It consists of a set of compiler directives, library routines, and environment variables that influence run-time behavior.
+
+                    <br/>
+                    <br/>
+
+                    OpenMP is managed by the nonprofit technology consortium OpenMP Architecture Review Board (or OpenMP ARB), jointly defined by a group of 
+                    major computer hardware and software vendors, including Arm, AMD, IBM, Intel, Cray, HP, Fujitsu, Nvidia, NEC, Red Hat, Texas Instruments, 
+                    Oracle Corporation, and more.
+
+                    <br/>
+                    <br/>
+
+                    OpenMP uses a portable, scalable model that gives programmers a simple and flexible interface for developing parallel applications for 
+                    platforms ranging from the standard desktop computer to the supercomputer.
+                </Text>,
                 category: 'Framework & Libraries',
 
                 light: true,
@@ -591,7 +642,17 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'React Hooks',
                 key: 'hooks',
                 level: 4,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    Hooks are functions that let developers "hook into" React state and lifecycle features from function components. 
+                    They make codes readable and easily understandable. Hooks don’t work inside classes — they let you use React without classes.
+
+                    <br/>
+                    <br/>
+
+                    React provides a few built-in Hooks like useState, useContext, useReducer and useEffect to name a few. 
+                    They are all stated in the Hooks API Reference. useState and useEffect, which are the most used, are for controlling 
+                    states and side effects respectively in React Components.
+                </Text>,
                 category: 'Framework & Libraries',
 
                 theme: '#0E0E0E',
@@ -601,7 +662,11 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Redux',
                 key: 'redux',
                 level: 4,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    Redux is an open-source JavaScript library for managing application state. 
+                    It is most commonly used with libraries such as React or Angular for building user interfaces. 
+                    Similar to (and inspired by) Facebook's Flux architecture, it was created by Dan Abramov and Andrew Clark.
+                </Text>,
                 category: 'Framework & Libraries',
 
                 theme: '#A690C6',
@@ -611,7 +676,18 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'CI/CD',
                 key: 'cicd',
                 level: 4,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    In software engineering, CI/CD or CICD generally refers to the combined practices of continuous 
+                    integration and either continuous delivery or continuous deployment.
+
+                    <br/>
+                    <br/>
+
+                    CI/CD bridges the gaps between development and operation activities and teams by enforcing automation in building, 
+                    testing and deployment of applications. Modern day DevOps practices involve continuous development, continuous testing, 
+                    continuous integration, continuous deployment and continuous monitoring of software applications throughout its development 
+                    life cycle. The CI/CD practice or CI/CD pipeline forms the backbone of modern day DevOps operations.
+                </Text>,
                 category: 'Principles',
 
                 theme: '#656565',
@@ -621,7 +697,14 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Multicore Programming',
                 key: 'multicoreprogramming',
                 level: 3,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    Multicore programming helps you create concurrent systems for deployment on multicore processor and multiprocessor systems. 
+                    A multicore processor system is a single processor with multiple execution cores in one chip. By contrast, a multiprocessor 
+                    system has multiple processors on the motherboard or chip. A multiprocessor system might include a Field-Programmable 
+                    Gate Array (FPGA). An FPGA is an integrated circuit containing an array of programmable logic blocks and a hierarchy of 
+                    reconfigurable interconnects. A processing node processes input data to produce outputs. It can be a processor in a multicore 
+                    or multiprocessor system, or an FPGA.
+                </Text>,
                 category: 'Principles',
 
                 light: true,
@@ -632,7 +715,21 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'P2P',
                 key: 'p2p',
                 level: 3,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    Peer-to-peer (P2P) computing or networking is a distributed application architecture that partitions tasks or workloads between peers. 
+                    Peers are equally privileged, equipotent participants in the application. They are said to form a peer-to-peer network of nodes.
+
+                    <br/>
+                    <br/>
+
+                    Peers make a portion of their resources, such as processing power, disk storage or network bandwidth, directly available to other network 
+                    participants, without the need for central coordination by servers or stable hosts. Peers are both suppliers and consumers of resources, 
+                    in contrast to the traditional client-server model in which the consumption and supply of resources is divided. Emerging collaborative P2P systems 
+                    are going beyond the era of peers doing similar things while sharing resources, and are looking for diverse peers that can bring in unique resources 
+                    and capabilities to a virtual community thereby empowering it to engage in greater tasks beyond those that can be accomplished by individual peers, 
+                    yet that are beneficial to all the peers.
+
+                </Text>,
                 category: 'Systems',
 
                 theme: '#316CEE',
@@ -642,7 +739,11 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Networking',
                 key: 'networking',
                 level: 3,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    A computer network is a group of computers that use a set of common communication protocols over digital interconnections for the purpose of 
+                    sharing resources located on or provided by the network nodes. The interconnections between nodes are formed from a broad spectrum of telecommunication 
+                    network technologies, based on physically wired, optical, and wireless radio-frequency methods that may be arranged in a variety of network topologies.
+                </Text>,
                 category: 'Systems',
 
                 theme: '#373788',
@@ -652,7 +753,13 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Concurrency',
                 key: 'concurrency',
                 level: 3,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    In computer science, concurrency is the ability of different parts or units of a program, algorithm, 
+                    or problem to be executed out-of-order or in partial order, without affecting the final outcome. This 
+                    allows for parallel execution of the concurrent units, which can significantly improve overall speed of the 
+                    execution in multi-processor and multi-core systems. In more technical terms, concurrency refers to the decomposability 
+                    property of a program, algorithm, or problem into order-independent or partially-ordered components or units.
+                </Text>,
                 category: 'Systems',
 
                 theme: '#5B5B5B',
@@ -662,7 +769,20 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Smart Contracts',
                 key: 'smartcontracts',
                 level: 4,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    A smart contract is a computer program or a transaction protocol which is intended to automatically execute, 
+                    control or document legally relevant events and actions according to the terms of a contract or an agreement.
+                    The objectives of smart contracts are the reduction of need in trusted intermediators, arbitrations and
+                    enforcement costs, fraud losses, as well as the reduction of malicious and accidental exceptions.
+
+                    <br/>
+                    <br/>
+
+                    Vending machines are mentioned as the oldest piece of technology equivalent to smart contract implementation.
+                    2014's white paper about the cryptocurrency Ethereum[6] describes the Bitcoin protocol as a weak version 
+                    of the smart contract concept as defined by computer scientist, lawyer and cryptographer Nick Szabo. 
+                    Since Ethereum, various cryptocurrencies support scripting languages which allow for more advanced smart contracts between untrusted parties.
+                </Text>,
                 category: 'Principles',
 
                 theme: '#7C674C',
@@ -672,7 +792,11 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Unit Testing',
                 key: 'unittesting',
                 level: 4,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    In computer programming, unit testing is a software testing method by which individual units of source code—sets 
+                    of one or more computer program modules together with associated control data, usage procedures, and operating 
+                    procedures—are tested to determine whether they are fit for use.
+                </Text>,
                 category: 'Principles',
 
                 theme: '#2B3135',
@@ -682,7 +806,28 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'SRS',
                 key: 'srs',
                 level: 3,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    A software requirements specification (SRS) is a description of a software system to be developed. 
+                    It is modeled after business requirements specification (CONOPS), also known as a stakeholder requirements 
+                    specification. The software requirements specification lays out functional and non-functional 
+                    requirements, and it may include a set of use cases that describe user interactions that the software must provide to the user for perfect interaction.
+
+                    <br/>
+                    <br/>
+
+                    Software requirements specification establishes the basis for an agreement between customers and contractors or 
+                    suppliers on how the software product should function (in a market-driven project, these roles may be played by 
+                    the marketing and development divisions). Software requirements specification is a rigorous assessment of requirements 
+                    before the more specific system design stages, and its goal is to reduce later redesign. It should also provide a realistic basis 
+                    for estimating product costs, risks, and schedules. Used appropriately, software requirements specifications can help prevent software project failure.
+
+                    <br/>
+                    <br/>
+
+                    The software requirements specification document lists sufficient and necessary requirements for the project development. 
+                    To derive the requirements, the developer needs to have clear and thorough understanding of the products under development. 
+                    This is achieved through detailed and continuous communications with the project team and customer throughout the software development process.
+                </Text>,
                 category: 'Principles',
 
                 theme: '#811B1F',
@@ -692,7 +837,11 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'SAD',
                 key: 'sad',
                 level: 3,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    The software architecture document provides a comprehensive overview of the architecture of the software system. It serves as a 
+                    communication medium between the software architect and other project team members regarding architecturally significant decisions which 
+                    have been made on the project.
+                </Text>,
                 category: 'Principles',
 
                 theme: '#668F20',
@@ -702,7 +851,13 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Integration Testing',
                 key: 'integrationtesting',
                 level: 4,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    Integration testing (sometimes called integration and testing, abbreviated I&T) is the phase in software testing in which individual 
+                    software modules are combined and tested as a group. Integration testing is conducted to evaluate the compliance of a system or component 
+                    with specified functional requirements. It occurs after unit testing and before validation testing. Integration testing takes as its 
+                    input modules that have been unit tested, groups them in larger aggregates, applies tests defined in an integration test plan to those aggregates, 
+                    and delivers as its output the integrated system ready for system testing.
+                </Text>,
                 category: 'Principles',
 
                 theme: '#592314',
@@ -712,7 +867,12 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Functional Testing',
                 key: 'functionaltesting',
                 level: 4,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    Functional testing is a quality assurance (QA) process and a type of black-box testing that bases its test cases on the specifications 
+                    of the software component under test. Functions are tested by feeding them input and examining the output, and internal program structure 
+                    is rarely considered (unlike white-box testing). Functional testing is conducted to evaluate the compliance of a system or component 
+                    with specified functional requirements. Functional testing usually describes what the system does.
+                </Text>,
                 category: 'Principles',
 
                 theme: '#8D6938',
@@ -722,7 +882,29 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Feature Flags',
                 key: 'featureflags',
                 level: 3,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    A feature toggle (also feature switch, feature flag, feature flipper, conditional feature, etc.) is a technique in software 
+                    development that attempts to provide an alternative to maintaining multiple branches in source code (known as feature branches), 
+                    such that a software feature can be tested even before it is completed and ready for release. Feature toggle is used to hide, enable 
+                    or disable the feature during runtime. For example, during the development process, a developer can enable the feature for testing 
+                    and disable it for other users.In this way, feature flags can be used to implement targeted rollouts of features to specific subsets of users, 
+                    a practice known as feature gating.
+
+                    <br/>
+                    <br/>
+
+                    Continuous release and continuous deployment provide developers with rapid feedback about their coding. This requires the integration of 
+                    their code changes as early as possible. Feature branches introduce a bypass to this process. Feature toggles are an important technique 
+                    used for the implementation of continuous delivery.
+
+                    <br/>
+                    <br/>
+
+                    The technique allows developers to release a version of a product that has unfinished features. These unfinished features are hidden (toggled) 
+                    so they do not appear in the user interface. This allows many small incremental versions of software to be delivered without the cost of constant 
+                    branching and merging. Feature toggles may allow shorter software integration cycles. A team working on a project can use feature toggle to speed 
+                    up the process of development, that can include the incomplete code as well.
+                </Text>,
                 category: 'Principles',
 
                 light: true,
