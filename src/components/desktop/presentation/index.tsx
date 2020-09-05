@@ -52,7 +52,8 @@ const TextContainer = styled.div`
     width: 50%;
     padding: 20px;
     text-align: justify;
-  text-justify: inter-word;
+    text-justify: inter-word;
+    z-index: 91;
 `;
 
 export const Presentation = () => {

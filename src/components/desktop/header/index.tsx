@@ -44,7 +44,7 @@ const Description = styled(motion.p)`
     font-size: 24px;
     margin: 0;
     margin-left: -30px;
-    opacity: 0.6
+    opacity: 0.6;
 `;
 
 const SoftBold = styled(motion.span)`
@@ -59,7 +59,11 @@ export const Header = () => {
             width: '100%'
         }}>
             <HeaderContainer>
-                <div>
+                <div
+                    style={{
+                        zIndex: 91
+                    }}
+                >
                     <Intro
                         transition={{ duration: 1 }}
                         initial={{ opacity: 0 }}

@@ -68,6 +68,7 @@ export const MobileT721 = () => {
                 ref={ref}
             >
                 <Logo
+                    alt={'Ticket721 Logo'}
                     variants={{
                         hidden: {
                             opacity: 0,
@@ -127,6 +128,7 @@ export const MobileT721 = () => {
                     Play Store and on the Web.
                         </T721Description>
                 <AppScreen
+                    alt={'Ticket721 App Screenshot'}
                     variants={{
                         hidden: {
                             opacity: 0,
@@ -146,6 +148,7 @@ export const MobileT721 = () => {
                     src={T721App}
                 />
                 <StoreIcon
+                    alt={'AppStore Link'}
                     variants={{
                         hidden: {
                             opacity: 0,
@@ -174,6 +177,7 @@ export const MobileT721 = () => {
                     src={AppStoreIcon}
                 />
                 <StoreIcon
+                    alt={'PlayStore Link'}
                     variants={{
                         hidden: {
                             opacity: 0,
@@ -202,6 +206,7 @@ export const MobileT721 = () => {
                     src={PlayStoreIcon}
                 />
                 <StoreIcon
+                    alt={'Web Link'}
                     variants={{
                         hidden: {
                             opacity: 0,

@@ -55,6 +55,7 @@ const DescriptionContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    z-index: 91;
 `
 
 const T721Title = styled(motion.h1)`
@@ -81,6 +82,7 @@ export const T721 = () => {
                 ref={ref}
             >
                 <AppScreen
+                    alt={'Ticket721 App Screenshot'}
                     variants={{
                         hidden: {
                             opacity: 0,
@@ -101,6 +103,7 @@ export const T721 = () => {
                 />
                 <DescriptionContainer>
                     <Logo
+                        alt={'Ticket721 Logo'}
                         variants={{
                             hidden: {
                                 opacity: 0,
@@ -161,6 +164,7 @@ export const T721 = () => {
                         </T721Description>
                     <LinkContainer>
                         <StoreIcon
+                            alt={'AppStore Link'}
                             variants={{
                                 hidden: {
                                     opacity: 0,
@@ -188,6 +192,7 @@ export const T721 = () => {
                             src={AppStoreIcon}
                         />
                         <StoreIcon
+                            alt={'PlayStore Link'}
                             variants={{
                                 hidden: {
                                     opacity: 0,
@@ -215,6 +220,7 @@ export const T721 = () => {
                             src={PlayStoreIcon}
                         />
                         <StoreIcon
+                            alt={'Web Link'}
                             variants={{
                                 hidden: {
                                     opacity: 0,
