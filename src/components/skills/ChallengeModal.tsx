@@ -134,6 +134,7 @@ const DescriptionContainer = styled.div`
 
 const ChallengeTitle = styled.h2`
     margin: 0;
+    margin-top: 12px;
     font-weight: 400;
 `;
 
@@ -168,10 +169,10 @@ margin-top: 40px;
 `;
 
 const DateText = styled.h4`
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 400;
     margin: 0;
     text-transform: uppercase;
-    margin-left: 12px;
 `
 
 const formatDate = (date: Date): string => new Intl.DateTimeFormat('en-US', {
@@ -262,8 +263,18 @@ const ChallengeModalContent: React.FC = (): JSX.Element | null => {
             />
         </ImageBannerContainer>
         <DescriptionContainer >
+            <Field
+                style={{
+                    margin: 0
+                }}
+            >challenge</Field>
             <ChallengeTitle>{lastChallenge.name}</ChallengeTitle>
-            <DateText>{formatDate(lastChallenge.start)} → {lastChallenge.end ? formatDate(lastChallenge.end) : 'now'}</DateText>
+            <Field>dates</Field>
+            <DateText
+                style={{
+                    marginTop: 12
+                }}
+            >{formatDate(lastChallenge.start)} → {lastChallenge.end ? formatDate(lastChallenge.end) : 'now'}</DateText>
             <DateText>{duration}</DateText>
             <Field>Description</Field>
             <DescriptionText>{lastChallenge.description}</DescriptionText>
@@ -303,7 +314,8 @@ const ChallengeModalContent: React.FC = (): JSX.Element | null => {
                             alignItems: 'center',
                             justifyContent: 'flex-start',
                             flexDirection: 'row',
-                            flexWrap: 'wrap'
+                            flexWrap: 'wrap',
+                            marginTop: 12
                         }}>
                             {
                                 lastChallenge.skills.map((skillName: string) => <StaticSkillCard

@@ -11,6 +11,8 @@ import { Skills } from './components/skills/index.desktop';
 import { SkillsContext, Challenge, Skill } from './components/skills/context';
 import { computeSkills } from './computeSkills';
 import { MobileSkills } from './components/skills/index.mobile';
+import { T721 } from './components/desktop/t721';
+import { MobileT721 } from './components/mobile/t721';
 const MediaQuery = require('react-responsive').default;
 
 
@@ -91,6 +93,7 @@ function App() {
       <MediaQuery minDeviceWidth={1224}>
         <Header />
         <Presentation />
+        <T721 />
         <Skills/>
 
         <LeftMenu />
@@ -101,6 +104,7 @@ function App() {
       <MediaQuery maxDeviceWidth={1224}>
         <MobileHeader />
         <MobilePresentation />
+        <MobileT721 />
         <MobileSkills/>
 
         <MobileTopMenu />

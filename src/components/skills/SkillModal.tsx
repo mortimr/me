@@ -87,6 +87,7 @@ const DescriptionContainer = styled.div`
 
 const SkillTitle = styled.h1`
     margin: 0;
+    margin-top: 12px;
     font-weight: 400;
 `;
 
@@ -114,7 +115,7 @@ const StaticChallengeCardContainer = styled.div`
     padding-bottom: 8px;
     padding-left: 12px;
     padding-right: 12px;
-    margin: 8px;
+    margin-top: 8px;
     width: 250px;
     height: 70px;
     cursor: pointer;
@@ -134,12 +135,12 @@ const StaticChallengeTextContainer = styled.div`
 
     & h4 {
         overflow: hidden;
-   text-overflow: ellipsis;
-   display: -webkit-box;
-   -webkit-box-orient: vertical;
-   -webkit-line-clamp: 2; /* number of lines to show */
-   line-height: 18px;        /* fallback */
-   max-height: 36px;  
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-height: 18px;
+        max-height: 36px;  
         margin: 0;
     }
 `
@@ -209,10 +210,9 @@ const LevelIndicator = (props: { level: number, color: string, visible: boolean 
     console.log(props.color, LightenColor(props.color, 30));
     return <div
         style={{
-            marginTop: 24,
+            marginTop: 12,
             position: 'relative',
-            width: '90%',
-            marginLeft: '5%',
+            width: '100%',
             height: '7px',
             borderRadius: '5px',
             zIndex: 100
@@ -224,7 +224,7 @@ const LevelIndicator = (props: { level: number, color: string, visible: boolean 
                 width: `100%`,
                 height: '7px',
                 borderRadius: '7px',
-                backgroundColor: `${LightenColor(props.color, 20)}`,
+                backgroundColor: `${LightenColor(props.color, props.level * 5)}`,
                 top: 0,
                 left: 0,
                 opacity: 0.3,
@@ -243,7 +243,7 @@ const LevelIndicator = (props: { level: number, color: string, visible: boolean 
                 },
                 visible: {
                     width: `${props.level * 20}%`,
-                    boxShadow: `0px 0px ${(props.level > 2 ? props.level : 0) * 2}px ${props.level > 2 ? 1 : 0}px ${LightenColor(props.color, 20)}`,
+                    boxShadow: `0px 0px ${(props.level > 2 ? props.level : 0) * 5}px ${props.level > 2 ? 1 : 0}px ${LightenColor(props.color, props.level * 10)}`,
                     transition: {
                         delay: 1,
                         duration: props.level,
@@ -257,8 +257,8 @@ const LevelIndicator = (props: { level: number, color: string, visible: boolean 
                 width: 0,
                 height: '7px',
                 borderRadius: '7px',
-                backgroundColor: `${LightenColor(props.color, 50)}`,
-                boxShadow: `0px 0px 0px 0px ${LightenColor(props.color, 40)}`,
+                backgroundColor: `${LightenColor(props.color, props.level * 10)}`,
+                boxShadow: `0px 0px 0px 0px ${LightenColor(props.color, 20)}`,
                 top: 0,
                 left: 0,
                 zIndex: 101
@@ -328,6 +328,11 @@ const SkillModalContent: React.FC = (): JSX.Element | null => {
             />
         </ImageBannerContainer>
         <DescriptionContainer>
+            <Field
+                style={{
+                    margin: 0
+                }}
+            >skill</Field>
             <SkillTitle>{lastSkill.name}</SkillTitle>
             <Field>Level</Field>
             <LevelIndicator
@@ -371,11 +376,11 @@ const SkillModalContent: React.FC = (): JSX.Element | null => {
                     <>
                         <Field>Related Challenges</Field>
                         <div style={{
+                            marginTop: 12,
                             display: 'flex',
                             alignItems: 'center',
                             flexDirection: 'row',
-                            flexWrap: 'wrap',
-                            marginRight: 10
+                            flexWrap: 'wrap'
                         }}>
                             {
                                 challenges.map((challenge: Challenge) => (

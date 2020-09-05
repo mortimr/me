@@ -95,6 +95,24 @@ export const RightMenu = (props: { idx: number; onChange: (idx: number) => void 
             }}
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
+            onClick={() => scroller.scrollTo('t721', {
+                duration: 500,
+                delay: 0,
+                smooth: 'easeInOutQuart'
+            })}
+        >T721</Section>
+        <Section
+            transition={{
+                x: {
+                    type: 'spring',
+                    stiffness: 200,
+                    damping: 50
+                },
+                duration: 0.4,
+                delay: 1
+            }}
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
             onClick={() => scroller.scrollTo('skills', {
                 duration: 500,
                 delay: 0,

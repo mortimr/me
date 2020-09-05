@@ -4,6 +4,7 @@ import React from "react";
 
 const Text = styled.h4`
     margin: 0;
+    margin-top: 12px;
     font-weight: 300;
 `;
 
@@ -102,7 +103,7 @@ export const computeSkills = (): SkillsContextState => {
                     or "C with Classes". The language has expanded significantly over time, and modern C++ now has object-oriented, generic, 
                     and functional features in addition to facilities for low-level memory manipulation. It is almost always implemented as a 
                     compiled language, and many vendors provide C++ compilers, including the Free Software Foundation, LLVM, Microsoft, Intel, Oracle, 
-                    and IBM, so it is available on many platforms.[9]
+                    and IBM, so it is available on many platforms.
                 </Text>,
                 category: 'Programming Languages',
                 theme: '#1E6AA6',
@@ -779,7 +780,7 @@ export const computeSkills = (): SkillsContextState => {
                     <br/>
 
                     Vending machines are mentioned as the oldest piece of technology equivalent to smart contract implementation.
-                    2014's white paper about the cryptocurrency Ethereum[6] describes the Bitcoin protocol as a weak version 
+                    2014's white paper about the cryptocurrency Ethereum describes the Bitcoin protocol as a weak version 
                     of the smart contract concept as defined by computer scientist, lawyer and cryptographer Nick Szabo. 
                     Since Ethereum, various cryptocurrencies support scripting languages which allow for more advanced smart contracts between untrusted parties.
                 </Text>,
@@ -915,7 +916,24 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Solidity',
                 key: 'solidity',
                 level: 4,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    Solidity is an object-oriented, high-level language for implementing smart contracts. Smart contracts are programs which govern the behaviour of accounts within the Ethereum state.
+
+                    <br/>
+                    <br/>
+
+                    Solidity was influenced by C++, Python and JavaScript and is designed to target the Ethereum Virtual Machine (EVM).
+
+                    <br/>
+                    <br/>
+
+                    Solidity is statically typed, supports inheritance, libraries and complex user-defined types among other features.
+
+                    <br/>
+                    <br/>
+
+                    With Solidity you can create contracts for uses such as voting, crowdfunding, blind auctions, and multi-signature wallets.
+                </Text>,
                 category: 'Programming Languages',
 
                 light: true,
@@ -926,7 +944,12 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'SQL',
                 key: 'sql',
                 level: 3,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    SQL (Structured Query Language)
+                    is a domain-specific language used in programming and designed for managing data held in a relational database management 
+                    system (RDBMS), or for stream processing in a relational data stream management system (RDSMS). It is particularly useful in 
+                    handling structured data, i.e. data incorporating relations among entities and variables.
+                    </Text>,
                 category: 'Programming Languages',
 
                 theme: '#639CD0',
@@ -936,7 +959,23 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Computer Science',
                 key: 'computerscience',
                 level: 4,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    Computer science is the study of computation and information. Computer science deals with theory of computation, algorithms, 
+                    computational problems and the design of computer systems hardware, software and applications. Computer science addresses both 
+                    human-made and natural information processes, such as communication, control, perception, learning and intelligence especially in human-made 
+                    computing systems and machines. According to Peter Denning, the fundamental question underlying computer science is, What can be automated?
+
+                    <br/>
+                    <br/>
+
+                    Its fields can be divided into theoretical and practical disciplines. For example computational complexity theory describes the amount of 
+                    resources required to solve computational problems, while computer graphics and computational geometry emphasizes more specific applications. 
+                    Algorithmics have been called the heart of computer science. Programming language theory considers approaches to the description of computational 
+                    processes, while software engineering involves the use of programming languages and complex systems. Computer architecture and computer engineering 
+                    deals with construction of computer components and computer-controlled equipment. Human–computer interaction considers the challenges in making 
+                    computers useful, usable, and accessible. Artificial intelligence aims to synthesize goal-orientated processes such as problem-solving, decision-making, 
+                    environmental adaptation, motion planning, learning, and communication found in humans and animals.
+                </Text>,
                 category: 'Principles',
 
                 theme: '#393939',
@@ -946,7 +985,9 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Software Engineering',
                 key: 'softwareengineering',
                 level: 4,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    Software engineering is the systematic application of engineering approaches to the development of software.
+                </Text>,
                 category: 'Principles',
 
                 light: true,
@@ -957,7 +998,13 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Pedagogy',
                 key: 'pedagogy',
                 level: 3,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    Pedagogy,  most commonly understood as the approach to teaching, refers to the theory and practice of learning, and how this 
+                    process influences, and is influenced by, the social, political and psychological development of learners. Pedagogy, taken as an 
+                    academic discipline, is the study of how knowledge and skills are imparted in an educational context, and it considers the interactions
+                     that take place during learning. Both the theory and practice of pedagogy vary greatly, as they reflect different social, political, 
+                     and cultural contexts.
+                </Text>,
                 category: 'Principles',
 
                 theme: '#505050',
@@ -967,7 +1014,12 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Cassandra',
                 key: 'cassandra',
                 level: 3,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    Apache Cassandra is a free and open-source, distributed, wide column store, NoSQL database management system designed to 
+                    handle large amounts of data across many commodity servers, providing high availability with no single point of failure. 
+                    Cassandra offers robust support for clusters spanning multiple datacenters, with asynchronous masterless replication allowing low latency 
+                    operations for all clients. Cassandra offers the distribution design of Amazon DynamoDB with the data model of Google's Bigtable.
+                </Text>,
                 category: 'Infrastructure & Cloud',
 
                 theme: '#ffffff',
@@ -978,7 +1030,14 @@ export const computeSkills = (): SkillsContextState => {
                 name: 'Elasticsearch',
                 key: 'elasticsearch',
                 level: 3,
-                description: <Text>Coming soon ...</Text>,
+                description: <Text>
+                    Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search 
+                    engine with an HTTP web interface and schema-free JSON documents. Elasticsearch is developed in Java. Following an open-core 
+                    business model, parts of the software are licensed under various open-source licenses (mostly the Apache License), while 
+                    other parts fall under the proprietary (source-available) Elastic License. Official clients are available in Java, .NET (C#), 
+                    PHP, Python, Apache Groovy, Ruby and many other languages. According to the DB-Engines ranking, Elasticsearch is the most popular 
+                    enterprise search engine followed by Apache Solr, also based on Lucene.
+                </Text>,
                 category: 'Infrastructure & Cloud',
 
                 theme: '#A77E24',

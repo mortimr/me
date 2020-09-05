@@ -61,7 +61,7 @@ export const MobileTopMenu = () => {
                     damping: 50
                 },
                 duration: 0.4,
-                delay: 0.8
+                delay: 1
             }}
             initial={{ y: - 50, opacity: 0 }}
             animate={{ y: 0, opacity: 0.7 }}
@@ -80,7 +80,7 @@ export const MobileTopMenu = () => {
                     damping: 50
                 },
                 duration: 0.4,
-                delay: 0.6
+                delay: 0.8
             }}
             initial={{ y: - 50, opacity: 0 }}
             animate={{ y: 0, opacity: 0.7 }}
@@ -91,6 +91,25 @@ export const MobileTopMenu = () => {
                 smooth: 'easeInOutQuart'
             })}
         >ABOUT</Section>
+        <Section
+            transition={{
+                y: {
+                    type: 'spring',
+                    stiffness: 200,
+                    damping: 50
+                },
+                duration: 0.4,
+                delay: 0.6
+            }}
+            initial={{ y: - 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 0.7 }}
+            onClick={() => scroller.scrollTo('t721', {
+                offset: -60,
+                duration: 500,
+                delay: 0,
+                smooth: 'easeInOutQuart'
+            })}
+        >T721</Section>
         <Section
             transition={{
                 y: {

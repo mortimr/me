@@ -1,8 +1,8 @@
-import { Component } from "../../Component";
 import React from "react";
 import { styled } from "../../../styled";
 import { motion } from "framer-motion"
 import { Element } from 'react-scroll'
+import { Component } from "../../Component";
 
 
 const HeaderContainer = styled.div`

@@ -59,17 +59,22 @@ const ChallengeTextContainer = styled.div`
 `
 
 interface ChallengeCardProps {
+    sectionVisible: boolean;
     challenge: Challenge;
     selectedSkill: Skill | null;
     onClick: () => void;
 }
 
-const computeAnimate = (challenge: Challenge, inView: boolean, selectedSkill: Skill | null): string => {
+const computeAnimate = (sectionVisible: boolean, challenge: Challenge, inView: boolean, selectedSkill: Skill | null): string => {
     if (!inView) {
         return 'hidden';
     }
 
     if (!selectedSkill || (selectedSkill && challenge.skills.indexOf(selectedSkill.key) !== -1)) {
+        return 'visible';
+    }
+
+    if (!sectionVisible) { // prevent extra shadow animation when all section disappears
         return 'visible';
     }
 
@@ -117,7 +122,7 @@ const ChallengeCard = (props: ChallengeCardProps) => {
             }}
             transition={{ duration: 0.4, delay }}
             initial={'hidden'}
-            animate={computeAnimate(props.challenge, displayed, props.selectedSkill)}
+            animate={computeAnimate(props.sectionVisible, props.challenge, displayed, props.selectedSkill)}
         >
             <div
                 style={{
@@ -228,6 +233,7 @@ const ChallengesSectionDisplay: React.FC<ChallengesSectionDisplayProps> = (props
             {
                 props.challenges.map((challenge: Challenge) => (
                     <ChallengeCard
+                        sectionVisible={amount !== 0}
                         selectedSkill={props.selectedSkill}
                         onClick={() => {
                             props.selectChallenge(challenge)
