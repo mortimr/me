@@ -21,6 +21,7 @@ const Intro = styled(motion.p)`
     opacity: 0.6;
     font-size: 28px;
 `;
+
 const Name = styled(motion.h1)`
     margin: 0;
     text-transform: uppercase;
