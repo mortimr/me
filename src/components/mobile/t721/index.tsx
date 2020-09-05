@@ -8,6 +8,7 @@ import T721Logo from '../../../t721logo.png';
 import AppStoreIcon from '../../../AppStoreButton.png';
 import PlayStoreIcon from '../../../GooglePlayButton.png';
 import WebLinkIcon from '../../../WebLinkButton.png';
+import { useInView } from 'react-intersection-observer';
 
 const AppScreen = styled(motion.img)`
     display: block;
@@ -40,15 +41,21 @@ const T721Container = styled.div`
     text-align: center;
 `;
 
-const T721Title = styled.h1`
+const T721Title = styled(motion.h1)`
     margin: 0;
 `;
 
-const T721Description = styled.h4`
+const T721Description = styled(motion.h4)`
     margin: 0;
 `;
 
 export const MobileT721 = () => {
+
+    const [ref, inView] = useInView();
+    const [refApple, inViewApple] = useInView();
+    const [refAndroid, inViewAndroid] = useInView();
+    const [refWeb, inViewWeb] = useInView();
+
     return <MobileComponent
         style={{
         }}
@@ -57,21 +64,105 @@ export const MobileT721 = () => {
             height: '100%',
             width: '100%'
         }}>
-            <T721Container>
+            <T721Container
+                ref={ref}
+            >
                 <Logo
+                    variants={{
+                        hidden: {
+                            opacity: 0,
+                            x: -50
+                        },
+                        visible: {
+                            opacity: 1,
+                            x: 0
+                        }
+                    }}
+                    transition={{
+                        duration: 1
+                    }}
+                    initial={'hidden'}
+                    animate={inView ? 'visible' : 'hidden'}
                     src={T721Logo}
                 />
-                <T721Title>
+                <T721Title
+                    variants={{
+                        hidden: {
+                            opacity: 0,
+                            y: 20
+                        },
+                        visible: {
+                            opacity: 1,
+                            y: 0
+                        }
+                    }}
+                    transition={{
+                        duration: 1,
+                        delay: 0.2
+                    }}
+                    initial={'hidden'}
+                    animate={inView ? 'visible' : 'hidden'}
+                >
                     Discover Ticket721,
                         </T721Title>
-                <T721Description>
+                <T721Description
+                    variants={{
+                        hidden: {
+                            opacity: 0,
+                            y: 20
+                        },
+                        visible: {
+                            opacity: 1,
+                            y: 0
+                        }
+                    }}
+                    transition={{
+                        duration: 1,
+                        delay: 0.6
+                    }}
+                    initial={'hidden'}
+                    animate={inView ? 'visible' : 'hidden'}
+                >
                     our ticketing solution, focused on security and user experience. Available on the App Store,
                     Play Store and on the Web.
                         </T721Description>
                 <AppScreen
+                    variants={{
+                        hidden: {
+                            opacity: 0,
+                            x: -40
+                        },
+                        visible: {
+                            opacity: 1,
+                            x: 0
+                        }
+                    }}
+                    transition={{
+                        duration: 3,
+                        delay: 0
+                    }}
+                    initial={'hidden'}
+                    animate={inView ? 'visible' : 'hidden'}
                     src={T721App}
                 />
                 <StoreIcon
+                    variants={{
+                        hidden: {
+                            opacity: 0,
+                            y: -40
+                        },
+                        visible: {
+                            opacity: 1,
+                            y: 0
+                        }
+                    }}
+                    transition={{
+                        duration: 1,
+                        delay: 0
+                    }}
+                    ref={refApple}
+                    initial={'hidden'}
+                    animate={inViewApple ? 'visible' : 'hidden'}
                     onClick={
                         () => {
                             window.location.href = 'https://apps.apple.com/tj/app/ticket721/id1525128412';
@@ -83,6 +174,23 @@ export const MobileT721 = () => {
                     src={AppStoreIcon}
                 />
                 <StoreIcon
+                    variants={{
+                        hidden: {
+                            opacity: 0,
+                            y: -40
+                        },
+                        visible: {
+                            opacity: 1,
+                            y: 0
+                        }
+                    }}
+                    transition={{
+                        duration: 1,
+                        delay: 0
+                    }}
+                    ref={refAndroid}
+                    initial={'hidden'}
+                    animate={inViewAndroid ? 'visible' : 'hidden'}
                     onClick={
                         () => {
                             window.location.href = 'https://play.google.com/store/apps/details?id=com.ticket721.t721'
@@ -94,6 +202,23 @@ export const MobileT721 = () => {
                     src={PlayStoreIcon}
                 />
                 <StoreIcon
+                    variants={{
+                        hidden: {
+                            opacity: 0,
+                            y: -40
+                        },
+                        visible: {
+                            opacity: 1,
+                            y: 0
+                        }
+                    }}
+                    transition={{
+                        duration: 1,
+                        delay: 0
+                    }}
+                    ref={refWeb}
+                    initial={'hidden'}
+                    animate={inViewWeb ? 'visible' : 'hidden'}
                     onClick={
                         () => {
                             window.location.href = 'https://app.ticket721.com'
