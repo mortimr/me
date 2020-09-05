@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-    background: #FF0000;
+    background: transparent;
 }
 
   html {
