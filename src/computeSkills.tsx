@@ -1531,6 +1531,7 @@ export const computeSkills = (): SkillsContextState => {
                     'computerscience',
                     'c',
                     'unix',
+                    'concurrency',
                     'sql'
                 ]
             },
@@ -1556,6 +1557,8 @@ export const computeSkills = (): SkillsContextState => {
                     'cpp',
                     'unix',
                     'sql',
+                    'concurrency',
+                    'networking',
                     'projectmanagement'
                 ],
                 theme: '#000000'
@@ -1579,7 +1582,9 @@ export const computeSkills = (): SkillsContextState => {
                     'cpp',
                     'unix',
                     'sql',
-                    'projectmanagement'
+                    'projectmanagement',
+                    'concurrency',
+                    'networking'
                 ],
                 theme: '#000000'
             },
