@@ -56,6 +56,7 @@ export const computeSkills = (): SkillsContextState => {
                     JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative,
                     and declarative (e.g. functional programming) styles. Read more about JavaScript.
                 </Text>,
+                light: true,
                 category: 'Programming Languages',
                 theme: '#F8E321',
                 image: 'javascript.png',
@@ -1356,7 +1357,6 @@ export const computeSkills = (): SkillsContextState => {
                     'multicoreprogramming',
                     'concurrency',
                     'opencl',
-                    'opengl',
                     'cuda',
                     'openmp',
                     'c',
