@@ -83,7 +83,7 @@ export const Header = () => {
                         transition={{ duration: 1, delay: 1 }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 0.6 }}
-                    >I'm a <SoftBold>Fullstack Software Engineer</SoftBold> based in Paris. I consider myself as a <SoftBold>versatile developer</SoftBold>, able to adapt to all sorts of constraints, languages and technologies. I build complete products, from apps to backend, and <SoftBold>love doing it</SoftBold>. Don't hesitate to get in touch !</Description>
+                    >I'm a <SoftBold>Software Engineer</SoftBold> based in Paris. I consider myself as a <SoftBold>versatile developer</SoftBold>, able to adapt to all sorts of constraints, languages and technologies. I build complete products, from apps to backend, and <SoftBold>love doing it</SoftBold>. Don't hesitate to get in touch !</Description>
                 </div>
             </HeaderContainer>
         </Element>

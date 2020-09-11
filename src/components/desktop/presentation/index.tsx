@@ -180,7 +180,7 @@ export const Presentation = () => {
 
                                     ref={ref}
                                 >
-                                    I'm a Fullstack Software Engineer based in Paris. I went to Epitech in Paris & Concordia University in Montreal, 
+                                    I'm a Software Engineer based in Paris. I went to Epitech in Paris & Concordia University in Montreal, 
                                     but most of what I learned came from personal and entrepreneurial projects. I enjoy building apps, platforms, 
                                     APIs and everything in between. I'm driven by a strong entrepreneurial spirit, making me always want to build new things and see them grow. 
                                     When confronted with a challenge, may it be technical or not, I never give up until I found the solution. This might be what describes me 
