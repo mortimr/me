@@ -207,7 +207,6 @@ const LightenColor = function (color: string, percent: number) {
 
 const LevelIndicator = (props: { level: number, color: string, visible: boolean }): JSX.Element => {
 
-    console.log(props.color, LightenColor(props.color, 30));
     return <div
         style={{
             marginTop: 12,

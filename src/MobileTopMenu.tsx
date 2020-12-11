@@ -14,9 +14,9 @@ const RightMenuContainer = styled(motion.div)`
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  background-color: ${props => props.theme.backdropFallbackColor};
   z-index: 999;
 
+  background-color: ${props => props.theme.backdropFallbackColor};
   @supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
     background-color: #00000000;
     backdrop-filter: blur(8px);

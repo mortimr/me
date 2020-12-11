@@ -54,12 +54,12 @@ export const MobilePresentation = () => {
             height: '100%',
             width: '100%'
         }}>
-        <PresentationContainer>
-            <AnimatePresence>
-                <ProfileImageContainer>
+            <PresentationContainer>
+                <AnimatePresence>
+                    <ProfileImageContainer>
                         <InView>
                             {({ inView, ref }) => (
-                                <>
+                                <div key={'content'}>
                                     <motion.div
                                         variants={{
                                             hidden: {
@@ -117,63 +117,65 @@ export const MobilePresentation = () => {
                                         initial={'hidden'}
                                         animate={inView ? 'visible' : 'hidden'}
                                     />
-                                </>
+                                </div>
                             )}
                         </InView>
-                </ProfileImageContainer>
-                <TextContainer>
-                    <InView>
-                        {({ inView, ref }) => (
-                            <Title
-                                variants={{
-                                    hidden: {
-                                        x: 20,
-                                        opacity: 0
-                                    },
-                                    visible: {
-                                        x: 0,
-                                        opacity: 0.7
-                                    }
-                                }}
-                                transition={{
-                                    duration: 0.7
-                                }}
-                                initial={'hidden'}
-                                animate={inView ? 'visible' : 'hidden'}
+                    </ProfileImageContainer>
+                    <TextContainer>
+                        <InView>
+                            {({ inView, ref }) => (
+                                <Title
+                                    key='title'
+                                    variants={{
+                                        hidden: {
+                                            x: 20,
+                                            opacity: 0
+                                        },
+                                        visible: {
+                                            x: 0,
+                                            opacity: 0.7
+                                        }
+                                    }}
+                                    transition={{
+                                        duration: 0.7
+                                    }}
+                                    initial={'hidden'}
+                                    animate={inView ? 'visible' : 'hidden'}
 
-                                ref={ref}
-                            >About me</Title>
-                        )}
-                    </InView>
-                    <InView>
-                        {({ inView, ref }) => (
-                            <Description
-                                variants={{
-                                    hidden: {
-                                        x: 20,
-                                        opacity: 0
-                                    },
-                                    visible: {
-                                        x: 0,
-                                        opacity: 0.7
-                                    }
-                                }}
-                                transition={{
-                                    duration: 0.7,
-                                    delay: 0.2
-                                }}
-                                initial={'hidden'}
-                                animate={inView ? 'visible' : 'hidden'}
+                                    ref={ref}
+                                >About me</Title>
+                            )}
+                        </InView>
+                        <InView>
+                            {({ inView, ref }) => (
+                                <Description
+                                    key='desc'
+                                    variants={{
+                                        hidden: {
+                                            x: 20,
+                                            opacity: 0
+                                        },
+                                        visible: {
+                                            x: 0,
+                                            opacity: 0.7
+                                        }
+                                    }}
+                                    transition={{
+                                        duration: 0.7,
+                                        delay: 0.2
+                                    }}
+                                    initial={'hidden'}
+                                    animate={inView ? 'visible' : 'hidden'}
 
-                                ref={ref}
-                            >
-                                I'm a Software Engineer based in Paris. I went to Epitech in Paris & Concordia University in Montreal, but most of what I learned came from personal and entrepreneurial projects. I enjoy building apps, platforms, APIs and everything in between. I'm driven by a strong entrepreneurial spirit, making me always want to build new things and see them grow. When confronted with a challenge, may it be technical or not, I never give up until I found the solution. This might be what describes me best in my daily work.
-                            </Description>
-                        )}
-                    </InView>
-                </TextContainer>
-            </AnimatePresence>
-        </PresentationContainer>
+                                    ref={ref}
+                                >
+                                    I'm a Software Engineer based in Paris. I went to Epitech in Paris & Concordia University in Montreal, but most of what I learned came from personal and entrepreneurial projects. I enjoy building apps, platforms, APIs and everything in between. I'm driven by a strong entrepreneurial spirit, making me always want to build new things and see them grow. When confronted with a challenge, may it be technical or not, I never give up until I found the solution. This might be what describes me best in my daily work.
+                                </Description>
+                            )}
+                        </InView>
+                    </TextContainer>
+                </AnimatePresence>
+            </PresentationContainer>
         </Element>
     </MobileComponent >
 };
