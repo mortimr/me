@@ -7,7 +7,8 @@ import { SkillsContext } from './components/skills/context';
 const RightMenuContainer = styled(motion.div)`
   position: fixed;
   width: 100vw;
-  height: 60px;
+  height: calc(60px + env(safe-area-inset-top));
+  padding-top: env(safe-area-inset-top);
   right: 0;
   top: 0;
   display: flex;

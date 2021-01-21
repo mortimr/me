@@ -11,7 +11,7 @@ import { SkillsContext } from './components/skills/context';
 const LeftMenuContainer = styled(motion.div)`
   position: fixed;
   width: 100vw;
-  height: 60px;
+  height: calc(60px + env(safe-area-inset-bottom));
   left: 0;
   bottom: 0;
   display: flex;
@@ -29,6 +29,7 @@ const LeftMenuContainer = styled(motion.div)`
 
 const ProfileImage = styled(motion.img)`
   width: 40px;
+  margin-bottom: env(safe-area-inset-bottom);
   height: 40px;
   z-index: 90;
 `;
@@ -36,6 +37,7 @@ const ProfileImage = styled(motion.img)`
 const Section = styled(motion.div)`
   width: 40px;
   height: 40px;
+  margin-bottom: env(safe-area-inset-bottom);
   border-radius: 25px;
   display: flex;
   align-items: center;
