@@ -1,9 +1,61 @@
 html,
 body {
+  width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+  background: url("/bg.jpeg");
+}
+
+#__next {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+}
+
+.title-bar-controls button[aria-label="Minimize_"] {
+  background-image: url("/minimize.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 3px left 4px;
+}
+
+.title-bar-controls button[aria-label="Maximize_"] {
+  background-image: url("/maximize.svg");
+  background-repeat: no-repeat;
+  background-position: top 2px left 3px;
+}
+
+.title-bar-controls button[aria-label="Restore_"] {
+  background-image: url("/restore.svg");
+  background-repeat: no-repeat;
+  background-position: top 2px left 3px;
+}
+
+.title-bar-controls button[aria-label="Help_"] {
+  background-image: url("/help.svg");
+  background-repeat: no-repeat;
+  background-position: top 2px left 5px;
+}
+
+.title-bar-controls button[aria-label="Close_"] {
+  margin-left: 2px;
+  background-image: url("/close.svg");
+  background-repeat: no-repeat;
+  background-position: top 3px left 4px;
+}
+
+.react_cli {
+  color: white;
+  font-size: 14px;
+  width: 90%;
+  padding: 4px;
+  white-space: pre;
+  letter-spacing: 1px;
 }
 
 a {
@@ -21,6 +73,32 @@ a {
   }
   body {
     color: white;
-    background: black;
   }
 }
+
+::-webkit-scrollbar-track {
+  background-image: none; 
+}
+
+
+::-webkit-scrollbar-corner {
+  background: none !important;
+}
+
+::-webkit-scrollbar-button:vertical:start {
+  height: 17px;
+  background-image: url("/button-up.svg");
+}
+::-webkit-scrollbar-button:vertical:end {
+  height: 17px;
+  background-image: url("/button-down.svg");
+}
+::-webkit-scrollbar-button:horizontal:start {
+  width: 16px;
+  background-image: url("/button-left.svg");
+}
+::-webkit-scrollbar-button:horizontal:end {
+  width: 16px;
+  background-image: url("/button-right.svg");
+}
+

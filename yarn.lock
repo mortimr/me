@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"98.css@^0.1.18":
+  version "0.1.18"
+  resolved "https://registry.yarnpkg.com/98.css/-/98.css-0.1.18.tgz#8c5514edfdccb32ef9e5b10904036ba674c21df7"
+  integrity sha512-I6l22DVVGAeets2KzpWhnbj3vCmP5HrkkZFnN8MhFF0z5yoXLkMM7p5vKCN9ap+Tnb4bFe4kukcMsinpDcnfhQ==
+
 "@babel/runtime-corejs3@^7.10.2":
   version "7.19.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime-corejs3/-/runtime-corejs3-7.19.4.tgz#870dbfd9685b3dad5aeb2d00841bb8b6192e3095"
@@ -1406,7 +1411,7 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prop-types@^15.8.1:
+prop-types@^15.6.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -1424,6 +1429,13 @@ queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
+
+react-command-line@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-command-line/-/react-command-line-1.0.3.tgz#74446a42264ca51c373e2b46baacbf74254b03b9"
+  integrity sha512-8/sz/Q4vY0sT+9lr6rorYNHgRd4YQNjgeJS63EtDkfjZuMHAtHBF4+vSueI5oilPctyTtfF66PWR3gHqDC2GsA==
+  dependencies:
+    react "^16.12.0"
 
 react-dom@18.2.0:
   version "18.2.0"
@@ -1444,6 +1456,15 @@ react@18.2.0:
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
   dependencies:
     loose-envify "^1.1.0"
+
+react@^16.12.0:
+  version "16.14.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
+  integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
 
 regenerator-runtime@^0.13.4:
   version "0.13.9"
