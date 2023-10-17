@@ -35,7 +35,7 @@ const commands = {
   },
   job: {
     fn: args => {
-      return `\tLead Ethereum Engineer @ Kiln (kiln.fi)`
+      return `\tPrincipal Engineer @ Kiln (kiln.fi)`
     }
   }
 };
